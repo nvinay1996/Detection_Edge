@@ -160,7 +160,7 @@ Check: begin
 	if(temp_sum[10] == 1 || temp_sum[9] == 1 || temp_sum[8] == 1)
 	o_processed_sum = 8'b11111111;
 	else
-	o_processed_sum = temp_sum;
+		o_processed_sum = temp_sum[7:0];
 	next_state = I;
 
 end
