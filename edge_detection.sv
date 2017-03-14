@@ -39,7 +39,7 @@ reg signed [8:0] D2, n_D2;
 reg signed [9:0] E2, n_E2;
 reg signed [10:0] Gy, n_Gy;
 reg signed [10:0] Gx, n_Gx;
-reg signed [10:0] temp_sum, n_temp_sum;
+reg signed [11:0] temp_sum, n_temp_sum;
 
 typedef enum bit [5:0] {IDLE, ASSIGN_AX, ASSIGN_BX, ASSIGN_CX, ASSIGN_GX, ASSIGN_EX, ASSIGN_DX, ASSIGN_AY, ASSIGN_BY, ASSIGN_CY, ASSIGN_GY, ASSIGN_EY, ASSIGN_DY, GX_NEG_CHK, GY_NEG_CHK, GX_NEG_SET, GY_NEG_SET, SUMM, FORCE255, DATA_READY} stateType;
 stateType state;
@@ -83,7 +83,7 @@ begin
 		E2 <= 10'b0;
 		Gx <= 11'b0;
 		Gy <= 11'b0;
-		temp_sum <= 11'b0;
+		temp_sum <= 12'b0;
 	end else begin
 		A1 <= n_A1;
 		B1 <= n_B1;
@@ -186,7 +186,7 @@ begin
 		end
 		SUMM:
 		begin
-			if (temp_sum[8] | temp_sum[9])
+			if (n_temp_sum[8] | n_temp_sum[9] | n_temp_sum[10])
 				next_state = FORCE255;
 			else
 				next_state = DATA_READY;
@@ -238,11 +238,31 @@ begin
 		end
 		ASSIGN_EX:
 		begin
-			n_E1 = {1'b0, A1} + {1'b0, D1};
+			n_E1 = A1 + D1;
+/*
+			if (A1[8] & D1[8])				// both negative
+				n_E1 = A1 + D1;
+			else if (A1[8] & !D1[8])
+				n_E1 = D1 + A1;
+			else if (!A1[8] & D1[8])
+				n_E1 = D1 + A1;
+			else						// both positive
+				n_E1 = {1'b0, A1} + {1'b0, D1};
+*/
 		end
 		ASSIGN_GX:
 		begin
-			n_Gx = {1'b0, C1} + {1'b0, E1};
+			n_Gx = C1 + E1;
+/*			
+			if (C1[9] & E1[9])				// both negative
+				n_Gx = {1'b1, C1} + {1'b0, E1};
+			else if (C1[9] & !E1[9])
+				n_Gx = C1 + E1;
+			else if (!C1[9] & E1[9])
+				n_Gx = C1 + E1;
+			else						// both positive
+				n_Gx = {1'b0, C1} + {1'b0, E1};
+*/
 		end
 		ASSIGN_AY:
 		begin
@@ -262,11 +282,31 @@ begin
 		end
 		ASSIGN_EY:
 		begin
-			n_E2 = {1'b0, A2} + {1'b0, D2};
+			n_E2 = A2 + D2;
+/*
+			if (A2[8] & D2[8])				// both negative
+				n_E2 = {1'b1, A2} + {1'b0, D2};
+			else if (A2[8] & !D2[8])
+				n_E2 = D2 + A2;
+			else if (!A2[8] & D2[8])
+				n_E2 = D2 + A2;
+			else						// both positive
+				n_E2 = {1'b0, A2} + {1'b0, D2};
+*/
 		end
 		ASSIGN_GY:
 		begin
-			n_Gy = {1'b0, C2} + {1'b0, E2};
+			n_Gy = C2 + E2;
+/*
+			if (C2[9] & E2[9])				// both negative
+				n_Gy = {1'b1, C2} + {1'b0, E2};
+			else if (C2[9] & !E2[9])
+				n_Gy = C2 + E2;
+			else if (!C2[9] & E2[9])
+				n_Gy = C2 + E2;
+			else						// both positive
+				n_Gy = {1'b0, C2} + {1'b0, E2};
+*/
 		end
 		GX_NEG_SET:
 		begin
@@ -278,11 +318,11 @@ begin
 		end
 		SUMM:
 		begin
-			n_temp_sum = Gx + Gy;
+			n_temp_sum = {0, Gx} + {0, Gy};
 		end
 		FORCE255:
 		begin
-			n_temp_sum = 11'b00011111111;
+			n_temp_sum = 12'd255;
 		end
 		DATA_READY:
 		begin
