@@ -237,7 +237,7 @@ begin
 			else
 				next = WAIT_8;
 		end
-OUT_M9:
+		OUT_M9:
 		begin
 			next = WRITE_9;
 		end
