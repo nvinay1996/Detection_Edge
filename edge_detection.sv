@@ -230,7 +230,7 @@ begin
 		end
 		ASSIGN_CX:
 		begin
-			n_C1 = B1 << 1;
+			n_C1 = B1 + B1;
 		end
 		ASSIGN_DX:
 		begin
@@ -274,7 +274,7 @@ begin
 		end
 		ASSIGN_CY:
 		begin
-			n_C2 = B2 << 1;
+			n_C2 = B2 + B2;
 		end
 		ASSIGN_DY:
 		begin
