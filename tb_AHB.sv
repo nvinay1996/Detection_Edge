@@ -7,7 +7,7 @@
 // Description: AHB testbench
 `timescale 1ns / 100ps
 module tb_AHB();
-	localparam CLK_PERIOD = 10; //Not sure what clock rate to use.
+	localparam CLK_PERIOD = 4; //Not sure what clock rate to use.
 
 	int data[4];
 	int k;
@@ -45,7 +45,7 @@ module tb_AHB();
 	end
 
 	generate
-		AHB DUT(.clk(tb_clk),.n_rst(tb_n_rst),.hready(tb_hready),.re(tb_re),.we(tb_we),.next_waddr(tb_next_waddr),.next_raddr(tb_next_raddr),.buffer2_data(tb_buffer2_data),.sram_data(tb_sram_data),.haddr(tb_haddr),.hrdata(tb_hrdata),.hwdata(tb_hwdata),.read_complete(tb_read_complete),.hwrite(tb_hwrite),.write_complete(tb_write_complete));
+		AHB DUT(.clk(tb_clk),.n_rst(tb_n_rst),.hready(tb_hready),.re(tb_re),.we(tb_we),.new_waddr(tb_next_waddr),.new_raddr(tb_next_raddr),.buffer2_data(tb_buffer2_data),.sram_data(tb_sram_data),.haddr(tb_haddr),.hrdata(tb_hrdata),.hwdata(tb_hwdata),.read_complete(tb_read_complete),.hwrite(tb_hwrite),.write_complete(tb_write_complete));
 	endgenerate
 
 	initial
