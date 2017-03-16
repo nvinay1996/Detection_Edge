@@ -23,6 +23,9 @@ module AHB
 	output reg read_complete,
 	output reg write_complete
 );
+
+	reg n_read_complete;
+
 	reg [31:0] n_greyscale;
 	reg [2:0] nQ;
 	reg [2:0] Q;
@@ -44,17 +47,20 @@ module AHB
 		else 
 			greyscale_data <= n_greyscale;
 	end
+
+	// Read Complete Register
+	always_ff @(posedge clk, negedge n_rst)
+	begin
+		if (n_rst == 0)
+			read_complete <= 0;
+		else
+			read_complete <= n_read_complete;
+	end
 	
-	//Next State and Output Logic
+	//Next State Logic
 	always_comb
 	begin
-		hwrite = 0;
-		haddr = 0;
-		read_complete = 0;
-		write_complete = 0;
-		hwdata = 0;
 		nQ = Q;
-		n_greyscale = greyscale_data;
 
 		if(Q == 3'b000) //IDLE
 		begin
@@ -62,40 +68,82 @@ module AHB
 				nQ = 3'b001;
 			else if(we==1)
 				nQ = 3'b100;
+			else
+				nQ = 3'b000;
 		end			
 		else if(Q == 3'b001) //READ ADDRESS PHASE
 		begin
-			hwrite = 0;
-			haddr = mcu_raddr;
 			nQ = 3'b010;
 		end 
 		else if(Q == 3'b010) //READ DATA PHASE
 		begin
-			n_greyscale = hrdata;
 			if(hready==1)
 				nQ = 3'b011;
+			else
+				nQ = 3'b010;
 		end	
 		else if(Q == 3'b011) //READ COMPLETE
 		begin
-			read_complete = 1;
 			nQ = 3'b000;
 		end
 		else if(Q == 3'b100) //WRITE ADDRESS PHASE
 		begin
-			hwrite = 1;
-			haddr = mcu_waddr;
 			nQ = 3'b101;
 		end
 		else if(Q == 3'b101) //WRITE DATA PHASE
 		begin
-			hwdata = buffer2_data;
 			if(hready == 1)
 				nQ = 3'b110;
+			else
+				nQ = 3'b101;
+		end
+		else if(Q == 3'b110) //WRITE COMPLETE
+		begin
+			nQ = 3'b000;
+		end
+	end
+
+	// Output Logic
+	always_comb
+	begin
+		hwrite = 0;
+		haddr = 0;
+		//read_complete = 0;
+		n_read_complete = 0;
+		write_complete = 0;
+		hwdata = 0;
+		n_greyscale = greyscale_data;
+		
+		if(Q == 3'b001) //READ ADDRESS PHASE
+		begin
+			hwrite = 0;
+			haddr = mcu_raddr;
+		end 
+		else if(Q == 3'b010) //READ DATA PHASE
+		begin
+			n_greyscale = hrdata;
+		end	
+/*
+		else if(Q == 3'b011) //READ COMPLETE
+		begin
+			read_complete = 1;
+		end
+*/
+		else if(Q == 3'b100) //WRITE ADDRESS PHASE
+		begin
+			hwrite = 1;
+			haddr = mcu_waddr;
+		end
+		else if(Q == 3'b101) //WRITE DATA PHASE
+		begin
+			hwdata = buffer2_data;
 		end
 		else if(Q == 3'b110) //WRITE COMPLETE
 		begin
 			write_complete = 1;
-			nQ = 3'b000;
 		end
+
+		if (nQ == 3'b011) // next state is READ COMPLETE
+			n_read_complete = 1'b1;
 	end
 endmodule	

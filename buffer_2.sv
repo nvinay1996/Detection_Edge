@@ -7,28 +7,29 @@
 // Description: buffer_2
 
 module buffer_2(
-input wire clk,
-input wire n_rst,
-input wire [7:0] i_processed_sum_1,
-input wire [7:0] i_processed_sum_2,
-input wire [7:0] i_processed_sum_3,
-input wire [7:0] i_processed_sum_4,
-input wire [7:0] i_processed_sum_5,
-input wire [7:0] i_processed_sum_6,
-input wire [7:0] i_processed_sum_7,
-input wire [7:0] i_processed_sum_8,
-input wire [7:0] i_processed_sum_9,
-input wire i_save,
-input wire i_write_complete,
-output reg o_empty,
-output reg o_full,
-output reg [31:0] o_buffer2_data,
-output reg o_write_enable
+	input wire clk,
+	input wire n_rst,
+	input wire [7:0] i_processed_sum_1,
+	input wire [7:0] i_processed_sum_2,
+	input wire [7:0] i_processed_sum_3,
+	input wire [7:0] i_processed_sum_4,
+	input wire [7:0] i_processed_sum_5,
+	input wire [7:0] i_processed_sum_6,
+	input wire [7:0] i_processed_sum_7,
+	input wire [7:0] i_processed_sum_8,
+	input wire [7:0] i_processed_sum_9,
+	input wire i_save,
+	input wire i_write_complete,
+	output reg o_empty,
+	output reg o_full,
+	output reg [31:0] o_buffer2_data,
+	output reg o_write_enable
 );
 
 
-//reg next_full;
-//reg next_empty;
+reg next_full;
+reg next_empty;
+reg next_write_enable;
 
 reg [7:0] m1, n_m1;
 reg [7:0] m2, n_m2;
@@ -44,17 +45,19 @@ reg [31:0] n_buffer2_data;
 typedef enum logic [5:0] {IDLE, LOAD, WAIT_0, OUT_M1, WAIT_1, WRITE_1, OUT_M2, WAIT_2, WRITE_2, OUT_M3, WAIT_3, WRITE_3, OUT_M4, WAIT_4, WRITE_4, OUT_M5, WAIT_5, WRITE_5, OUT_M6, WAIT_6, WRITE_6, OUT_M7, WAIT_7, WRITE_7, OUT_M8, WAIT_8, WRITE_8, OUT_M9, WAIT_9, WRITE_9} state_type;
 state_type curr, next;
 
-/*always_ff @ (posedge clk, negedge n_rst)
+always_ff @ (posedge clk, negedge n_rst)
 begin
 	if (n_rst == 0) begin
 		o_empty <= 1'b1;
 		o_full <= 1'b0;
+		o_write_enable <= 1'b0;
 	end else begin
 		o_empty <= next_empty;
 		o_full <= next_full;
+		o_write_enable <= next_write_enable;
 	end
 end
-*/
+
 
 always_ff @ (posedge clk, negedge n_rst)
 begin
@@ -270,13 +273,13 @@ begin
 	n_m8 = m8;
 	n_m9 = m9;
 	n_buffer2_data = o_buffer2_data;
-	o_write_enable = 1'b0;
-	o_full = 1'b0;
-	o_empty = 1'b0;
+	next_write_enable = 1'b0;
+	next_full = 1'b0;
+	next_empty = 1'b0;
 	case(curr)
 		IDLE:
 		begin
-			o_empty = 1'b1;
+			next_empty = 1'b1;
 		end
 		LOAD:
 		begin
@@ -289,10 +292,11 @@ begin
 			n_m7 = i_processed_sum_7;
 			n_m8 = i_processed_sum_8;
 			n_m9 = i_processed_sum_9;
+			next_full = 1'b1;
 		end
 		WAIT_0:
 		begin
-			o_full = 1'b1;
+			next_full = 1'b1;
 		end
 		OUT_M1:
 		begin
@@ -300,7 +304,7 @@ begin
 		end
 		WRITE_1:
 		begin
-			o_write_enable = 1'b1;
+			next_write_enable = 1'b1;
 		end
 
 		OUT_M2:
@@ -309,7 +313,7 @@ begin
 		end
 		WRITE_2:
 		begin
-			o_write_enable = 1'b1;
+			next_write_enable = 1'b1;
 		end
 		OUT_M3:
 		begin
@@ -317,7 +321,7 @@ begin
 		end
 		WRITE_3:
 		begin
-			o_write_enable = 1'b1;
+			next_write_enable = 1'b1;
 		end
 		OUT_M4:
 		begin
@@ -325,7 +329,7 @@ begin
 		end
 		WRITE_4:
 		begin
-			o_write_enable = 1'b1;
+			next_write_enable = 1'b1;
 		end
 		OUT_M5:
 		begin
@@ -333,7 +337,7 @@ begin
 		end
 		WRITE_5:
 		begin
-			o_write_enable = 1'b1;
+			next_write_enable = 1'b1;
 		end
 		OUT_M6:
 		begin
@@ -341,7 +345,7 @@ begin
 		end
 		WRITE_6:
 		begin
-			o_write_enable = 1'b1;
+			next_write_enable = 1'b1;
 		end
 		OUT_M7:
 		begin
@@ -349,7 +353,7 @@ begin
 		end
 		WRITE_7:
 		begin
-			o_write_enable = 1'b1;
+			next_write_enable = 1'b1;
 		end
 		OUT_M8:
 		begin
@@ -357,7 +361,7 @@ begin
 		end
 		WRITE_8:
 		begin
-			o_write_enable = 1'b1;
+			next_write_enable = 1'b1;
 		end
 
 		OUT_M9:
@@ -366,9 +370,10 @@ begin
 		end
 		WRITE_9:
 		begin
-			o_write_enable = 1'b1;
+			next_write_enable = 1'b1;
 		end
 	endcase
 end
 
 endmodule
+
