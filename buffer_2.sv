@@ -373,6 +373,8 @@ begin
 			next_write_enable = 1'b1;
 		end
 	endcase
+	if (next == IDLE)
+		next_empty = 1'b1;
 end
 
 endmodule
