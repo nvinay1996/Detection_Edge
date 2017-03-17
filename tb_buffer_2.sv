@@ -5,13 +5,6 @@
 // Lab Section: 337-06
 // Version:     1.0  Initial Design Entry
 // Description: test bench for buffer_2.sv
-// $Id: $
-// File name:   tb_grayscale.sv
-// Created:     3/13/2017
-// Author:      Chia-Hua Peng
-// Lab Section: 337-06
-// Version:     1.0  Initial Design Entry
-// Description: test bench for gray scaler
 
 `timescale 1ns / 10ps
 
@@ -39,13 +32,13 @@ module tb_buffer_2();
 	logic tb_empty;
 	logic tb_full;
 	logic [31:0] tb_buffer2_data;
-	logic tb_write_enable;
+	logic tb_start_next_write;
 
 
 	
 	logic expected_full;
 	logic expected_empty;
-	logic expected_write_enable;
+	logic expected_start_next_write;
 	logic [23:0] expected_out_rgb;
 	logic [23:0] tb_out_rgb;
 
@@ -68,7 +61,7 @@ module tb_buffer_2();
 		.o_empty(tb_empty),
 		.o_full(tb_full),
 		.o_buffer2_data(tb_buffer2_data),
-		.o_write_enable(tb_write_enable)
+		.o_start_next_write(tb_start_next_write)
 	);
 
 	// Generate clock signal
@@ -102,7 +95,7 @@ module tb_buffer_2();
 	expected_out_rgb = 24'b0;	
 	expected_full = 1'b0;
 	expected_empty = 1'b1;
-	expected_write_enable = 1'b0;
+	expected_start_next_write = 1'b0;
 	
 	// Initial device power on
 	#(0.1);
@@ -123,7 +116,7 @@ module tb_buffer_2();
 	expected_out_rgb = 24'b0;	
 	expected_full = 1'b0;
 	expected_empty = 1'b1;
-	expected_write_enable = 1'b0;
+	expected_start_next_write = 1'b0;
 
 	#(CHECK_DELAY);
 	if (tb_out_rgb == expected_out_rgb) begin
@@ -136,10 +129,10 @@ module tb_buffer_2();
 	end else begin
 		$error("Test Case %d - Incorrect Empty Full Output - FAILED", test_case);
 	end
-	if (tb_write_enable == expected_write_enable) begin
-		$info("Test Case %d - Correct Write Enable Output - PASSED", test_case);
+	if (tb_start_next_write == expected_start_next_write) begin
+		$info("Test Case %d - Correct start_next_write Output - PASSED", test_case);
 	end else begin
-		$error("Test Case %d - Incorrect Write Enable Output - FAILED", test_case);
+		$error("Test Case %d - Incorrect start_next_write Output - FAILED", test_case);
 	end
 
 // Test Case 1
