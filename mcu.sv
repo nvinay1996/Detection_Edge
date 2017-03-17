@@ -48,8 +48,8 @@ reg [7:0] wct4, n_wct4;
 
 reg n_re, n_grayscale_start, n_b1_save, n_b1_clear, n_gradient_start, n_b2_save, n_we;
 
-typedef enum logic [4:0] {IDLE, R_CON_1, R_CON_2, R_CON_3, READ_ADDR_1, READ_ADDR_2, READ_ADDR_3, READ_ADDR_4, READ_EN, WAIT_READ,  			  // read stages
-			  GRAY_START, WAIT_GRAY, B1_SAVE, EDGE_START, WAIT_EDGE, B2_SAVE, 			   		   			  // computation stages
+typedef enum logic [5:0] {IDLE, R_CON_1, R_CON_2, R_CON_3, READ_ADDR_1, READ_ADDR_2, READ_ADDR_3, READ_ADDR_4, READ_EN, WAIT_READ,  			  // read stages
+			  GRAY_START, WAIT_GRAY, B1_SAVE, B1_WAIT_1, B1_WAIT_2, EDGE_START, WAIT_EDGE, B2_SAVE, 			   		   			  // computation stages
 			  B2_WAIT, W_CON_1, W_CON_2, W_CON_3, WRITE_ADDR_1, WRITE_ADDR_2, WRITE_ADDR_3, WRITE_ADDR_4, WRITE_EN, WAIT_WRITE, CHK_B2_DONE,  // write stages
 			  OVERALL_DONE_CHK} state_type;
 state_type curr, next;
@@ -194,12 +194,19 @@ begin
 		end
 		B1_SAVE:
 		begin
+			next = B1_WAIT_1;
+		end
+		B1_WAIT_1:
+		begin
+			next = B1_WAIT_2;
+		end
+		B1_WAIT_2:
+		begin
 			if (!i_b1_full)
 				next = R_CON_1;
 			else
 				next = EDGE_START;
 		end
-
 		EDGE_START:
 		begin
 			next = WAIT_EDGE;
