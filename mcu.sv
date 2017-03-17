@@ -51,7 +51,7 @@ reg n_re, n_grayscale_start, n_b1_save, n_b1_clear, n_gradient_start, n_b2_save,
 typedef enum logic [5:0] {IDLE, R_CON_1, R_CON_2, R_CON_3, READ_ADDR_1, READ_ADDR_2, READ_ADDR_3, READ_ADDR_4, READ_EN, WAIT_READ,  			  // read stages
 			  GRAY_START, WAIT_GRAY, B1_SAVE, B1_WAIT_1, B1_WAIT_2, EDGE_START, WAIT_EDGE, B2_SAVE, 			   		   			  // computation stages
 			  B2_WAIT, W_CON_1, W_CON_2, W_CON_3, WRITE_ADDR_1, WRITE_ADDR_2, WRITE_ADDR_3, WRITE_ADDR_4, WRITE_EN, WAIT_WRITE, CHK_B2_DONE,  // write stages
-			  OVERALL_DONE_CHK} state_type;
+			  B2_POST_WAIT_1, B2_POST_WAIT_2, OVERALL_DONE_CHK} state_type;
 state_type curr, next;
 
 
@@ -94,12 +94,12 @@ always_ff @ (posedge clk, negedge n_rst)
 begin
 	if (n_rst == 0) begin
 		rct1 <= 3'b0;
-		rct2 <= 3'b0;
-		rct3 <= 8'b0;
+		rct2 <= 3'b1;
+		rct3 <= 8'b1;
 		wct1 <= 2'b0;
-		wct2 <= 2'b0;
-		wct3 <= 8'b0;
-		wct4 <= 8'b0;
+		wct2 <= 2'b1;
+		wct3 <= 8'b1;
+		wct4 <= 8'b1;
 	end else begin
 		rct1 <= n_rct1;
 		rct2 <= n_rct2;
@@ -273,9 +273,17 @@ begin
 		WAIT_WRITE:
 		begin
 			if (i_write_complete)
-				next = CHK_B2_DONE;
+				next = B2_POST_WAIT_1;
 			else
 				next = WAIT_WRITE;
+		end
+		B2_POST_WAIT_1:
+		begin
+			next = B2_POST_WAIT_2;
+		end
+		B2_POST_WAIT_2:
+		begin
+			next = CHK_B2_DONE;
 		end
 		CHK_B2_DONE:
 		begin
