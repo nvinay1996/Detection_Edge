@@ -101,7 +101,7 @@ module tb_mcu();
 	@(posedge tb_clk);
 	tb_n_rst = 1;
 
-	for (test_case = 0; test_case < 20; test_case = test_case + 1) begin
+	for (test_case = 0; test_case < 40003; test_case = test_case + 1) begin
 		b1 = 0;
 		while (tb_i_b1_full == 1'b0) begin		
 			@(posedge tb_clk);
@@ -116,6 +116,18 @@ module tb_mcu();
 			@(posedge tb_clk);
 			@(posedge tb_clk);
 			@(posedge tb_clk);
+			@(posedge tb_clk);
+			@(posedge tb_clk);
+			@(posedge tb_clk);	
+			@(posedge tb_clk);
+			@(posedge tb_clk);
+			@(posedge tb_clk);	
+			@(posedge tb_clk);
+			@(posedge tb_clk);
+			@(posedge tb_clk);	
+			@(posedge tb_clk);
+			@(posedge tb_clk);
+			@(posedge tb_clk);	
 	
 			tb_i_read_complete = 1'b1;
 			@(posedge tb_clk);
@@ -185,6 +197,16 @@ module tb_mcu();
 			@(posedge tb_clk);	
 			@(posedge tb_clk);
 			@(posedge tb_clk);
+			@(posedge tb_clk);	
+			@(posedge tb_clk);
+			@(posedge tb_clk);
+			@(posedge tb_clk);	
+			@(posedge tb_clk);
+			@(posedge tb_clk);
+			@(posedge tb_clk);	
+			@(posedge tb_clk);
+			@(posedge tb_clk);
+			@(posedge tb_clk);	
 			@(posedge tb_clk);	
 			tb_i_write_complete = 1'b1;
 			@(posedge tb_clk);
