@@ -189,17 +189,17 @@ edge_detection_core EDC_DUT
 .i_m23(o_m23),
 .i_m24(o_m24),
 .i_m25(o_m25),
-i_gradient_start(o_gradient_start),
-o_gradient_ready(o_gradient_ready),
-o_processed_sum_1(o_processed_sum_1),
-o_processed_sum_2(o_processed_sum_2),
-o_processed_sum_3(o_processed_sum_3),
-o_processed_sum_4(o_processed_sum_4),
-o_processed_sum_5(o_processed_sum_5),
-o_processed_sum_6(o_processed_sum_6),
-o_processed_sum_7(o_processed_sum_7),
-o_processed_sum_8(o_processed_sum_8),
-o_processed_sum_9(o_processed_sum_9)
+.i_gradient_start(o_gradient_start),
+.o_gradient_ready(o_gradient_ready),
+.o_processed_sum_1(o_processed_sum_1),
+.o_processed_sum_2(o_processed_sum_2),
+.o_processed_sum_3(o_processed_sum_3),
+.o_processed_sum_4(o_processed_sum_4),
+.o_processed_sum_5(o_processed_sum_5),
+.o_processed_sum_6(o_processed_sum_6),
+.o_processed_sum_7(o_processed_sum_7),
+.o_processed_sum_8(o_processed_sum_8),
+.o_processed_sum_9(o_processed_sum_9)
 );
 
 
