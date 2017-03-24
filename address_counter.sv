@@ -16,7 +16,8 @@ module address_counter
 	output reg [31:0] o_raddr,
 	output reg [31:0] o_waddr,
 	output reg o_r_ready,
-	output reg o_w_ready
+	output reg o_w_ready,
+	output reg o_done
 );
 
 
@@ -40,6 +41,7 @@ state_type curr_read_state, next_read_state, curr_write_state, next_write_state;
 // register output
 reg next_r_ready;
 reg next_w_ready;
+reg n_done;
 
 // next read write address
 reg [31:0] n_raddr;
@@ -69,11 +71,13 @@ begin
 		o_waddr <= 32'd200000;
 		o_r_ready <= 1'b0;
 		o_w_ready <= 1'b0;
+		o_done <= 1'b0;
 	end else begin
 		o_raddr <= n_raddr;
 		o_waddr <= n_waddr;
 		o_r_ready <= next_r_ready;
 		o_w_ready <= next_w_ready;
+		o_done <= n_done;
 	end
 end
 
@@ -325,6 +329,7 @@ begin
 	n_wct3 = wct3;
 	n_wpt = wpt;
 	next_w_ready = 0;
+	n_done = 0;
 
 	case (curr_write_state)
 		W_CON_1:
@@ -367,6 +372,8 @@ begin
 				n_wpt = o_waddr + 3;
 			else
 				n_wpt = wpt;
+			if (o_waddr == 32'd381476)
+				n_done = 1;
 			next_w_ready = 1;
 		end
 	endcase
