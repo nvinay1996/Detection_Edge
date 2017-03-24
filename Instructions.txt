@@ -1,0 +1,15 @@
+gcc -Wall -Werror -Wshadow input_sram_generator.c -o input_sram_generator
+
+gcc -Wall -Werror -Wshadow output_generator.c -o output_generator
+
+./input_sram_generator airplane.bmp  
+
+Output: The two files generated are:
+header_airplane.b
+input_airplane.b
+
+
+./output_generator header_airplane.b output_airplane.b output_airplane.bmp
+
+Output: Output file output_airplane.bmp created
+
