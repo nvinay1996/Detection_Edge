@@ -197,8 +197,13 @@ begin
 		end
 		DATA_READY:
 		begin
+			next_state = DATA_READY2;
+		end
+		DATA_READY2:
+		begin
 			next_state = IDLE;
 		end
+		
 	endcase
 end
 
@@ -292,6 +297,11 @@ begin
 		begin
 			next_data_ready = 1'b1;
 		end
+		DATA_READY2:
+		begin
+			next_data_ready = 1'b1;
+		end
+		
 	endcase
 end
 
