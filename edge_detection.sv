@@ -20,7 +20,7 @@ module edge_detection
 	input wire [7:0] P6,
 	input wire [7:0] P7,
 	input wire [7:0] P8,
-	output reg o_gradient_data_ready,
+	output reg o_gradient_ready,
 	output reg [7:0] o_processed_sum
 );
 
@@ -49,10 +49,10 @@ stateType next_state;
 always_ff @ (posedge clk, negedge n_rst)
 begin
 	if(n_rst == 1'b0) begin
-		o_gradient_data_ready <= 1'b0;
+		o_gradient_ready <= 1'b0;
 		o_processed_sum <= 8'b0;
 	end else begin
-		o_gradient_data_ready <= next_data_ready;
+		o_gradient_ready <= next_data_ready;
 		o_processed_sum <= next_processed_sum;
 	end
 end
