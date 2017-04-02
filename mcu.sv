@@ -37,7 +37,7 @@ module mcu
 // register output
 reg n_re, n_grayscale_start, n_b1_save, n_b1_clear, n_gradient_start, n_b2_save, n_we, n_inc_raddr, n_inc_waddr;
 
-typedef enum logic [5:0] {IDLE, READ_ADDR_INC, READ_ADDR_WAIT,READ_EN, WAIT_READ, GRAY_START, WAIT_GRAY, B1_SAVE, B1_WAIT_1, B1_WAIT_2, // stage 1: read the data, gray scale pixel, and store in buffer1
+typedef enum logic [5:0] {SIG_WAIT,IDLE, READ_ADDR_INC, READ_ADDR_WAIT,READ_EN, WAIT_READ, GRAY_START, WAIT_GRAY, B1_SAVE, B1_WAIT_1, B1_WAIT_2, // stage 1: read the data, gray scale pixel, and store in buffer1
 			  EDGE_START, WAIT_EDGE, 											// stage 2: compute edge detection
 			  B2_SAVE, B2_WAIT, WRITE_ADDR_INC, WRITE_ADDR_WAIT, WRITE_EN, WAIT_WRITE, CHK_B2_DONE,  			// stage 3: store the computed data in buffer 2, and transfer to SRAM
 			  B2_POST_WAIT_1, B2_POST_WAIT_2, DONE_CHK} state_type;
@@ -132,7 +132,11 @@ begin
 		end
 		B1_WAIT_1:
 		begin
-			next = B1_WAIT_2;
+			next = SIG_WAIT;
+		end
+		SIG_WAIT:
+		begin
+			next=B1_WAIT_2;
 		end
 		B1_WAIT_2:
 		begin
@@ -154,14 +158,7 @@ begin
 		end
 		B2_SAVE:
 		begin
-			next = B2_WAIT;
-		end
-		B2_WAIT:
-		begin
-			if (i_start_next_write)
-				next = WRITE_ADDR_INC;
-			else
-				next = B2_WAIT;
+			next = WRITE_ADDR_INC;
 		end
 		WRITE_ADDR_INC:
 		begin
@@ -196,7 +193,7 @@ begin
 		CHK_B2_DONE:
 		begin
 			if (!i_b2_empty)
-				next = B2_WAIT;
+				next = B2_SAVE;
 			else
 				next = DONE_CHK;
 		end

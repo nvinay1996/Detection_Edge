@@ -73,7 +73,7 @@ edge_detection E1
 	.P6(i_m11), 
 	.P7(i_m12), 
 	.P8(i_m13), 
-	.o_gradient_ready(temp_gradient_ready_1), 
+	.o_gradient_data_ready(temp_gradient_ready_1), 
 	.o_processed_sum(o_processed_sum_1)
 );
 
@@ -91,7 +91,7 @@ edge_detection E2
 	.P6(i_m12), 
 	.P7(i_m13), 
 	.P8(i_m14), 
-	.o_gradient_ready(temp_gradient_ready_2), 
+	.o_gradient_data_ready(temp_gradient_ready_2), 
 	.o_processed_sum(o_processed_sum_2)
 );
 
@@ -109,7 +109,7 @@ edge_detection E3
 	.P6(i_m13), 
 	.P7(i_m14), 
 	.P8(i_m15), 
-	.o_gradient_ready(temp_gradient_ready_3), 
+	.o_gradient_data_ready(temp_gradient_ready_3), 
 	.o_processed_sum(o_processed_sum_3)
 );
 
@@ -127,7 +127,7 @@ edge_detection E4
 	.P6(i_m16), 
 	.P7(i_m17), 
 	.P8(i_m18), 
-	.o_gradient_ready(temp_gradient_ready_4), 
+	.o_gradient_data_ready(temp_gradient_ready_4), 
 	.o_processed_sum(o_processed_sum_4)
 );
 
@@ -146,7 +146,7 @@ edge_detection E5
 	.P6(i_m17), 
 	.P7(i_m18), 
 	.P8(i_m19), 
-	.o_gradient_ready(temp_gradient_ready_5), 
+	.o_gradient_data_ready(temp_gradient_ready_5), 
 	.o_processed_sum(o_processed_sum_5)
 );
 
@@ -165,7 +165,7 @@ edge_detection E6
 	.P6(i_m18), 
 	.P7(i_m19), 
 	.P8(i_m20), 
-	.o_gradient_ready(temp_gradient_ready_6), 
+	.o_gradient_data_ready(temp_gradient_ready_6), 
 	.o_processed_sum(o_processed_sum_6)
 );
 
@@ -184,7 +184,7 @@ edge_detection E7
 	.P6(i_m21), 
 	.P7(i_m22), 
 	.P8(i_m23), 
-	.o_gradient_ready(temp_gradient_ready_7), 
+	.o_gradient_data_ready(temp_gradient_ready_7), 
 	.o_processed_sum(o_processed_sum_7)
 );
 
@@ -203,7 +203,7 @@ edge_detection E8
 	.P6(i_m22), 
 	.P7(i_m23), 
 	.P8(i_m24), 
-	.o_gradient_ready(temp_gradient_ready_8), 
+	.o_gradient_data_ready(temp_gradient_ready_8), 
 	.o_processed_sum(o_processed_sum_8)
 );
 
@@ -221,7 +221,7 @@ edge_detection E9
 	.P6(i_m23), 
 	.P7(i_m24), 
 	.P8(i_m25), 
-	.o_gradient_ready(temp_gradient_ready_9), 
+	.o_gradient_data_ready(temp_gradient_ready_9), 
 	.o_processed_sum(o_processed_sum_9)
 );
 

@@ -5,6 +5,7 @@
 // Lab Section: 337-06
 // Version:     1.0  Initial Design Entry
 // Description: AHB Bus
+`timescale 1ns/100ps
 module AHB
 (
 	input wire clk,
@@ -27,6 +28,7 @@ module AHB
 	reg [2:0] nQ;
 	reg [2:0] Q;
 	reg n_read_complete;
+	reg [31:0] n_haddr;
 
 	//State Register
 	always_ff @(posedge clk, negedge n_rst)
@@ -44,11 +46,13 @@ module AHB
 		begin
 			greyscale_data <= 0;
 			read_complete <= 0;
+			haddr<=0;
 		end
 		else
 		begin 
 			greyscale_data <= n_greyscale;
 			read_complete <= n_read_complete;
+			haddr<=n_haddr;
 		end
 	end
 	
@@ -56,24 +60,27 @@ module AHB
 	always_comb
 	begin
 		hwrite = 0;
-		haddr = 0;
 		n_read_complete = 0;
 		write_complete = 0;
 		hwdata = 0;
 		nQ = Q;
 		n_greyscale = greyscale_data;
-
+		n_haddr=haddr;
+			
 		if(Q == 3'b000) //IDLE
 		begin
-			if(re==1)
+			if(re==1)begin
 				nQ = 3'b001;
-			else if(we==1)
+				n_haddr=mcu_raddr;
+			end
+			else if(we==1)begin
+				n_haddr=mcu_waddr;
 				nQ = 3'b100;
+			end
 		end			
 		else if(Q == 3'b001) //READ ADDRESS PHASE
 		begin
 			hwrite = 0;
-			haddr = mcu_raddr;
 			nQ = 3'b010;
 		end 
 		else if(Q == 3'b010) //READ DATA PHASE
@@ -93,7 +100,6 @@ module AHB
 		else if(Q == 3'b100) //WRITE ADDRESS PHASE
 		begin
 			hwrite = 1;
-			haddr = mcu_waddr;
 			nQ = 3'b101;
 		end
 		else if(Q == 3'b101) //WRITE DATA PHASE

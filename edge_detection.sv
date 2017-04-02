@@ -20,7 +20,7 @@ module edge_detection
 	input wire [7:0] P6,
 	input wire [7:0] P7,
 	input wire [7:0] P8,
-	output reg o_gradient_ready,
+	output reg o_gradient_data_ready,
 	output reg [7:0] o_processed_sum
 );
 
@@ -41,7 +41,7 @@ reg signed [10:0] Gy, n_Gy;
 reg signed [10:0] Gx, n_Gx;
 reg signed [11:0] temp_sum, n_temp_sum;
 
-	typedef enum bit [5:0] {IDLE, ASSIGN_AX, ASSIGN_BX, ASSIGN_CX, ASSIGN_GX, ASSIGN_EX, DATA_ASSIGN_DX, ASSIGN_AY, ASSIGN_BY, ASSIGN_CY, ASSIGN_GY, ASSIGN_EY, ASSIGN_DY, GX_NEG_CHK, GY_NEG_CHK, GX_NEG_SET, GY_NEG_SET, SUMM, FORCE255, DATA_READY, DATA_READY2} stateType;
+typedef enum bit [5:0] {IDLE, ASSIGN_AX, ASSIGN_BX, ASSIGN_CX, ASSIGN_GX,GX_NEG_SET_WAIT,SUMM_WAIT,DATA_READY_WAIT, ASSIGN_EX, ASSIGN_DX, ASSIGN_AY, ASSIGN_BY, ASSIGN_CY, ASSIGN_GY, ASSIGN_EY, ASSIGN_DY, GX_NEG_CHK, GY_NEG_CHK, GX_NEG_SET, GY_NEG_SET, SUMM, FORCE255, DATA_READY,DATA_READY2,DATA_READY3,DATA_READY4} stateType;
 stateType state;
 stateType next_state;
 
@@ -49,10 +49,10 @@ stateType next_state;
 always_ff @ (posedge clk, negedge n_rst)
 begin
 	if(n_rst == 1'b0) begin
-		o_gradient_ready <= 1'b0;
+		o_gradient_data_ready <= 1'b0;
 		o_processed_sum <= 8'b0;
 	end else begin
-		o_gradient_ready <= next_data_ready;
+		o_gradient_data_ready <= next_data_ready;
 		o_processed_sum <= next_processed_sum;
 	end
 end
@@ -167,7 +167,11 @@ begin
 			if (Gx[10] == 1'b1)
 				next_state = GX_NEG_SET;
 			else
-				next_state = GY_NEG_CHK;
+				next_state = GX_NEG_SET_WAIT;
+		end
+		GX_NEG_SET_WAIT:
+		begin
+			next_state=GY_NEG_CHK;
 		end
 		GX_NEG_SET:
 		begin
@@ -178,7 +182,11 @@ begin
 			if (Gy[10] == 1'b1)
 				next_state = GY_NEG_SET;
 			else
-				next_state = SUMM;
+				next_state = SUMM_WAIT;
+		end
+		SUMM_WAIT:
+		begin
+			next_state=SUMM;
 		end
 		GY_NEG_SET:
 		begin
@@ -189,17 +197,17 @@ begin
 			if (n_temp_sum[8] | n_temp_sum[9] | n_temp_sum[10])
 				next_state = FORCE255;
 			else
-				next_state = DATA_READY;
+				next_state = DATA_READY_WAIT;
 		end
 		FORCE255:
 		begin
 			next_state = DATA_READY;
 		end
-		DATA_READY:
+		DATA_READY_WAIT:
 		begin
-			next_state = DATA_READY2;
+			next_state=DATA_READY;
 		end
-		DATA_READY2:
+		DATA_READY:
 		begin
 			next_state = IDLE;
 		end
@@ -294,10 +302,6 @@ begin
 			n_temp_sum = 12'd255;
 		end
 		DATA_READY:
-		begin
-			next_data_ready = 1'b1;
-		end
-		DATA_READY2:
 		begin
 			next_data_ready = 1'b1;
 		end
