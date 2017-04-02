@@ -12,7 +12,7 @@ module tb_Top_Level(); 				//Not sure what to name this
 	localparam CLK_PERIOD=4;  
 	localparam IMG_WIDTH=428;		//Input image width
 	localparam IMG_HEIGHT=428;		//Input image height
-	localparam INPUT="./docs/airplane.bmp";
+	localparam INPUT="./docs/input.bmp";
 	localparam OUTPUT="./docs/output.bmp";	
 
 	reg[7:0] img_arr[IMG_HEIGHT*IMG_WIDTH*3*4];
@@ -64,7 +64,7 @@ module tb_Top_Level(); 				//Not sure what to name this
 		$fseek(out_ptr,0,0);
 		$fseek(in_ptr,0,0);
 	
-		for(i=0;i<54;i+=1)begin
+		for(i=0;i<138;i+=1)begin
 			useless=$fscanf(in_ptr,"%c",temp);
 			$fwrite(out_ptr,"%c",temp);
 		end
