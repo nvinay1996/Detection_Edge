@@ -1,7 +1,7 @@
 // $Id: $
 // File name:   tb_Top_Level.sv
 // Created:     3/16/2017
-// Author:      Paul Swartz
+// Author:      Paul Swartz, Vinay Nagarajan
 // Lab Section: 337-06
 // Version:     1.0  Initial Design Entry
 // Description: Top Level Testbench
