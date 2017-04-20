@@ -1,7 +1,7 @@
 // $Id: $
 // File name:   edge_detection.sv
 // Created:     3/13/2017
-// Author:      Vinay Nagarajan
+// Author:      Vinay Nagarajan, Chia-Hua Peng
 // Lab Section: 337-06
 // Version:     1.0  Initial Design Entry
 // Description: edge detection
@@ -41,7 +41,7 @@ reg signed [10:0] Gy, n_Gy;
 reg signed [10:0] Gx, n_Gx;
 reg signed [11:0] temp_sum, n_temp_sum;
 
-typedef enum bit [5:0] {IDLE, ASSIGN_AX, ASSIGN_BX, ASSIGN_CX, ASSIGN_GX,GX_NEG_SET_WAIT,SUMM_WAIT,DATA_READY_WAIT, ASSIGN_EX, ASSIGN_DX, ASSIGN_AY, ASSIGN_BY, ASSIGN_CY, ASSIGN_GY, ASSIGN_EY, ASSIGN_DY, GX_NEG_CHK, GY_NEG_CHK, GX_NEG_SET, GY_NEG_SET, SUMM, FORCE255, DATA_READY,DATA_READY2,DATA_READY3,DATA_READY4} stateType;
+typedef enum bit [5:0] {IDLE, ASSIGN_A, ASSIGN_C, ASSIGN_E, ASSIGN_G,GX_NEG_SET_WAIT,SUMM_WAIT,DATA_READY_WAIT, GX_NEG_CHK, GY_NEG_CHK, GX_NEG_SET, GY_NEG_SET, SUMM, FORCE255, DATA_READY,DATA_READY2,DATA_READY3,DATA_READY4} stateType;
 stateType state;
 stateType next_state;
 
@@ -109,56 +109,24 @@ begin
 		IDLE:
 		begin
 			if (i_gradient_start) begin
-				next_state = ASSIGN_AX;
+				next_state = ASSIGN_A;
 			end else begin
 				next_state = IDLE;
 			end
 		end
-		ASSIGN_AX:
+		ASSIGN_A:
 		begin
-			next_state = ASSIGN_BX;
+			next_state = ASSIGN_C;
 		end
-		ASSIGN_BX:
+		ASSIGN_C:
 		begin
-			next_state = ASSIGN_CX;
+			next_state = ASSIGN_E;
 		end
-		ASSIGN_CX:
+		ASSIGN_E:
 		begin
-			next_state = ASSIGN_DX;
+			next_state = ASSIGN_G;
 		end
-		ASSIGN_DX:
-		begin
-			next_state = ASSIGN_EX;
-		end
-		ASSIGN_EX:
-		begin
-			next_state = ASSIGN_GX;
-		end
-		ASSIGN_GX:
-		begin
-			next_state = ASSIGN_AY;
-		end
-		ASSIGN_AY:
-		begin
-			next_state = ASSIGN_BY;
-		end
-		ASSIGN_BY:
-		begin
-			next_state = ASSIGN_CY;
-		end
-		ASSIGN_CY:
-		begin
-			next_state = ASSIGN_DY;
-		end
-		ASSIGN_DY:
-		begin
-			next_state = ASSIGN_EY;
-		end
-		ASSIGN_EY:
-		begin
-			next_state = ASSIGN_GY;
-		end
-		ASSIGN_GY:
+		ASSIGN_G:
 		begin
 			next_state = GX_NEG_CHK;
 		end
@@ -194,14 +162,7 @@ begin
 		end
 		SUMM:
 		begin
-			if (n_temp_sum[8] | n_temp_sum[9] | n_temp_sum[10])
-				next_state = FORCE255;
-			else
-				next_state = DATA_READY_WAIT;
-		end
-		FORCE255:
-		begin
-			next_state = DATA_READY;
+			next_state = DATA_READY_WAIT;
 		end
 		DATA_READY_WAIT:
 		begin
@@ -233,57 +194,29 @@ begin
 	n_temp_sum = temp_sum;
 	next_data_ready = 1'b0;
 	case (state)
-		ASSIGN_AX:
+		ASSIGN_A:
 		begin
 			n_A1 = {1'b0, P2} - {1'b0, P0};
-		end
-		ASSIGN_BX:
-		begin
-			n_B1 = {1'b0, P5} - {1'b0, P3};
-		end
-		ASSIGN_CX:
-		begin
-			n_C1 = B1 + B1;
-		end
-		ASSIGN_DX:
-		begin
-			n_D1 = {1'b0, P8} - {1'b0, P6};
-		end
-		ASSIGN_EX:
-		begin
-			n_E1 = A1 + D1;
-
-		end
-		ASSIGN_GX:
-		begin
-			n_Gx = C1 + E1;
-
-		end
-		ASSIGN_AY:
-		begin
 			n_A2 = {1'b0, P0} - {1'b0, P6};
-		end
-		ASSIGN_BY:
-		begin
+			n_B1 = {1'b0, P5} - {1'b0, P3};
 			n_B2 = {1'b0, P1} - {1'b0, P7};
-		end
-		ASSIGN_CY:
-		begin
-			n_C2 = B2 + B2;
-		end
-		ASSIGN_DY:
-		begin
+			n_D1 = {1'b0, P8} - {1'b0, P6};
 			n_D2 = {1'b0, P2} - {1'b0, P8};
 		end
-		ASSIGN_EY:
+		ASSIGN_C:
 		begin
-			n_E2 = A2 + D2;
-
+			n_C1 = B1 + B1;
+			n_C2 = B2 + B2;
 		end
-		ASSIGN_GY:
+		ASSIGN_E:
 		begin
+			n_E1 = A1 + D1;
+			n_E2 = A2 + D2;
+		end
+		ASSIGN_G:
+		begin
+			n_Gx = C1 + E1;
 			n_Gy = C2 + E2;
-
 		end
 		GX_NEG_SET:
 		begin
@@ -296,10 +229,8 @@ begin
 		SUMM:
 		begin
 			n_temp_sum = {0, Gx} + {0, Gy};
-		end
-		FORCE255:
-		begin
-			n_temp_sum = 12'd255;
+			if (n_temp_sum[8] | n_temp_sum[9] | n_temp_sum[10])
+				n_temp_sum = 12'd255;
 		end
 		DATA_READY:
 		begin
