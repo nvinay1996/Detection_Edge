@@ -1,0 +1,2 @@
+Includes all project files up-to-date as of 4/21
+I fixed the AHB pipelining, but the start_waddr is still hard-coded. Also, I need to update tb_AHB_wrapper
