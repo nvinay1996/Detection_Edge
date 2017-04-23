@@ -1,0 +1,9 @@
+QuestaSim-64 vlog 10.3b Compiler 2014.05 May 29 2014
+Start time: 00:26:26 on Apr 22,2017
+vlog -sv -work source_work source/buffer_2.sv 
+-- Compiling module buffer_2
+
+Top level modules:
+	buffer_2
+End time: 00:26:26 on Apr 22,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
