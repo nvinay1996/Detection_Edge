@@ -1,1 +1,1 @@
-  Contains the updated files for the reduced critical timing path. Critical time path is currently at about 3 ns.
+contains updated slave (with pipelining), updated tb_AHB_wrapper, and updated tb_Top_Level
