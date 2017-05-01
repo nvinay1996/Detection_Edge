@@ -1,0 +1,399 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -voptargs="+acc" -i -t ps mapped_work.tb_Top_Level 
+# Start time: 15:19:30 on Apr 28,2017
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: mapped/Top_Level.v(19422): (vopt-2685) [TFMPC] - Too few port connections for 'B1_DUT'.  Expected 32, found 31.
+# ** Warning: mapped/Top_Level.v(19422): (vopt-2718) [TFMPC] - Missing connection for port 'o_empty'.
+# ** Warning: mapped/Top_Level.v(19442): (vopt-2685) [TFMPC] - Too few port connections for 'B2_DUT'.  Expected 17, found 16.
+# ** Warning: mapped/Top_Level.v(19442): (vopt-2718) [TFMPC] - Missing connection for port 'o_full'.
+# ** Warning: mapped/Top_Level.v(5184): (vopt-2685) [TFMPC] - Too few port connections for 'add_184'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(5184): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(5017): (vopt-2685) [TFMPC] - Too few port connections for 'II'.  Expected 13, found 12.
+# ** Warning: mapped/Top_Level.v(5017): (vopt-2718) [TFMPC] - Missing connection for port 'start_waddr'.
+# ** Warning: mapped/Top_Level.v(3802): (vopt-2685) [TFMPC] - Too few port connections for 'add_238'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(3802): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(3810): (vopt-2685) [TFMPC] - Too few port connections for 'add_368'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(3810): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(3817): (vopt-2685) [TFMPC] - Too few port connections for 'add_387'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(3817): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(3824): (vopt-2685) [TFMPC] - Too few port connections for 'add_257'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(3824): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(14075): (vopt-2685) [TFMPC] - Too few port connections for 'add_231'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(14075): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(14078): (vopt-2685) [TFMPC] - Too few port connections for 'add_219'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(14078): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(14081): (vopt-2685) [TFMPC] - Too few port connections for 'add_218'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(14081): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(14084): (vopt-2685) [TFMPC] - Too few port connections for 'add_214'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(14084): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(14087): (vopt-2685) [TFMPC] - Too few port connections for 'add_213'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(14087): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(14090): (vopt-2685) [TFMPC] - Too few port connections for 'sub_201'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(14090): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(14093): (vopt-2685) [TFMPC] - Too few port connections for 'sub_203'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(14093): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(14094): (vopt-2685) [TFMPC] - Too few port connections for 'sub_200'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(14094): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(14097): (vopt-2685) [TFMPC] - Too few port connections for 'sub_199'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(14097): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(14100): (vopt-2685) [TFMPC] - Too few port connections for 'sub_202'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(14100): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(14103): (vopt-2685) [TFMPC] - Too few port connections for 'sub_204'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(14103): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(7560): (vopt-2685) [TFMPC] - Too few port connections for 'add_231'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(7560): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(7563): (vopt-2685) [TFMPC] - Too few port connections for 'add_219'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(7563): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(7566): (vopt-2685) [TFMPC] - Too few port connections for 'add_218'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(7566): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(7569): (vopt-2685) [TFMPC] - Too few port connections for 'add_214'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(7569): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(7572): (vopt-2685) [TFMPC] - Too few port connections for 'add_213'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(7572): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(7575): (vopt-2685) [TFMPC] - Too few port connections for 'sub_204'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(7575): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(7578): (vopt-2685) [TFMPC] - Too few port connections for 'sub_202'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(7578): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(7581): (vopt-2685) [TFMPC] - Too few port connections for 'sub_203'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(7581): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(7584): (vopt-2685) [TFMPC] - Too few port connections for 'sub_200'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(7584): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(7587): (vopt-2685) [TFMPC] - Too few port connections for 'sub_201'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(7587): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(7590): (vopt-2685) [TFMPC] - Too few port connections for 'sub_199'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(7590): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(8852): (vopt-2685) [TFMPC] - Too few port connections for 'add_231'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(8852): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(8855): (vopt-2685) [TFMPC] - Too few port connections for 'add_219'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(8855): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(8858): (vopt-2685) [TFMPC] - Too few port connections for 'add_218'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(8858): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(8861): (vopt-2685) [TFMPC] - Too few port connections for 'add_214'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(8861): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(8864): (vopt-2685) [TFMPC] - Too few port connections for 'add_213'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(8864): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(8867): (vopt-2685) [TFMPC] - Too few port connections for 'sub_202'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(8867): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(8870): (vopt-2685) [TFMPC] - Too few port connections for 'sub_204'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(8870): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(8873): (vopt-2685) [TFMPC] - Too few port connections for 'sub_203'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(8873): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(8876): (vopt-2685) [TFMPC] - Too few port connections for 'sub_200'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(8876): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(8879): (vopt-2685) [TFMPC] - Too few port connections for 'sub_201'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(8879): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(8882): (vopt-2685) [TFMPC] - Too few port connections for 'sub_199'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(8882): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(10179): (vopt-2685) [TFMPC] - Too few port connections for 'add_231'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(10179): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(10182): (vopt-2685) [TFMPC] - Too few port connections for 'add_219'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(10182): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(10185): (vopt-2685) [TFMPC] - Too few port connections for 'add_218'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(10185): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(10188): (vopt-2685) [TFMPC] - Too few port connections for 'add_214'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(10188): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(10191): (vopt-2685) [TFMPC] - Too few port connections for 'add_213'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(10191): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(10194): (vopt-2685) [TFMPC] - Too few port connections for 'sub_203'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(10194): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(10197): (vopt-2685) [TFMPC] - Too few port connections for 'sub_200'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(10197): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(10200): (vopt-2685) [TFMPC] - Too few port connections for 'sub_202'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(10200): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(10203): (vopt-2685) [TFMPC] - Too few port connections for 'sub_201'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(10203): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(10206): (vopt-2685) [TFMPC] - Too few port connections for 'sub_204'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(10206): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(10209): (vopt-2685) [TFMPC] - Too few port connections for 'sub_199'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(10209): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(12776): (vopt-2685) [TFMPC] - Too few port connections for 'add_231'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(12776): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(12779): (vopt-2685) [TFMPC] - Too few port connections for 'add_219'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(12779): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(12782): (vopt-2685) [TFMPC] - Too few port connections for 'add_218'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(12782): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(12785): (vopt-2685) [TFMPC] - Too few port connections for 'add_214'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(12785): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(12788): (vopt-2685) [TFMPC] - Too few port connections for 'add_213'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(12788): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(12791): (vopt-2685) [TFMPC] - Too few port connections for 'sub_202'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(12791): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(12794): (vopt-2685) [TFMPC] - Too few port connections for 'sub_201'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(12794): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(12797): (vopt-2685) [TFMPC] - Too few port connections for 'sub_204'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(12797): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(12800): (vopt-2685) [TFMPC] - Too few port connections for 'sub_203'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(12800): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(12803): (vopt-2685) [TFMPC] - Too few port connections for 'sub_200'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(12803): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(12806): (vopt-2685) [TFMPC] - Too few port connections for 'sub_199'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(12806): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(17899): (vopt-2685) [TFMPC] - Too few port connections for 'add_231'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(17899): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(17902): (vopt-2685) [TFMPC] - Too few port connections for 'add_219'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(17902): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(17905): (vopt-2685) [TFMPC] - Too few port connections for 'add_218'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(17905): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(17908): (vopt-2685) [TFMPC] - Too few port connections for 'add_214'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(17908): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(17911): (vopt-2685) [TFMPC] - Too few port connections for 'add_213'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(17911): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(17914): (vopt-2685) [TFMPC] - Too few port connections for 'sub_199'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(17914): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(17917): (vopt-2685) [TFMPC] - Too few port connections for 'sub_201'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(17917): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(17920): (vopt-2685) [TFMPC] - Too few port connections for 'sub_203'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(17920): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(17923): (vopt-2685) [TFMPC] - Too few port connections for 'sub_200'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(17923): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(17926): (vopt-2685) [TFMPC] - Too few port connections for 'sub_202'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(17926): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(17929): (vopt-2685) [TFMPC] - Too few port connections for 'sub_204'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(17929): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(16617): (vopt-2685) [TFMPC] - Too few port connections for 'add_231'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(16617): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(16620): (vopt-2685) [TFMPC] - Too few port connections for 'add_219'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(16620): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(16623): (vopt-2685) [TFMPC] - Too few port connections for 'add_218'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(16623): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(16626): (vopt-2685) [TFMPC] - Too few port connections for 'add_214'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(16626): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(16629): (vopt-2685) [TFMPC] - Too few port connections for 'add_213'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(16629): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(16632): (vopt-2685) [TFMPC] - Too few port connections for 'sub_199'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(16632): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(16635): (vopt-2685) [TFMPC] - Too few port connections for 'sub_202'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(16635): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(16638): (vopt-2685) [TFMPC] - Too few port connections for 'sub_201'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(16638): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(16641): (vopt-2685) [TFMPC] - Too few port connections for 'sub_204'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(16641): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(16644): (vopt-2685) [TFMPC] - Too few port connections for 'sub_203'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(16644): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(16647): (vopt-2685) [TFMPC] - Too few port connections for 'sub_200'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(16647): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(15346): (vopt-2685) [TFMPC] - Too few port connections for 'add_231'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(15346): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(15349): (vopt-2685) [TFMPC] - Too few port connections for 'add_219'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(15349): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(15352): (vopt-2685) [TFMPC] - Too few port connections for 'add_218'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(15352): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(15355): (vopt-2685) [TFMPC] - Too few port connections for 'add_214'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(15355): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(15358): (vopt-2685) [TFMPC] - Too few port connections for 'add_213'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(15358): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(15361): (vopt-2685) [TFMPC] - Too few port connections for 'sub_204'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(15361): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(15364): (vopt-2685) [TFMPC] - Too few port connections for 'sub_199'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(15364): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(15367): (vopt-2685) [TFMPC] - Too few port connections for 'sub_202'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(15367): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(15370): (vopt-2685) [TFMPC] - Too few port connections for 'sub_201'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(15370): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(15373): (vopt-2685) [TFMPC] - Too few port connections for 'sub_203'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(15373): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(15376): (vopt-2685) [TFMPC] - Too few port connections for 'sub_200'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(15376): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(11471): (vopt-2685) [TFMPC] - Too few port connections for 'add_231'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(11471): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(11474): (vopt-2685) [TFMPC] - Too few port connections for 'add_219'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(11474): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(11477): (vopt-2685) [TFMPC] - Too few port connections for 'add_218'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(11477): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(11480): (vopt-2685) [TFMPC] - Too few port connections for 'add_214'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(11480): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(11483): (vopt-2685) [TFMPC] - Too few port connections for 'add_213'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(11483): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(11486): (vopt-2685) [TFMPC] - Too few port connections for 'sub_204'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(11486): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(11489): (vopt-2685) [TFMPC] - Too few port connections for 'sub_201'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(11489): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(11492): (vopt-2685) [TFMPC] - Too few port connections for 'sub_202'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(11492): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(11495): (vopt-2685) [TFMPC] - Too few port connections for 'sub_203'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(11495): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(11498): (vopt-2685) [TFMPC] - Too few port connections for 'sub_200'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(11498): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: mapped/Top_Level.v(11501): (vopt-2685) [TFMPC] - Too few port connections for 'sub_199'.  Expected 5, found 4.
+# ** Warning: mapped/Top_Level.v(11501): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# Loading sv_std.std
+# Loading work.tb_Top_Level(fast)
+# Loading work.Top_Level(fast)
+# Loading work.AHB_wrapper(fast)
+# Loading work.AHB(fast)
+# Loading work.AHB_slave(fast)
+# Loading work.address_counter(fast)
+# Loading work.address_counter_DW01_dec_0(fast)
+# Loading work.address_counter_DW01_add_6(fast)
+# Loading work.address_counter_DW01_add_7(fast)
+# Loading work.address_counter_DW01_add_8(fast)
+# Loading work.address_counter_DW01_add_9(fast)
+# Loading work.address_counter_DW01_inc_2(fast)
+# Loading work.address_counter_DW01_inc_3(fast)
+# Loading work.grayscale(fast)
+# Loading work.grayscale_DW01_add_1(fast)
+# Loading work.buffer_window(fast)
+# Loading work.edge_detection_core(fast)
+# Loading work.edge_detection_8(fast)
+# Loading work.edge_detection_8_DW01_add_7(fast)
+# Loading work.edge_detection_8_DW01_add_8(fast)
+# Loading work.edge_detection_8_DW01_add_9(fast)
+# Loading work.edge_detection_8_DW01_add_10(fast)
+# Loading work.edge_detection_8_DW01_add_11(fast)
+# Loading work.edge_detection_8_DW01_sub_8(fast)
+# Loading work.edge_detection_8_DW01_sub_9(fast)
+# Loading work.edge_detection_8_DW01_sub_10(fast)
+# Loading work.edge_detection_8_DW01_sub_11(fast)
+# Loading work.edge_detection_8_DW01_sub_12(fast)
+# Loading work.edge_detection_8_DW01_sub_13(fast)
+# Loading work.edge_detection_7(fast)
+# Loading work.edge_detection_7_DW01_add_7(fast)
+# Loading work.edge_detection_7_DW01_add_8(fast)
+# Loading work.edge_detection_7_DW01_add_9(fast)
+# Loading work.edge_detection_7_DW01_add_10(fast)
+# Loading work.edge_detection_7_DW01_add_11(fast)
+# Loading work.edge_detection_7_DW01_sub_8(fast)
+# Loading work.edge_detection_7_DW01_sub_9(fast)
+# Loading work.edge_detection_7_DW01_sub_10(fast)
+# Loading work.edge_detection_7_DW01_sub_11(fast)
+# Loading work.edge_detection_7_DW01_sub_12(fast)
+# Loading work.edge_detection_7_DW01_sub_13(fast)
+# Loading work.edge_detection_6(fast)
+# Loading work.edge_detection_6_DW01_add_7(fast)
+# Loading work.edge_detection_6_DW01_add_8(fast)
+# Loading work.edge_detection_6_DW01_add_9(fast)
+# Loading work.edge_detection_6_DW01_add_10(fast)
+# Loading work.edge_detection_6_DW01_add_11(fast)
+# Loading work.edge_detection_6_DW01_sub_8(fast)
+# Loading work.edge_detection_6_DW01_sub_9(fast)
+# Loading work.edge_detection_6_DW01_sub_10(fast)
+# Loading work.edge_detection_6_DW01_sub_11(fast)
+# Loading work.edge_detection_6_DW01_sub_12(fast)
+# Loading work.edge_detection_6_DW01_sub_13(fast)
+# Loading work.edge_detection_5(fast)
+# Loading work.edge_detection_5_DW01_add_7(fast)
+# Loading work.edge_detection_5_DW01_add_8(fast)
+# Loading work.edge_detection_5_DW01_add_9(fast)
+# Loading work.edge_detection_5_DW01_add_10(fast)
+# Loading work.edge_detection_5_DW01_add_11(fast)
+# Loading work.edge_detection_5_DW01_sub_8(fast)
+# Loading work.edge_detection_5_DW01_sub_9(fast)
+# Loading work.edge_detection_5_DW01_sub_10(fast)
+# Loading work.edge_detection_5_DW01_sub_11(fast)
+# Loading work.edge_detection_5_DW01_sub_12(fast)
+# Loading work.edge_detection_5_DW01_sub_13(fast)
+# Loading work.edge_detection_4(fast)
+# Loading work.edge_detection_4_DW01_add_7(fast)
+# Loading work.edge_detection_4_DW01_add_8(fast)
+# Loading work.edge_detection_4_DW01_add_9(fast)
+# Loading work.edge_detection_4_DW01_add_10(fast)
+# Loading work.edge_detection_4_DW01_add_11(fast)
+# Loading work.edge_detection_4_DW01_sub_8(fast)
+# Loading work.edge_detection_4_DW01_sub_9(fast)
+# Loading work.edge_detection_4_DW01_sub_10(fast)
+# Loading work.edge_detection_4_DW01_sub_11(fast)
+# Loading work.edge_detection_4_DW01_sub_12(fast)
+# Loading work.edge_detection_4_DW01_sub_13(fast)
+# Loading work.edge_detection_3(fast)
+# Loading work.edge_detection_3_DW01_add_7(fast)
+# Loading work.edge_detection_3_DW01_add_8(fast)
+# Loading work.edge_detection_3_DW01_add_9(fast)
+# Loading work.edge_detection_3_DW01_add_10(fast)
+# Loading work.edge_detection_3_DW01_add_11(fast)
+# Loading work.edge_detection_3_DW01_sub_8(fast)
+# Loading work.edge_detection_3_DW01_sub_9(fast)
+# Loading work.edge_detection_3_DW01_sub_10(fast)
+# Loading work.edge_detection_3_DW01_sub_11(fast)
+# Loading work.edge_detection_3_DW01_sub_12(fast)
+# Loading work.edge_detection_3_DW01_sub_13(fast)
+# Loading work.edge_detection_2(fast)
+# Loading work.edge_detection_2_DW01_add_7(fast)
+# Loading work.edge_detection_2_DW01_add_8(fast)
+# Loading work.edge_detection_2_DW01_add_9(fast)
+# Loading work.edge_detection_2_DW01_add_10(fast)
+# Loading work.edge_detection_2_DW01_add_11(fast)
+# Loading work.edge_detection_2_DW01_sub_8(fast)
+# Loading work.edge_detection_2_DW01_sub_9(fast)
+# Loading work.edge_detection_2_DW01_sub_10(fast)
+# Loading work.edge_detection_2_DW01_sub_11(fast)
+# Loading work.edge_detection_2_DW01_sub_12(fast)
+# Loading work.edge_detection_2_DW01_sub_13(fast)
+# Loading work.edge_detection_1(fast)
+# Loading work.edge_detection_1_DW01_add_7(fast)
+# Loading work.edge_detection_1_DW01_add_8(fast)
+# Loading work.edge_detection_1_DW01_add_9(fast)
+# Loading work.edge_detection_1_DW01_add_10(fast)
+# Loading work.edge_detection_1_DW01_add_11(fast)
+# Loading work.edge_detection_1_DW01_sub_8(fast)
+# Loading work.edge_detection_1_DW01_sub_9(fast)
+# Loading work.edge_detection_1_DW01_sub_10(fast)
+# Loading work.edge_detection_1_DW01_sub_11(fast)
+# Loading work.edge_detection_1_DW01_sub_12(fast)
+# Loading work.edge_detection_1_DW01_sub_13(fast)
+# Loading work.edge_detection_0(fast)
+# Loading work.edge_detection_0_DW01_add_7(fast)
+# Loading work.edge_detection_0_DW01_add_8(fast)
+# Loading work.edge_detection_0_DW01_add_9(fast)
+# Loading work.edge_detection_0_DW01_add_10(fast)
+# Loading work.edge_detection_0_DW01_add_11(fast)
+# Loading work.edge_detection_0_DW01_sub_8(fast)
+# Loading work.edge_detection_0_DW01_sub_9(fast)
+# Loading work.edge_detection_0_DW01_sub_10(fast)
+# Loading work.edge_detection_0_DW01_sub_11(fast)
+# Loading work.edge_detection_0_DW01_sub_12(fast)
+# Loading work.edge_detection_0_DW01_sub_13(fast)
+# Loading work.buffer_2(fast)
+# Loading work.mcu(fast)
+# ** Warning: (vsim-PLI-3691) source/tb_Top_Level.sv(86): Expected a system task, not a system function '$fseek'.
+#         Region: /tb_Top_Level
+# ** Warning: (vsim-PLI-3691) source/tb_Top_Level.sv(88): Expected a system task, not a system function '$fseek'.
+#         Region: /tb_Top_Level
+# ** Warning: (vsim-PLI-3691) source/tb_Top_Level.sv(94): Expected a system task, not a system function '$fseek'.
+#         Region: /tb_Top_Level
+# ** Warning: (vsim-PLI-3691) source/tb_Top_Level.sv(101): Expected a system task, not a system function '$fseek'.
+#         Region: /tb_Top_Level
+# ** Warning: (vsim-PLI-3691) source/tb_Top_Level.sv(102): Expected a system task, not a system function '$fseek'.
+#         Region: /tb_Top_Level
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.math_real(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffsr(metastabilitywrapperarch)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.prim(body)
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.dffsr_core(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.oai21x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.aoi22x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nand2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.aoi21x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.oai22x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nand3x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.and2x2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.bufx2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.and2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx4(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.mux2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.xnor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.or2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.xor2x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.or2x2(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.invx8(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.hax1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.nor3x1(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.bufx4(behavioral)#1
+# Loading /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work.fax1(behavioral)#1
+# End time: 15:19:41 on Apr 28,2017, Elapsed time: 0:00:11
+# Errors: 0, Warnings: 219

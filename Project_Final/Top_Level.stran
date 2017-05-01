@@ -1,0 +1,50 @@
+# //  Questa Sim-64
+# //  Version 10.3b linux_x86_64 May 29 2014
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -Lf /home/ecegrid/a/ece337/Course_Prod/IP_Libs/Lab_IP_Lib/Vsim -L /home/ecegrid/a/ece337/Course_Prod/Cell_Libs/AMI_05/vhdl_work -L /home/ecegrid/a/ece337/Class0.5u/GOLD_LIB "+no_glitch_msg" -coverage -voptargs="+acc" -i -t ps source_work.tb_Top_Level 
+# Start time: 15:18:28 on Apr 28,2017
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "buffer_window(fast)".
+# ** Note: (vopt-143) Recognized 2 FSMs in module "address_counter(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "buffer_2(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "edge_detection(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "AHB(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "mcu(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "grayscale(fast)".
+# Loading sv_std.std
+# Loading work.tb_Top_Level(fast)
+# Loading work.Top_Level(fast)
+# Loading work.AHB_wrapper(fast)
+# Loading work.AHB(fast)
+# Loading work.AHB_slave(fast)
+# Loading work.address_counter(fast)
+# Loading work.grayscale(fast)
+# Loading work.buffer_window(fast)
+# Loading work.edge_detection_core(fast)
+# Loading work.edge_detection(fast)
+# Loading work.buffer_2(fast)
+# Loading work.mcu(fast)
+# ** Warning: (vsim-PLI-3691) source/tb_Top_Level.sv(86): Expected a system task, not a system function '$fseek'.
+#         Region: /tb_Top_Level
+# ** Warning: (vsim-PLI-3691) source/tb_Top_Level.sv(88): Expected a system task, not a system function '$fseek'.
+#         Region: /tb_Top_Level
+# ** Warning: (vsim-PLI-3691) source/tb_Top_Level.sv(94): Expected a system task, not a system function '$fseek'.
+#         Region: /tb_Top_Level
+# ** Warning: (vsim-PLI-3691) source/tb_Top_Level.sv(101): Expected a system task, not a system function '$fseek'.
+#         Region: /tb_Top_Level
+# ** Warning: (vsim-PLI-3691) source/tb_Top_Level.sv(102): Expected a system task, not a system function '$fseek'.
+#         Region: /tb_Top_Level
+run 3ms
+# ** Info:   104,    80
+#    Time: 5 ns  Scope: tb_Top_Level File: source/tb_Top_Level.sv Line: 100
+# ** Info: DONE
+#    Time: 2296609 ns  Scope: tb_Top_Level File: source/tb_Top_Level.sv Line: 213
+# End time: 15:18:44 on Apr 28,2017, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 5

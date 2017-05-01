@@ -1,0 +1,1145 @@
+[04/27 18:32:21      0s] 
+[04/27 18:32:21      0s] Cadence Innovus(TM) Implementation System.
+[04/27 18:32:21      0s] Copyright 2016 Cadence Design Systems, Inc. All rights reserved worldwide.
+[04/27 18:32:21      0s] 
+[04/27 18:32:21      0s] Version:	v16.12-s051_1, built Wed Aug 17 12:18:54 PDT 2016
+[04/27 18:32:21      0s] Options:	
+[04/27 18:32:21      0s] Date:		Thu Apr 27 18:32:21 2017
+[04/27 18:32:21      0s] Host:		ecegrid-thin2.ecn.purdue.edu (x86_64 w/Linux 2.6.32-696.1.1.el6.x86_64) (6cores*24cpus*Intel(R) Xeon(R) CPU X5675 @ 3.07GHz 12288KB)
+[04/27 18:32:21      0s] OS:		Red Hat Enterprise Linux Workstation release 6.9 (Santiago)
+[04/27 18:32:21      0s] 
+[04/27 18:32:21      0s] License:
+[04/27 18:32:21      0s] 		invs	Innovus Implementation System	16.1	checkout succeeded
+[04/27 18:32:21      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[04/27 18:32:32     11s] @(#)CDS: Innovus v16.12-s051_1 (64bit) 08/17/2016 12:18 (Linux 2.6.18-194.el5)
+[04/27 18:32:32     11s] @(#)CDS: NanoRoute 16.12-s051_1 NR160816-1350/16_12-UB (database version 2.30, 347.6.1) {superthreading v1.30}
+[04/27 18:32:32     11s] @(#)CDS: AAE 16.12-s026 (64bit) 08/17/2016 (Linux 2.6.18-194.el5)
+[04/27 18:32:32     11s] @(#)CDS: CTE 16.12-s023_1 () Aug 12 2016 01:35:46 ( )
+[04/27 18:32:32     11s] @(#)CDS: SYNTECH 16.12-s009_1 () Aug 11 2016 01:33:09 ( )
+[04/27 18:32:32     11s] @(#)CDS: CPE v16.12-s054
+[04/27 18:32:32     11s] @(#)CDS: IQRC/TQRC 15.2.4-s467 (64bit) Wed Jul 20 17:12:38 PDT 2016 (Linux 2.6.18-194.el5)
+[04/27 18:32:32     11s] @(#)CDS: OA 22.50-p049 Fri Jun 10 10:56:20 2016
+[04/27 18:32:32     11s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[04/27 18:32:32     11s] @(#)CDS: RCDB 11.8
+[04/27 18:32:32     11s] --- Running on ecegrid-thin2.ecn.purdue.edu (x86_64 w/Linux 2.6.32-696.1.1.el6.x86_64) (6cores*24cpus*Intel(R) Xeon(R) CPU X5675 @ 3.07GHz 12288KB) ---
+[04/27 18:32:32     11s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_10370_ecegrid-thin2.ecn.purdue.edu_mg163_dZ0DDE.
+
+[04/27 18:32:33     11s] 
+[04/27 18:32:33     11s] **INFO:  MMMC transition support version v31-84 
+[04/27 18:32:33     11s] 
+[04/27 18:32:33     11s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[04/27 18:32:33     11s] <CMD> suppressMessage ENCEXT-2799
+[04/27 18:32:33     12s] <CMD> getDrawView
+[04/27 18:32:33     12s] <CMD> loadWorkspace -name Physical
+[04/27 18:32:33     12s] <CMD> win
+[04/27 18:32:34     12s] <CMD> deleteSelectedFromFPlan
+[04/27 18:32:34     12s] <CMD> setLayerPreference allM2 -isVisible 0
+[04/27 18:32:34     12s] <CMD> setLayerPreference allM2Cont -isVisible 0
+[04/27 18:32:34     12s] <CMD> setLayerPreference allM3Cont -isVisible 0
+[04/27 18:32:34     12s] <CMD> setLayerPreference allM4Cont -isVisible 1
+[04/27 18:32:34     12s] <CMD> setLayerPreference allM5Cont -isVisible 1
+[04/27 18:32:34     12s] <CMD> setLayerPreference allM6Cont -isVisible 1
+[04/27 18:32:34     12s] <CMD> setLayerPreference allM7Cont -isVisible 1
+[04/27 18:32:34     12s] <CMD> setLayerPreference allM8Cont -isVisible 1
+[04/27 18:32:34     12s] <CMD> setLayerPreference allM9Cont -isVisible 1
+[04/27 18:32:34     12s] <CMD> setLayerPreference allM10Cont -isVisible 1
+[04/27 18:32:34     12s] <CMD> setLayerPreference allM11Cont -isVisible 1
+[04/27 18:32:34     12s] <CMD> setLayerPreference allM12Cont -isVisible 1
+[04/27 18:33:01     14s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[04/27 18:33:01     14s] <CMD> suppressMessage ENCEXT-2799
+[04/27 18:33:01     14s] <CMD> getDrawView
+[04/27 18:33:01     14s] <CMD> loadWorkspace -name Physical
+[04/27 18:33:01     14s] <CMD> win
+[04/27 18:33:01     14s] <CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+[04/27 18:33:01     14s] <CMD> set conf_qxconf_file NULL
+[04/27 18:33:01     14s] <CMD> set conf_qxlib_file NULL
+[04/27 18:33:01     14s] <CMD> set defHierChar /
+[04/27 18:33:01     14s] Set Default Input Pin Transition as 0.1 ps.
+[04/27 18:33:01     14s] <CMD> set delaycal_input_transition_delay 0.1ps
+[04/27 18:33:01     14s] <CMD> set distributed_client_message_echo 1
+[04/27 18:33:01     14s] <CMD> set distributed_mmmc_disable_reports_auto_redirection 0
+[04/27 18:33:01     14s] <CMD> set floorplan_default_site core
+[04/27 18:33:01     14s] <CMD> set fpIsMaxIoHeight 0
+[04/27 18:33:01     14s] <CMD> set init_gnd_net gnd
+[04/27 18:33:01     14s] <CMD> set init_io_file innovus_pins.io
+[04/27 18:33:01     14s] <CMD> set init_lef_file osu05_stdcells.lef
+[04/27 18:33:01     14s] <CMD> set init_mmmc_file osu05_MMMC.view
+[04/27 18:33:01     14s] <CMD> set init_oa_search_lib {}
+[04/27 18:33:01     14s] <CMD> set init_pwr_net vdd
+[04/27 18:33:01     14s] <CMD> set init_verilog mapped/Top_Level.v
+[04/27 18:33:01     14s] <CMD> set latch_time_borrow_mode max_borrow
+[04/27 18:33:01     14s] <CMD> set pegDefaultResScaleFactor 1
+[04/27 18:33:01     14s] <CMD> set pegDetailResScaleFactor 1
+[04/27 18:33:01     14s] <CMD> set report_inactive_arcs_format {from to when arc_type sense reason}
+[04/27 18:33:01     14s] <CMD> set timing_library_ccs_noise_vin_clip_points {}
+[04/27 18:33:01     14s] <CMD> set timing_library_ccs_noise_vout_clip_points {}
+[04/27 18:33:01     14s] <CMD> set timing_library_load_pin_cap_indices {}
+[04/27 18:33:01     14s] <CMD> set timing_library_write_library_to_directory {}
+[04/27 18:33:01     14s] <CMD> set tso_post_client_restore_command {update_timing ; write_eco_opt_db ;}
+[04/27 18:33:01     14s] <CMD> init_design
+[04/27 18:33:01     14s] #- Begin Load MMMC data ... (date=04/27 18:33:01, mem=504.7M)
+[04/27 18:33:01     14s] #- End Load MMMC data ... (date=04/27 18:33:01, total cpu=0:00:00.0, real=0:00:00.0, peak res=504.7M, current mem=504.7M)
+[04/27 18:33:01     14s] **WARN: (GLOBAL-100):	Global 'timing_disable_backward_compatible_mmmc_mode' has become obsolete. It will be removed in the next release.
+[04/27 18:33:01     14s] 
+[04/27 18:33:01     14s] Loading LEF file osu05_stdcells.lef ...
+[04/27 18:33:01     14s] **WARN: (IMPLF-108):	There is no overlap layer defined in any LEF file
+[04/27 18:33:01     14s] so you are unable to create rectilinear partition in a hierarchical flow.
+[04/27 18:33:01     14s] Set DBUPerIGU to M2 pitch 2400.
+[04/27 18:33:01     14s] 
+[04/27 18:33:01     14s] viaInitial starts at Thu Apr 27 18:33:01 2017
+**WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURN1 GENERATE.
+[04/27 18:33:01     14s] Type 'man IMPPP-557' for more detail.
+[04/27 18:33:01     14s] **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURN2 GENERATE.
+[04/27 18:33:01     14s] Type 'man IMPPP-557' for more detail.
+[04/27 18:33:01     14s] **WARN: (IMPPP-557):	A single-layer VIARULE GENERATE for turn-vias is obsolete and is being ignored. Remove this statement from the technology file: VIARULE TURN3 GENERATE.
+[04/27 18:33:01     14s] Type 'man IMPPP-557' for more detail.
+[04/27 18:33:01     14s] viaInitial ends at Thu Apr 27 18:33:01 2017
+Loading view definition file from osu05_MMMC.view
+[04/27 18:33:01     14s] Reading OSUv2.7 timing library '/package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib' ...
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A' of cell 'AND2X1' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'B' of cell 'AND2X1' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AND2X1' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A' of cell 'AND2X2' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'B' of cell 'AND2X2' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AND2X2' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A' of cell 'AOI21X1' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'B' of cell 'AOI21X1' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'C' of cell 'AOI21X1' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AOI21X1' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A' of cell 'AOI22X1' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'B' of cell 'AOI22X1' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'C' of cell 'AOI22X1' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'D' of cell 'AOI22X1' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AOI22X1' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A' of cell 'BUFX2' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'BUFX2' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A' of cell 'BUFX4' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'BUFX4' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] **WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A' of cell 'CLKBUF1' is not defined in the library. (File /package/eda/cells/OSU/v2.7/cadence/lib/ami05/signalstorm/osu05_stdcells.lib)
+[04/27 18:33:01     14s] Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+[04/27 18:33:01     14s] Read 39 cells in library 'osu05_stdcells' 
+[04/27 18:33:01     14s] *** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.24min, fe_real=0.67min, fe_mem=530.3M) ***
+[04/27 18:33:01     14s] #- Begin Load netlist data ... (date=04/27 18:33:01, mem=530.3M)
+[04/27 18:33:01     14s] *** Begin netlist parsing (mem=530.3M) ***
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'YPAD' of cell 'PADGND' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'gnd' of cell 'PADGND' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'YPAD' of cell 'PADVDD' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'vdd' of cell 'PADVDD' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'gnd' of cell 'XOR2X1' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'vdd' of cell 'XOR2X1' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'gnd' of cell 'XNOR2X1' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'vdd' of cell 'XNOR2X1' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'gnd' of cell 'TBUFX2' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'vdd' of cell 'TBUFX2' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'gnd' of cell 'TBUFX1' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'vdd' of cell 'TBUFX1' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'gnd' of cell 'OR2X2' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'vdd' of cell 'OR2X2' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'gnd' of cell 'OR2X1' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'vdd' of cell 'OR2X1' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'gnd' of cell 'OAI22X1' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'vdd' of cell 'OAI22X1' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'gnd' of cell 'OAI21X1' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (IMPVL-159):	Pin 'vdd' of cell 'OAI21X1' is defined in LEF but not in the timing library.
+[04/27 18:33:01     14s] **WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+[04/27 18:33:01     14s] To increase the message display limit, refer to the product command reference manual.
+[04/27 18:33:01     14s] Created 39 new cells from 1 timing libraries.
+[04/27 18:33:01     14s] Reading netlist ...
+[04/27 18:33:01     14s] Backslashed names will retain backslash and a trailing blank character.
+[04/27 18:33:01     14s] Reading verilog netlist 'mapped/Top_Level.v'
+[04/27 18:33:02     14s] 
+[04/27 18:33:02     14s] *** Memory Usage v#1 (Current mem = 534.262M, initial mem = 174.582M) ***
+[04/27 18:33:02     14s] *** End netlist parsing (cpu=0:00:00.2, real=0:00:01.0, mem=534.3M) ***
+[04/27 18:33:02     14s] #- End Load netlist data ... (date=04/27 18:33:02, total cpu=0:00:00.3, real=0:00:01.0, peak res=534.3M, current mem=534.3M)
+[04/27 18:33:02     14s] Top level cell is Top_Level.
+[04/27 18:33:02     15s] **WARN: (IMPTS-124):	Timing library description of pin 'YPAD' is missing from cell 'PADGND' in timing library 'osu05_stdcells'.
+[04/27 18:33:02     15s] **WARN: (IMPTS-124):	Timing library description of pin 'YPAD' is missing from cell 'PADVDD' in timing library 'osu05_stdcells'.
+[04/27 18:33:02     15s] Hooked 39 DB cells to tlib cells.
+[04/27 18:33:02     15s] Starting recursive module instantiation check.
+[04/27 18:33:02     15s] No recursion found.
+[04/27 18:33:02     15s] Building hierarchical netlist for Cell Top_Level ...
+[04/27 18:33:02     15s] *** Netlist is unique.
+[04/27 18:33:02     15s] ** info: there are 166 modules.
+[04/27 18:33:02     15s] ** info: there are 14964 stdCell insts.
+[04/27 18:33:02     15s] 
+[04/27 18:33:02     15s] *** Memory Usage v#1 (Current mem = 573.770M, initial mem = 174.582M) ***
+[04/27 18:33:02     15s] Reading IO assignment file "innovus_pins.io" ...
+[04/27 18:33:02     15s] **WARN: (IMPFP-3961):	The techSite 'IO' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[04/27 18:33:02     15s] Type 'man IMPFP-3961' for more detail.
+[04/27 18:33:02     15s] **WARN: (IMPFP-3961):	The techSite 'corner' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+[04/27 18:33:02     15s] Type 'man IMPFP-3961' for more detail.
+[04/27 18:33:02     15s] Horizontal Layer M1 offset = 1500 (derived)
+[04/27 18:33:02     15s] Vertical Layer M2 offset = 1200 (derived)
+[04/27 18:33:02     15s] Set Default Net Delay as 1000 ps.
+[04/27 18:33:02     15s] Set Default Net Load as 0.5 pF. 
+[04/27 18:33:02     15s] Set Default Input Pin Transition as 0.1 ps.
+[04/27 18:33:02     15s] Extraction setup Started 
+[04/27 18:33:02     15s] Initializing multi-corner RC extraction with 1 active RC Corners ...
+[04/27 18:33:02     15s] Reading Capacitance Table File osu05.capTbl ...
+[04/27 18:33:02     15s] Process name: DIFFERENT_KINDS_OF_DIELECTRIC.
+[04/27 18:33:02     15s] Importing multi-corner RC tables ... 
+[04/27 18:33:02     15s] Summary of Active RC-Corners : 
+[04/27 18:33:02     15s]  
+[04/27 18:33:02     15s]  Analysis View: osu05
+[04/27 18:33:02     15s]     RC-Corner Name        : osu05
+[04/27 18:33:02     15s]     RC-Corner Index       : 0
+[04/27 18:33:02     15s]     RC-Corner Temperature : 30 Celsius
+[04/27 18:33:02     15s]     RC-Corner Cap Table   : 'osu05.capTbl'
+[04/27 18:33:02     15s]     RC-Corner PreRoute Res Factor         : 1
+[04/27 18:33:02     15s]     RC-Corner PreRoute Cap Factor         : 1
+[04/27 18:33:02     15s]     RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+[04/27 18:33:02     15s]     RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+[04/27 18:33:02     15s]     RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+[04/27 18:33:02     15s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[04/27 18:33:02     15s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[04/27 18:33:02     15s]     RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+[04/27 18:33:02     15s]     RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+[04/27 18:33:02     15s] *Info: initialize multi-corner CTS.
+[04/27 18:33:02     15s] Reading timing constraints file 'prects.sdc' ...
+[04/27 18:33:02     15s] Current (total cpu=0:00:15.5, real=0:00:41.0, peak res=256.3M, current mem=687.1M)
+[04/27 18:33:02     15s] **WARN: (TCLNL-330):	set_input_delay on clock root 'clk' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File prects.sdc, Line 14).
+[04/27 18:33:02     15s] 
+[04/27 18:33:02     15s] INFO (CTE): Reading of timing constraints file prects.sdc completed, with 1 WARNING
+[04/27 18:33:02     15s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=271.4M, current mem=703.3M)
+[04/27 18:33:02     15s] Current (total cpu=0:00:15.6, real=0:00:41.0, peak res=271.4M, current mem=703.3M)
+[04/27 18:33:02     15s] Reading timing constraints file 'postcts.sdc' ...
+[04/27 18:33:02     15s] Current (total cpu=0:00:15.6, real=0:00:41.0, peak res=271.4M, current mem=703.3M)
+[04/27 18:33:02     15s] Resetting all latency settings from fanout cone of clock 'clk' (File postcts.sdc, Line 2).
+[04/27 18:33:02     15s] 
+[04/27 18:33:03     16s] INFO (CTE): Constraints read successfully.
+[04/27 18:33:03     16s] Ending "Constraint file reading stats" (total cpu=0:00:00.6, real=0:00:01.0, peak res=285.2M, current mem=717.6M)
+[04/27 18:33:03     16s] Current (total cpu=0:00:16.2, real=0:00:42.0, peak res=285.2M, current mem=717.6M)
+[04/27 18:33:03     16s] Summary for sequential cells idenfication: 
+[04/27 18:33:03     16s] Identified SBFF number: 3
+[04/27 18:33:03     16s] Identified MBFF number: 0
+[04/27 18:33:03     16s] Not identified SBFF number: 0
+[04/27 18:33:03     16s] Not identified MBFF number: 0
+[04/27 18:33:03     16s] Number of sequential cells which are not FFs: 1
+[04/27 18:33:03     16s] 
+[04/27 18:33:03     16s] Total number of combinational cells: 26
+[04/27 18:33:03     16s] Total number of sequential cells: 4
+[04/27 18:33:03     16s] Total number of tristate cells: 2
+[04/27 18:33:03     16s] Total number of level shifter cells: 0
+[04/27 18:33:03     16s] Total number of power gating cells: 0
+[04/27 18:33:03     16s] Total number of isolation cells: 0
+[04/27 18:33:03     16s] Total number of power switch cells: 0
+[04/27 18:33:03     16s] Total number of pulse generator cells: 0
+[04/27 18:33:03     16s] Total number of always on buffers: 0
+[04/27 18:33:03     16s] Total number of retention cells: 0
+[04/27 18:33:03     16s] List of usable buffers: BUFX2 BUFX4 CLKBUF1
+[04/27 18:33:03     16s] Total number of usable buffers: 3
+[04/27 18:33:03     16s] List of unusable buffers:
+[04/27 18:33:03     16s] Total number of unusable buffers: 0
+[04/27 18:33:03     16s] List of usable inverters: INVX2 INVX1 INVX4 INVX8
+[04/27 18:33:03     16s] Total number of usable inverters: 4
+[04/27 18:33:03     16s] List of unusable inverters:
+[04/27 18:33:03     16s] Total number of unusable inverters: 0
+[04/27 18:33:03     16s] List of identified usable delay cells: CLKBUF2 CLKBUF3
+[04/27 18:33:03     16s] Total number of identified usable delay cells: 2
+[04/27 18:33:03     16s] List of identified unusable delay cells:
+[04/27 18:33:03     16s] Total number of identified unusable delay cells: 0
+[04/27 18:33:03     16s] 
+[04/27 18:33:03     16s] *** Summary of all messages that are not suppressed in this session:
+[04/27 18:33:03     16s] Severity  ID               Count  Summary                                  
+[04/27 18:33:03     16s] WARNING   IMPLF-108            1  There is no overlap layer defined in any...
+[04/27 18:33:03     16s] WARNING   IMPFP-3961           2  The techSite '%s' has no related standar...
+[04/27 18:33:03     16s] WARNING   IMPTS-124            2  Timing library description of pin '%s' i...
+[04/27 18:33:03     16s] WARNING   IMPVL-159           68  Pin '%s' of cell '%s' is defined in LEF ...
+[04/27 18:33:03     16s] WARNING   IMPPP-557            3  A single-layer VIARULE GENERATE for turn...
+[04/27 18:33:03     16s] *** Message Summary: 76 warning(s), 0 error(s)
+[04/27 18:33:03     16s] 
+[04/27 18:33:03     16s] <CMD> floorPlan -r 1.0 0.6 50 50 50 50
+[04/27 18:33:03     16s] Snap core to left to manufacture grid: 49.9500.
+[04/27 18:33:03     16s] Snap core to bottom to manufacture grid: 49.9500.
+[04/27 18:33:03     16s] Snap core to right to manufacture grid: 49.9500.
+[04/27 18:33:03     16s] Snap core to top to manufacture grid: 49.9500.
+[04/27 18:33:03     16s] Horizontal Layer M1 offset = 1500 (derived)
+[04/27 18:33:03     16s] Vertical Layer M2 offset = 1200 (derived)
+[04/27 18:33:03     16s] **WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+[04/27 18:33:03     16s] <CMD> unfixAllIos
+[04/27 18:33:03     16s] <CMD> legalizePin
+[04/27 18:33:03     16s] #- Begin legalizePin (date=04/27 18:33:03, mem=725.6M)
+[04/27 18:33:03     16s] 
+[04/27 18:33:03     16s] Start pin legalization for the partition [Top_Level]:
+[04/27 18:33:03     16s] Moving Pin [clk] to LEGAL location (  13.200 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [n_rst] to LEGAL location ( 104.400 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[29]] to LEGAL location (   0.000  109.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[28]] to LEGAL location (   0.000  166.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[27]] to LEGAL location (   0.000  220.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[26]] to LEGAL location (   0.000  277.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[25]] to LEGAL location (   0.000  331.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[24]] to LEGAL location (   0.000  388.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[23]] to LEGAL location (   0.000  442.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[22]] to LEGAL location (   0.000  499.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[21]] to LEGAL location (   0.000  553.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[20]] to LEGAL location (   0.000  610.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[19]] to LEGAL location (   0.000  664.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[18]] to LEGAL location (   0.000  721.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[17]] to LEGAL location (   0.000  775.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[16]] to LEGAL location (   0.000  832.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[15]] to LEGAL location (   0.000  886.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[14]] to LEGAL location (   0.000  943.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[13]] to LEGAL location (   0.000  997.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[12]] to LEGAL location (   0.000 1054.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[10]] to LEGAL location (   0.000 1165.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[9]] to LEGAL location (   0.000 1219.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[8]] to LEGAL location (   0.000 1273.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[7]] to LEGAL location (   0.000 1330.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[6]] to LEGAL location (   0.000 1384.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[5]] to LEGAL location (   0.000 1441.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[4]] to LEGAL location (   0.000 1495.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[3]] to LEGAL location (   0.000 1552.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[2]] to LEGAL location (   0.000 1606.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[1]] to LEGAL location (   0.000 1663.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_haddr[0]] to LEGAL location (   0.000 1717.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[31]] to LEGAL location (3498.000    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[29]] to LEGAL location (3511.200  109.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[28]] to LEGAL location (3511.200  166.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[27]] to LEGAL location (3511.200  220.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[26]] to LEGAL location (3511.200  277.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[25]] to LEGAL location (3511.200  331.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[24]] to LEGAL location (3511.200  388.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[23]] to LEGAL location (3511.200  442.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[22]] to LEGAL location (3511.200  499.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[21]] to LEGAL location (3511.200  553.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[20]] to LEGAL location (3511.200  610.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[19]] to LEGAL location (3511.200  664.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[18]] to LEGAL location (3511.200  721.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[17]] to LEGAL location (3511.200  775.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[16]] to LEGAL location (3511.200  832.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[15]] to LEGAL location (3511.200  886.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[14]] to LEGAL location (3511.200  943.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[13]] to LEGAL location (3511.200  997.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[12]] to LEGAL location (3511.200 1054.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[10]] to LEGAL location (3511.200 1165.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[9]] to LEGAL location (3511.200 1219.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[8]] to LEGAL location (3511.200 1273.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[7]] to LEGAL location (3511.200 1330.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[6]] to LEGAL location (3511.200 1384.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[5]] to LEGAL location (3511.200 1441.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[4]] to LEGAL location (3511.200 1495.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[3]] to LEGAL location (3511.200 1552.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[2]] to LEGAL location (3511.200 1606.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[1]] to LEGAL location (3511.200 1663.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_haddr[0]] to LEGAL location (3511.200 1717.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[31]] to LEGAL location ( 320.400    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[30]] to LEGAL location ( 315.600    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[29]] to LEGAL location ( 426.000    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[28]] to LEGAL location ( 531.600    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[27]] to LEGAL location ( 639.600    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[26]] to LEGAL location ( 745.200    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[25]] to LEGAL location ( 850.800    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[24]] to LEGAL location ( 958.800    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[23]] to LEGAL location (1064.400    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[22]] to LEGAL location (1170.000    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[21]] to LEGAL location (1278.000    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[20]] to LEGAL location (1383.600    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[19]] to LEGAL location (1489.200    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[18]] to LEGAL location (1597.200    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[17]] to LEGAL location (1702.800    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[16]] to LEGAL location (1808.400    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[15]] to LEGAL location (1916.400    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[14]] to LEGAL location (2022.000    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[13]] to LEGAL location (2127.600    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[12]] to LEGAL location (2235.600    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[11]] to LEGAL location (2341.200    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[10]] to LEGAL location (2446.800    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[9]] to LEGAL location (2554.800    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[8]] to LEGAL location (2660.400    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[7]] to LEGAL location (2766.000    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[6]] to LEGAL location (2874.000    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[5]] to LEGAL location (2979.600    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[4]] to LEGAL location (3085.200    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[3]] to LEGAL location (3193.200    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[2]] to LEGAL location (3298.800    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[1]] to LEGAL location (3404.400    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hrdata[0]] to LEGAL location (3511.200   16.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[31]] to LEGAL location ( 310.800 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[30]] to LEGAL location ( 414.000 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[29]] to LEGAL location ( 517.200 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[28]] to LEGAL location ( 620.400 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[27]] to LEGAL location ( 723.600 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[26]] to LEGAL location ( 826.800 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[25]] to LEGAL location ( 930.000 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[24]] to LEGAL location (1033.200 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[23]] to LEGAL location (1136.400 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[22]] to LEGAL location (1239.600 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[21]] to LEGAL location (1342.800 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[20]] to LEGAL location (1446.000 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[19]] to LEGAL location (1549.200 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[18]] to LEGAL location (1652.400 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[17]] to LEGAL location (1755.600 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[16]] to LEGAL location (1858.800 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[15]] to LEGAL location (1962.000 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[14]] to LEGAL location (2065.200 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[13]] to LEGAL location (2168.400 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[12]] to LEGAL location (2271.600 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[11]] to LEGAL location (2374.800 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[10]] to LEGAL location (2478.000 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[9]] to LEGAL location (2581.200 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[8]] to LEGAL location (2684.400 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[7]] to LEGAL location (2787.600 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[6]] to LEGAL location (2890.800 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[5]] to LEGAL location (2994.000 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[4]] to LEGAL location (3097.200 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[3]] to LEGAL location (3200.400 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[2]] to LEGAL location (3303.600 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[1]] to LEGAL location (3406.800 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hrdata[0]] to LEGAL location (3511.200 3475.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[31]] to LEGAL location (   0.000 1774.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[30]] to LEGAL location (   0.000 1828.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[29]] to LEGAL location (   0.000 1885.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[28]] to LEGAL location (   0.000 1939.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[27]] to LEGAL location (   0.000 1996.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[26]] to LEGAL location (   0.000 2050.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[25]] to LEGAL location (   0.000 2107.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[24]] to LEGAL location (   0.000 2161.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[23]] to LEGAL location (   0.000 2218.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[21]] to LEGAL location (   0.000 2329.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[20]] to LEGAL location (   0.000 2383.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[19]] to LEGAL location (   0.000 2437.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[18]] to LEGAL location (   0.000 2494.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[17]] to LEGAL location (   0.000 2548.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[16]] to LEGAL location (   0.000 2605.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[15]] to LEGAL location (   0.000 2659.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[14]] to LEGAL location (   0.000 2716.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[13]] to LEGAL location (   0.000 2770.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[12]] to LEGAL location (   0.000 2827.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[11]] to LEGAL location (   0.000 2881.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[10]] to LEGAL location (   0.000 2938.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[9]] to LEGAL location (   0.000 2992.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[8]] to LEGAL location (   0.000 3049.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[7]] to LEGAL location (   0.000 3103.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[6]] to LEGAL location (   0.000 3160.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[5]] to LEGAL location (   0.000 3214.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[4]] to LEGAL location (   0.000 3271.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[3]] to LEGAL location (   0.000 3325.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[2]] to LEGAL location (   0.000 3382.500 3 )
+[04/27 18:33:03     16s] Moving Pin [m_hwdata[0]] to LEGAL location (   0.000 3475.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[31]] to LEGAL location (3511.200 1774.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[30]] to LEGAL location (3511.200 1828.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[29]] to LEGAL location (3511.200 1885.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[28]] to LEGAL location (3511.200 1939.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[27]] to LEGAL location (3511.200 1996.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[26]] to LEGAL location (3511.200 2050.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[25]] to LEGAL location (3511.200 2107.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[24]] to LEGAL location (3511.200 2161.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[23]] to LEGAL location (3511.200 2218.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[21]] to LEGAL location (3511.200 2329.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[20]] to LEGAL location (3511.200 2383.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[19]] to LEGAL location (3511.200 2437.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[18]] to LEGAL location (3511.200 2494.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[17]] to LEGAL location (3511.200 2548.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[16]] to LEGAL location (3511.200 2605.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[15]] to LEGAL location (3511.200 2659.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[14]] to LEGAL location (3511.200 2716.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[13]] to LEGAL location (3511.200 2770.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[12]] to LEGAL location (3511.200 2827.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[11]] to LEGAL location (3511.200 2881.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[10]] to LEGAL location (3511.200 2938.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[9]] to LEGAL location (3511.200 2992.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[8]] to LEGAL location (3511.200 3049.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[7]] to LEGAL location (3511.200 3103.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[6]] to LEGAL location (3511.200 3160.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[5]] to LEGAL location (3511.200 3214.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[4]] to LEGAL location (3511.200 3271.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[3]] to LEGAL location (3511.200 3325.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[2]] to LEGAL location (3511.200 3382.500 3 )
+[04/27 18:33:03     16s] Moving Pin [s_hwdata[0]] to LEGAL location (3498.000 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hwrite] to LEGAL location ( 106.800    0.000 2 )
+[04/27 18:33:03     16s] Moving Pin [s_hready] to LEGAL location ( 207.600 3492.000 2 )
+[04/27 18:33:03     16s] Moving Pin [m_hready] to LEGAL location ( 212.400    0.000 2 )
+[04/27 18:33:03     16s] Summary report for top level: [Top_Level] 
+[04/27 18:33:03     16s] 	Total Pads                         : 0
+[04/27 18:33:03     16s] 	Total Pins                         : 198
+[04/27 18:33:03     16s] 	Legally Assigned Pins              : 198
+[04/27 18:33:03     16s] 	Illegally Assigned Pins            : 0
+[04/27 18:33:03     16s] 	Unplaced Pins                      : 0
+[04/27 18:33:03     16s] 	Constant/Spl Net Pins              : 0
+[04/27 18:33:03     16s] 	Internal Pins                      : 0
+[04/27 18:33:03     16s] 	Legally Assigned Feedthrough Pins  : 0
+[04/27 18:33:03     16s] 	Illegally Assigned Feedthrough Pins: 0
+[04/27 18:33:03     16s] End of Summary report
+[04/27 18:33:03     16s] 188 pin(s) of the Partition Top_Level were legalized.
+[04/27 18:33:03     16s] End pin legalization for the partition [Top_Level].
+[04/27 18:33:03     16s] 
+[04/27 18:33:03     16s] #- End legalizePin (date=04/27 18:33:03, total cpu=0:00:00.0, real=0:00:00.0, peak res=725.6M, current mem=725.6M)
+[04/27 18:33:03     16s] <CMD> addRing -spacing_bottom 9.9 -width_left 9.9 -width_bottom 9.9 -width_top 9.9 -spacing_top 9.9 -layer_bottom metal1 -width_right 9.9 -around default_power_domain -center 1 -layer_top metal1 -spacing_right 9.9 -spacing_left 9.9 -layer_right metal2 -layer_left metal2 -offset 9.9 -nets { gnd vdd }
+[04/27 18:33:03     16s] #- Begin addRing (date=04/27 18:33:03, mem=725.6M)
+[04/27 18:33:03     16s] **WARN: (IMPPP-4022):	Option "-spacing_bottom" is obsolete and has been replaced by "-spacing". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-spacing"..
+[04/27 18:33:03     16s] **WARN: (IMPPP-4022):	Option "-width_left" is obsolete and has been replaced by "-width". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-width"..
+[04/27 18:33:03     16s] **WARN: (IMPPP-4022):	Option "-width_bottom" is obsolete and has been replaced by "-width". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-width"..
+[04/27 18:33:03     16s] **WARN: (IMPPP-4022):	Option "-width_top" is obsolete and has been replaced by "-width". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-width"..
+[04/27 18:33:03     16s] **WARN: (IMPPP-4022):	Option "-spacing_top" is obsolete and has been replaced by "-spacing". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-spacing"..
+[04/27 18:33:03     16s] **WARN: (IMPPP-4022):	Option "-layer_bottom" is obsolete and has been replaced by "-layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-layer"..
+[04/27 18:33:03     16s] **WARN: (IMPPP-4022):	Option "-width_right" is obsolete and has been replaced by "-width". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-width"..
+[04/27 18:33:03     16s] **WARN: (IMPPP-4022):	Option "-layer_top" is obsolete and has been replaced by "-layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-layer"..
+[04/27 18:33:03     16s] **WARN: (IMPPP-4022):	Option "-spacing_right" is obsolete and has been replaced by "-spacing". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-spacing"..
+[04/27 18:33:03     16s] **WARN: (IMPPP-4022):	Option "-spacing_left" is obsolete and has been replaced by "-spacing". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-spacing"..
+[04/27 18:33:03     16s] **WARN: (IMPPP-4022):	Option "-layer_right" is obsolete and has been replaced by "-layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-layer"..
+[04/27 18:33:03     16s] **WARN: (IMPPP-4022):	Option "-layer_left" is obsolete and has been replaced by "-layer". The obsolete option still works in this release, but to avoid this warning and to ensure compatibility with future releases, update your script to use "-layer"..
+[04/27 18:33:03     16s] 
+[04/27 18:33:03     16s] Ring generation is complete; vias are now being generated.
+[04/27 18:33:03     16s] addRing created 8 wires.
+[04/27 18:33:03     16s] ViaGen created 8 vias and deleted 0 via to avoid violation.
+[04/27 18:33:03     16s] +--------+----------------+----------------+
+[04/27 18:33:03     16s] |  Layer |     Created    |     Deleted    |
+[04/27 18:33:03     16s] +--------+----------------+----------------+
+[04/27 18:33:03     16s] | metal1 |        4       |       NA       |
+[04/27 18:33:03     16s] |   via  |        8       |        0       |
+[04/27 18:33:03     16s] | metal2 |        4       |       NA       |
+[04/27 18:33:03     16s] +--------+----------------+----------------+
+[04/27 18:33:03     16s] #- End addRing (date=04/27 18:33:03, total cpu=0:00:00.0, real=0:00:00.0, peak res=725.6M, current mem=725.6M)
+[04/27 18:33:03     16s] <CMD> setPlaceMode -congEffort medium
+[04/27 18:33:03     16s] <CMD> placeDesign -inPlaceOpt
+[04/27 18:33:03     16s] **WARN: the option '-inPlaceOpt' will become obsolete in the next major release. Instead use the following mode  'setOptMode -allEndPoints true' and run regular placeDesign followed by optDesign -preCts. The obsolete option still works in this release, but to avoid this warning and to ensure the compatibility with future relases, update your script to use the recommended setting.
+[04/27 18:33:03     16s] **WARN: the option '-inPlaceOpt' will become obsolete in the next major release. Instead use the following mode  'setOptMode -allEndPoints true' and run regular placeDesign followed by optDesign -preCts. The obsolete option still works in this release, but to avoid this warning and to ensure the compatibility with future relases, update your script to use the recommended setting.
+[04/27 18:33:03     16s] *** Starting placeDesign concurrent flow ***
+[04/27 18:33:03     16s] **INFO: Enable pre-place timing setting for timing analysis
+[04/27 18:33:03     16s] Set Using Default Delay Limit as 101.
+[04/27 18:33:03     16s] **WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+[04/27 18:33:03     16s] Set Default Net Delay as 0 ps.
+[04/27 18:33:03     16s] Set Default Net Load as 0 pF. 
+[04/27 18:33:03     16s] **INFO: Analyzing IO path groups for slack adjustment
+[04/27 18:33:03     16s] Effort level <high> specified for reg2reg_tmp.10370 path_group
+[04/27 18:33:03     16s] #################################################################################
+[04/27 18:33:03     16s] # Design Stage: PreRoute
+[04/27 18:33:03     16s] # Design Name: Top_Level
+[04/27 18:33:03     16s] # Design Mode: 90nm
+[04/27 18:33:03     16s] # Analysis Mode: MMMC Non-OCV 
+[04/27 18:33:03     16s] # Parasitics Mode: No SPEF/RCDB
+[04/27 18:33:03     16s] # Signoff Settings: SI Off 
+[04/27 18:33:03     16s] #################################################################################
+[04/27 18:33:03     16s] Calculate delays in Single mode...
+[04/27 18:33:04     16s] Topological Sorting (CPU = 0:00:00.0, MEM = 725.6M, InitMEM = 725.6M)
+[04/27 18:33:04     17s] siFlow : Timing analysis mode is single, using late cdB files
+[04/27 18:33:06     19s] Total number of fetched objects 15337
+[04/27 18:33:06     19s] End Timing Check Calculation. (CPU Time=0:00:00.1, Real Time=0:00:00.0)
+[04/27 18:33:06     19s] End delay calculation. (MEM=877.051 CPU=0:00:02.3 REAL=0:00:02.0)
+[04/27 18:33:06     19s] *** CDM Built up (cpu=0:00:02.7  real=0:00:03.0  mem= 877.1M) ***
+[04/27 18:33:07     20s] **INFO: Disable pre-place timing setting for timing analysis
+[04/27 18:33:07     20s] Set Using Default Delay Limit as 1000.
+[04/27 18:33:07     20s] Set Default Net Delay as 1000 ps.
+[04/27 18:33:07     20s] Set Default Net Load as 0.5 pF. 
+[04/27 18:33:07     20s] *** Start deleteBufferTree ***
+[04/27 18:33:08     20s] Info: Detect buffers to remove automatically.
+[04/27 18:33:08     20s] Analyzing netlist ...
+[04/27 18:33:08     21s] Updating netlist
+[04/27 18:33:08     21s] 
+[04/27 18:33:08     21s] *summary: 754 instances (buffers/inverters) removed
+[04/27 18:33:08     21s] *** Finish deleteBufferTree (0:00:00.7) ***
+[04/27 18:33:08     21s] *** ThreeLayerMode is automatically turned on for small designs with less than 4 layers.
+[04/27 18:33:08     21s] ThreeLayerMode is on. Timing-driven placement option disabled.
+[04/27 18:33:08     21s] Deleted 0 physical inst  (cell - / prefix -).
+[04/27 18:33:08     21s] Extracting standard cell pins and blockage ...... 
+[04/27 18:33:08     21s] Pin and blockage extraction finished
+[04/27 18:33:08     21s] Extracting macro/IO cell pins and blockage ...... 
+[04/27 18:33:08     21s] Pin and blockage extraction finished
+[04/27 18:33:08     21s] *** Starting "NanoPlace(TM) placement v#1 (mem=862.7M)" ...
+[04/27 18:33:08     21s] Options: clkGateAware pinGuide congEffort=medium gpeffort=medium 
+[04/27 18:33:08     21s] #std cell=14276 (0 fixed + 14276 movable) #block=0 (0 floating + 0 preplaced)
+[04/27 18:33:08     21s] #ioInst=0 #net=14646 #term=46223 #term/net=3.16, #fixedIo=198, #floatIo=0, #fixedPin=0, #floatPin=168
+[04/27 18:33:08     21s] stdCell: 14276 single + 0 double + 0 multi
+[04/27 18:33:08     21s] Total standard cell length = 226.7448 (mm), area = 6.8023 (mm^2)
+[04/27 18:33:08     21s] Core basic site is core
+[04/27 18:33:08     21s] Estimated cell power/ground rail width = 3.750 um
+[04/27 18:33:08     21s] Layer info - lib-1st H=1, V=2.  Cell-FPin=1. Top-pin=2
+[04/27 18:33:08     21s] Apply auto density screen in pre-place stage.
+[04/27 18:33:08     21s] Auto density screen increases utilization from 0.588 to 0.589
+[04/27 18:33:08     21s] Auto density screen runtime: cpu = 0:00:00.0 real = 0:00:00.0 mem = 862.7M
+[04/27 18:33:08     21s] Average module density = 0.589.
+[04/27 18:33:08     21s] Density for the design = 0.589.
+[04/27 18:33:08     21s]        = stdcell_area 94477 sites (6802344 um^2) / alloc_area 160339 sites (11544397 um^2).
+[04/27 18:33:08     21s] Pin Density = 0.2879.
+[04/27 18:33:08     21s]             = total # of pins 46223 / total area 160573.
+[04/27 18:33:08     21s] Initial padding reaches pin density 0.411 for top
+[04/27 18:33:08     21s] Initial padding increases density from 0.589 to 0.950 for top
+[04/27 18:33:08     21s] === lastAutoLevel = 8 
+[04/27 18:33:08     21s] **WARN: (IMPSP-9531):	Turning off clkGateAware when timingDriven is off
+[04/27 18:33:09     21s] Iteration  1: Total net bbox = 7.350e+05 (3.81e+05 3.54e+05)
+[04/27 18:33:09     21s]               Est.  stn bbox = 7.826e+05 (4.03e+05 3.79e+05)
+[04/27 18:33:09     21s]               cpu = 0:00:00.2 real = 0:00:00.0 mem = 872.7M
+[04/27 18:33:09     21s] Iteration  2: Total net bbox = 7.350e+05 (3.81e+05 3.54e+05)
+[04/27 18:33:09     21s]               Est.  stn bbox = 7.826e+05 (4.03e+05 3.79e+05)
+[04/27 18:33:09     21s]               cpu = 0:00:00.0 real = 0:00:00.0 mem = 872.7M
+[04/27 18:33:09     21s] exp_mt_sequential is set from setPlaceMode option to 1
+[04/27 18:33:09     21s] Setting dotProdMode from setPlaceMode option to Multi-thread sequential mode (nrThread=1)
+[04/27 18:33:09     21s] place_exp_mt_interval set to default 32
+[04/27 18:33:09     21s] place_exp_mt_interval_bias (first half) set to default 0.750000
+[04/27 18:33:13     25s] Iteration  3: Total net bbox = 4.539e+05 (1.97e+05 2.57e+05)
+[04/27 18:33:13     25s]               Est.  stn bbox = 5.807e+05 (2.61e+05 3.20e+05)
+[04/27 18:33:13     25s]               cpu = 0:00:03.9 real = 0:00:04.0 mem = 888.7M
+[04/27 18:33:19     31s] Iteration  4: Total net bbox = 1.589e+06 (6.99e+05 8.90e+05)
+[04/27 18:33:19     31s]               Est.  stn bbox = 1.882e+06 (8.19e+05 1.06e+06)
+[04/27 18:33:19     31s]               cpu = 0:00:05.9 real = 0:00:06.0 mem = 888.7M
+[04/27 18:33:27     39s] Iteration  5: Total net bbox = 1.594e+06 (6.96e+05 8.98e+05)
+[04/27 18:33:27     39s]               Est.  stn bbox = 1.912e+06 (8.15e+05 1.10e+06)
+[04/27 18:33:27     39s]               cpu = 0:00:07.7 real = 0:00:08.0 mem = 888.7M
+[04/27 18:33:34     46s] Iteration  6: Total net bbox = 1.612e+06 (7.21e+05 8.91e+05)
+[04/27 18:33:34     46s]               Est.  stn bbox = 1.945e+06 (8.48e+05 1.10e+06)
+[04/27 18:33:34     46s]               cpu = 0:00:07.0 real = 0:00:07.0 mem = 918.7M
+[04/27 18:33:34     46s] Initialize trialRoute multiThread mode= 16383 (=0x3fff) and nrThread= 0.
+[04/27 18:33:34     46s] enableMT= 3
+[04/27 18:33:34     46s] useHNameCompare= 3 (lazy mode)
+[04/27 18:33:34     46s] doMTMainInit= 1
+[04/27 18:33:34     46s] doMTFlushLazyWireDelete= 1
+[04/27 18:33:34     46s] useFastLRoute= 0
+[04/27 18:33:34     46s] useFastCRoute= 1
+[04/27 18:33:34     46s] doMTNetInitAdjWires= 1
+[04/27 18:33:34     46s] wireMPoolNoThreadCheck= 1
+[04/27 18:33:34     46s] allMPoolNoThreadCheck= 1
+[04/27 18:33:34     46s] doNotUseMPoolInCRoute= 1
+[04/27 18:33:34     46s] doMTSprFixZeroViaCodes= 1
+[04/27 18:33:34     46s] doMTDtrRoute1CleanupA= 1
+[04/27 18:33:34     46s] doMTDtrRoute1CleanupB= 1
+[04/27 18:33:34     46s] doMTWireLenCalc= 0
+[04/27 18:33:34     46s] doSkipQALenRecalc= 1
+[04/27 18:33:34     46s] doMTMainCleanup= 1
+[04/27 18:33:34     46s] doMTMoveCellTermsToMSLayer= 1
+[04/27 18:33:34     46s] doMTConvertWiresToNewViaCode= 1
+[04/27 18:33:34     46s] doMTRemoveAntenna= 1
+[04/27 18:33:34     46s] doMTCheckConnectivity= 1
+[04/27 18:33:34     46s] enableRuntimeLog= 0
+[04/27 18:33:34     46s] Congestion driven padding in post-place stage.
+[04/27 18:33:34     46s] Congestion driven padding increases utilization from 0.950 to 0.951
+[04/27 18:33:34     46s] Congestion driven padding runtime: cpu = 0:00:00.1 real = 0:00:00.0 mem = 902.7M
+[04/27 18:33:40     52s] Iteration  7: Total net bbox = 1.668e+06 (7.69e+05 9.00e+05)
+[04/27 18:33:40     52s]               Est.  stn bbox = 2.007e+06 (8.98e+05 1.11e+06)
+[04/27 18:33:40     52s]               cpu = 0:00:06.0 real = 0:00:06.0 mem = 902.7M
+[04/27 18:33:40     52s] Iteration  8: Total net bbox = 1.668e+06 (7.69e+05 9.00e+05)
+[04/27 18:33:40     52s]               Est.  stn bbox = 2.007e+06 (8.98e+05 1.11e+06)
+[04/27 18:33:40     52s]               cpu = 0:00:00.0 real = 0:00:00.0 mem = 902.7M
+[04/27 18:33:45     57s] Initialize trialRoute multiThread mode= 16383 (=0x3fff) and nrThread= 0.
+[04/27 18:33:45     57s] Congestion driven padding in post-place stage.
+[04/27 18:33:45     57s] Congestion driven padding increases utilization from 0.951 to 0.951
+[04/27 18:33:45     57s] Congestion driven padding runtime: cpu = 0:00:00.1 real = 0:00:00.0 mem = 902.7M
+[04/27 18:33:49     61s] Iteration  9: Total net bbox = 1.657e+06 (7.70e+05 8.87e+05)
+[04/27 18:33:49     61s]               Est.  stn bbox = 2.009e+06 (9.08e+05 1.10e+06)
+[04/27 18:33:49     61s]               cpu = 0:00:09.6 real = 0:00:09.0 mem = 902.7M
+[04/27 18:33:49     61s] Iteration 10: Total net bbox = 1.657e+06 (7.70e+05 8.87e+05)
+[04/27 18:33:49     61s]               Est.  stn bbox = 2.009e+06 (9.08e+05 1.10e+06)
+[04/27 18:33:49     61s]               cpu = 0:00:00.0 real = 0:00:00.0 mem = 902.7M
+[04/27 18:34:07     79s] Iteration 11: Total net bbox = 1.867e+06 (8.60e+05 1.01e+06)
+[04/27 18:34:07     79s]               Est.  stn bbox = 2.228e+06 (1.00e+06 1.23e+06)
+[04/27 18:34:07     79s]               cpu = 0:00:17.4 real = 0:00:18.0 mem = 902.7M
+[04/27 18:34:07     79s] Iteration 12: Total net bbox = 1.867e+06 (8.60e+05 1.01e+06)
+[04/27 18:34:07     79s]               Est.  stn bbox = 2.228e+06 (1.00e+06 1.23e+06)
+[04/27 18:34:07     79s]               cpu = 0:00:00.0 real = 0:00:00.0 mem = 902.7M
+[04/27 18:34:07     79s] Iteration 13: Total net bbox = 1.867e+06 (8.60e+05 1.01e+06)
+[04/27 18:34:07     79s]               Est.  stn bbox = 2.228e+06 (1.00e+06 1.23e+06)
+[04/27 18:34:07     79s]               cpu = 0:00:00.0 real = 0:00:00.0 mem = 902.7M
+[04/27 18:34:07     79s] *** cost = 1.867e+06 (8.60e+05 1.01e+06) (cpu for global=0:00:57.9) real=0:00:59.0***
+[04/27 18:34:07     79s] Core Placement runtime cpu: 0:00:57.2 real: 0:00:59.0
+[04/27 18:34:07     79s] **WARN: (IMPSP-9025):	No scan chain specified/traced.
+[04/27 18:34:07     79s] Type 'man IMPSP-9025' for more detail.
+[04/27 18:34:07     79s] #spOpts: mergeVia=F 
+[04/27 18:34:07     79s] Core basic site is core
+[04/27 18:34:07     79s] Layer info - lib-1st H=1, V=2.  Cell-FPin=1. Top-pin=2
+[04/27 18:34:07     79s] *** Starting refinePlace (0:01:19 mem=902.7M) ***
+[04/27 18:34:07     79s] Total net bbox length = 1.867e+06 (8.599e+05 1.007e+06) (ext = 4.546e+04)
+[04/27 18:34:07     79s] Starting refinePlace ...
+[04/27 18:34:07     79s] Move report: placeLevelShifters moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+[04/27 18:34:07     79s] default core: bins with density >  0.75 = 2.08 % ( 3 / 144 )
+[04/27 18:34:07     79s] Density distribution unevenness ratio = 6.377%
+[04/27 18:34:07     79s]   Spread Effort: high, pre-route mode, useDDP on.
+[04/27 18:34:07     79s] [CPU] RefinePlace/preRPlace (cpu=0:00:00.5, real=0:00:00.0, mem=902.7MB) @(0:01:19 - 0:01:20).
+[04/27 18:34:07     79s] Move report: preRPlace moves 14275 insts, mean move: 9.18 um, max move: 49.69 um
+[04/27 18:34:07     79s] 	Max move on inst (AHB_DUT/I/U419): (70.93, 2018.42) --> (103.20, 2001.00)
+[04/27 18:34:07     79s] 	Length: 2 sites, height: 1 rows, site name: core, cell type: INVX2
+[04/27 18:34:07     79s] wireLenOptFixPriorityInst 0 inst fixed
+[04/27 18:34:07     79s] Placement tweakage begins.
+[04/27 18:34:07     79s] wire length = 2.367e+06
+[04/27 18:34:09     81s] wire length = 2.254e+06
+[04/27 18:34:09     81s] Placement tweakage ends.
+[04/27 18:34:09     81s] Move report: tweak moves 3533 insts, mean move: 24.71 um, max move: 214.80 um
+[04/27 18:34:09     81s] 	Max move on inst (EDC_DUT/E7/U222): (1660.80, 861.00) --> (1596.00, 1011.00)
+[04/27 18:34:09     81s] [CPU] RefinePlace/TweakPlacement (cpu=0:00:02.0, real=0:00:02.0, mem=902.7MB) @(0:01:20 - 0:01:22).
+[04/27 18:34:09     81s] Move report: legalization moves 0 insts, mean move: 0.00 um, max move: 0.00 um
+[04/27 18:34:09     81s] [CPU] RefinePlace/Legalization (cpu=0:00:00.1, real=0:00:00.0, mem=902.7MB) @(0:01:22 - 0:01:22).
+[04/27 18:34:09     81s] Move report: Detail placement moves 14275 insts, mean move: 13.90 um, max move: 208.16 um
+[04/27 18:34:09     81s] 	Max move on inst (EDC_DUT/E7/U222): (1660.36, 867.20) --> (1596.00, 1011.00)
+[04/27 18:34:09     81s] 	Runtime: CPU: 0:00:02.5 REAL: 0:00:02.0 MEM: 902.7MB
+[04/27 18:34:09     81s] Statistics of distance of Instance movement in refine placement:
+[04/27 18:34:09     81s]   maximum (X+Y) =       208.16 um
+[04/27 18:34:09     81s]   inst (EDC_DUT/E7/U222) with max move: (1660.36, 867.199) -> (1596, 1011)
+[04/27 18:34:09     81s]   mean    (X+Y) =        13.90 um
+[04/27 18:34:09     81s] Total instances flipped for WireLenOpt: 619
+[04/27 18:34:09     81s] Total instances flipped, including legalization: 1
+[04/27 18:34:09     81s] Summary Report:
+[04/27 18:34:09     81s] Instances move: 14275 (out of 14276 movable)
+[04/27 18:34:09     81s] Instances flipped: 1
+[04/27 18:34:09     81s] Mean displacement: 13.90 um
+[04/27 18:34:09     81s] Max displacement: 208.16 um (Instance: EDC_DUT/E7/U222) (1660.36, 867.199) -> (1596, 1011)
+[04/27 18:34:09     81s] 	Length: 2 sites, height: 1 rows, site name: core, cell type: INVX2
+[04/27 18:34:09     81s] Total instances moved : 14275
+[04/27 18:34:09     81s] Total net bbox length = 1.798e+06 (7.888e+05 1.009e+06) (ext = 4.452e+04)
+[04/27 18:34:09     81s] Runtime: CPU: 0:00:02.6 REAL: 0:00:02.0 MEM: 902.7MB
+[04/27 18:34:09     81s] [CPU] RefinePlace/total (cpu=0:00:02.6, real=0:00:02.0, mem=902.7MB) @(0:01:19 - 0:01:22).
+[04/27 18:34:09     81s] *** Finished refinePlace (0:01:22 mem=902.7M) ***
+[04/27 18:34:09     81s] *** End of Placement (cpu=0:01:01, real=0:01:01, mem=902.7M) ***
+[04/27 18:34:09     81s] #spOpts: mergeVia=F 
+[04/27 18:34:09     81s] Core basic site is core
+[04/27 18:34:09     81s] Layer info - lib-1st H=1, V=2.  Cell-FPin=1. Top-pin=2
+[04/27 18:34:09     81s] default core: bins with density >  0.75 = 2.78 % ( 4 / 144 )
+[04/27 18:34:09     81s] Density distribution unevenness ratio = 6.376%
+[04/27 18:34:09     81s] setAnalysisMode  -domain allClockDomain -checkType setup -skew true -usefulSkew false -log true -warn true -caseAnalysis true -sequentialConstProp false -moduleIOCstr true -clockPropagation forcedIdeal -clkSrcPath false -timingSelfLoopsNoSkew false -asyncChecks async -useOutputPinCap true -latch true -latchDelayCalIteration 2 -timeBorrowing true -latchFullDelayCal false -clockGatingCheck true -enableMultipleDriveNet true -analysisType single -cppr false -clkNetsMarking beforeConstProp -honorVirtualPartition false -honorClockDomains false
+[04/27 18:34:09     81s] **INFO: setDesignMode -flowEffort standard -> setting 'setOptMode -allEndPoints true' for the duration of this command.
+[04/27 18:34:09     81s] Core basic site is core
+[04/27 18:34:09     81s] Layer info - lib-1st H=1, V=2.  Cell-FPin=1. Top-pin=2
+[04/27 18:34:09     81s] #spOpts: mergeVia=F 
+[04/27 18:34:09     82s] GigaOpt running with 1 threads.
+[04/27 18:34:09     82s] Info: 1 threads available for lower-level modules during optimization.
+[04/27 18:34:09     82s] #spOpts: mergeVia=F 
+[04/27 18:34:09     82s] Summary for sequential cells idenfication: 
+[04/27 18:34:09     82s] Identified SBFF number: 3
+[04/27 18:34:09     82s] Identified MBFF number: 0
+[04/27 18:34:09     82s] Not identified SBFF number: 0
+[04/27 18:34:09     82s] Not identified MBFF number: 0
+[04/27 18:34:09     82s] Number of sequential cells which are not FFs: 1
+[04/27 18:34:09     82s] 
+[04/27 18:34:09     82s] **WARN: (IMPOPT-6118):	The following cells have a dont_touch property but without being dont_use.
+[04/27 18:34:09     82s] To avoid such a configuration impacting timing closure, since otherwise such cells could be inserted but never optimized or removed, optDesign is treating the following cells as dont_use.
+[04/27 18:34:09     82s] 			Cell PADVDD is dont_touch but not dont_use
+[04/27 18:34:09     82s] 			Cell PADNC is dont_touch but not dont_use
+[04/27 18:34:09     82s] 			Cell PADGND is dont_touch but not dont_use
+[04/27 18:34:09     82s] 			Cell PADFC is dont_touch but not dont_use
+[04/27 18:34:09     82s] 	...
+[04/27 18:34:09     82s] 	Reporting only the 20 first cells found...
+[04/27 18:34:09     82s] 
+[04/27 18:34:09     82s] **optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 875.1M, totSessionCpu=0:01:22 **
+[04/27 18:34:10     82s] Added -handlePreroute to trialRouteMode
+[04/27 18:34:10     82s] *** optDesign -preCTS ***
+[04/27 18:34:10     82s] DRC Margin: user margin 0.0; extra margin 0.2
+[04/27 18:34:10     82s] Setup Target Slack: user slack 0; extra slack 0.1
+[04/27 18:34:10     82s] Hold Target Slack: user slack 0
+[04/27 18:34:10     82s] No user sequential activity specified, applying default sequential activity of "0.2" for Dynamic Power reporting.
+[04/27 18:34:10     82s] Summary for sequential cells idenfication: 
+[04/27 18:34:10     82s] Identified SBFF number: 3
+[04/27 18:34:10     82s] Identified MBFF number: 0
+[04/27 18:34:10     82s] Not identified SBFF number: 0
+[04/27 18:34:10     82s] Not identified MBFF number: 0
+[04/27 18:34:10     82s] Number of sequential cells which are not FFs: 1
+[04/27 18:34:10     82s] 
+[04/27 18:34:10     82s] Start to check current routing status for nets...
+[04/27 18:34:10     82s] Using hname+ instead name for net compare
+[04/27 18:34:10     82s] All nets will be re-routed.
+[04/27 18:34:10     82s] End to check current routing status for nets (mem=875.1M)
+[04/27 18:34:10     82s] ### Creating LA Mngr. totSessionCpu=0:01:22 mem=875.1M
+[04/27 18:34:10     82s] ### Creating LA Mngr, finished. totSessionCpu=0:01:22 mem=875.1M
+[04/27 18:34:10     82s] [NR-eGR] Detected a user setting of 'setTrialRouteMode -handlePreroute true' which was ignored.
+[04/27 18:34:10     82s] [PSP] Started earlyGlobalRoute kernel
+[04/27 18:34:10     82s] [PSP] Initial Peak syMemory usage = 875.1 MB
+[04/27 18:34:10     82s] (I)       Reading DB...
+[04/27 18:34:10     82s] (I)       congestionReportName   : 
+[04/27 18:34:10     82s] (I)       layerRangeFor2DCongestion : 
+[04/27 18:34:10     82s] (I)       buildTerm2TermWires    : 1
+[04/27 18:34:10     82s] (I)       doTrackAssignment      : 1
+[04/27 18:34:10     82s] (I)       dumpBookshelfFiles     : 0
+[04/27 18:34:10     82s] (I)       numThreads             : 1
+[04/27 18:34:10     82s] [NR-eGR] honorMsvRouteConstraint: false
+[04/27 18:34:10     82s] (I)       honorPin               : false
+[04/27 18:34:10     82s] (I)       honorPinGuide          : true
+[04/27 18:34:10     82s] (I)       honorPartition         : false
+[04/27 18:34:10     82s] (I)       allowPartitionCrossover: false
+[04/27 18:34:10     82s] (I)       honorSingleEntry       : true
+[04/27 18:34:10     82s] (I)       honorSingleEntryStrong : true
+[04/27 18:34:10     82s] (I)       handleViaSpacingRule   : false
+[04/27 18:34:10     82s] (I)       handleEolSpacingRule   : false
+[04/27 18:34:10     82s] (I)       PDConstraint           : none
+[04/27 18:34:10     82s] (I)       expBetterNDRHandling   : false
+[04/27 18:34:10     82s] [NR-eGR] honorClockSpecNDR      : 0
+[04/27 18:34:10     82s] (I)       routingEffortLevel     : 3
+[04/27 18:34:10     82s] (I)       effortLevel            : standard
+[04/27 18:34:10     82s] [NR-eGR] minRouteLayer          : 2
+[04/27 18:34:10     82s] [NR-eGR] maxRouteLayer          : 2147483647
+[04/27 18:34:10     82s] (I)       numRowsPerGCell        : 1
+[04/27 18:34:10     82s] (I)       speedUpLargeDesign     : 0
+[04/27 18:34:10     82s] (I)       speedUpBlkViolationClean: 1
+[04/27 18:34:10     82s] (I)       multiThreadingTA       : 1
+[04/27 18:34:10     82s] (I)       blockedPinEscape       : 1
+[04/27 18:34:10     82s] (I)       blkAwareLayerSwitching : 1
+[04/27 18:34:10     82s] (I)       betterClockWireModeling: 1
+[04/27 18:34:10     82s] (I)       congestionCleanMode    : 0
+[04/27 18:34:10     82s] (I)       optimizationMode       : false
+[04/27 18:34:10     82s] (I)       routeSecondPG          : false
+[04/27 18:34:10     82s] (I)       punchThroughDistance   : 500.00
+[04/27 18:34:10     82s] (I)       scenicBound            : 1.15
+[04/27 18:34:10     82s] (I)       maxScenicToAvoidBlk    : 100.00
+[04/27 18:34:10     82s] (I)       source-to-sink ratio   : 0.00
+[04/27 18:34:10     82s] (I)       targetCongestionRatioH : 1.00
+[04/27 18:34:10     82s] (I)       targetCongestionRatioV : 1.00
+[04/27 18:34:10     82s] (I)       layerCongestionRatio   : 0.70
+[04/27 18:34:10     82s] (I)       m1CongestionRatio      : 0.10
+[04/27 18:34:10     82s] (I)       m2m3CongestionRatio    : 0.70
+[04/27 18:34:10     82s] (I)       localRouteEffort       : 1.00
+[04/27 18:34:10     82s] (I)       numSitesBlockedByOneVia: 8.00
+[04/27 18:34:10     82s] (I)       supplyScaleFactorH     : 1.00
+[04/27 18:34:10     82s] (I)       supplyScaleFactorV     : 1.00
+[04/27 18:34:10     82s] (I)       highlight3DOverflowFactor: 0.00
+[04/27 18:34:10     82s] (I)       doubleCutViaModelingRatio: 0.00
+[04/27 18:34:10     82s] (I)       blockTrack             : 
+[04/27 18:34:10     82s] (I)       routeVias              : 
+[04/27 18:34:10     82s] (I)       readTROption           : true
+[04/27 18:34:10     82s] (I)       extraSpacingFactor     : 1.00
+[04/27 18:34:10     82s] [NR-eGR] numTracksPerClockWire  : 0
+[04/27 18:34:10     82s] (I)       routeSelectedNetsOnly  : false
+[04/27 18:34:10     82s] (I)       before initializing RouteDB syMemory usage = 880.6 MB
+[04/27 18:34:10     82s] (I)       starting read tracks
+[04/27 18:34:10     82s] (I)       build grid graph
+[04/27 18:34:10     82s] (I)       build grid graph start
+[04/27 18:34:10     82s] [NR-eGR] Layer1 has no routable track
+[04/27 18:34:10     82s] [NR-eGR] Layer2 has single uniform track structure
+[04/27 18:34:10     82s] [NR-eGR] Layer3 has single uniform track structure
+[04/27 18:34:10     82s] (I)       build grid graph end
+[04/27 18:34:10     82s] (I)       numViaLayers=2
+[04/27 18:34:10     82s] (I)       Reading via M2_M1 for layer: 0 
+[04/27 18:34:10     82s] (I)       Reading via M3_M2 for layer: 1 
+[04/27 18:34:10     82s] (I)       end build via table
+[04/27 18:34:10     82s] [NR-eGR] numRoutingBlks=0 numInstBlks=3445 numPGBlocks=12 numBumpBlks=0 numBoundaryFakeBlks=0
+[04/27 18:34:10     82s] [NR-eGR] numPreroutedNet = 0  numPreroutedWires = 0
+[04/27 18:34:10     82s] (I)       readDataFromPlaceDB
+[04/27 18:34:10     82s] (I)       Read net information..
+[04/27 18:34:10     82s] [NR-eGR] Read numTotalNets=14646  numIgnoredNets=0
+[04/27 18:34:10     82s] (I)       Read testcase time = 0.010 seconds
+[04/27 18:34:10     82s] 
+[04/27 18:34:10     82s] (I)       build grid graph start
+[04/27 18:34:10     82s] (I)       build grid graph end
+[04/27 18:34:10     82s] (I)       Model blockage into capacity
+[04/27 18:34:10     82s] (I)       Read numBlocks=32054  numPreroutedWires=0  numCapScreens=0
+[04/27 18:34:10     82s] (I)       blocked area on Layer1 : 0  (0.00%)
+[04/27 18:34:10     82s] (I)       blocked area on Layer2 : 6285273120000  (51.26%)
+[04/27 18:34:10     82s] (I)       blocked area on Layer3 : 0  (0.00%)
+[04/27 18:34:10     82s] (I)       Modeling time = 0.000 seconds
+[04/27 18:34:10     82s] 
+[04/27 18:34:10     82s] (I)       totalPins=46224  totalGlobalPin=41842 (90.52%)
+[04/27 18:34:10     82s] (I)       Number of ignored nets = 0
+[04/27 18:34:10     82s] (I)       Number of fixed nets = 0.  Ignored: Yes
+[04/27 18:34:10     82s] (I)       Number of clock nets = 1.  Ignored: No
+[04/27 18:34:10     82s] (I)       Number of analog nets = 0.  Ignored: Yes
+[04/27 18:34:10     82s] (I)       Number of special nets = 0.  Ignored: Yes
+[04/27 18:34:10     82s] (I)       Number of mixed signal nets = 0.  Ignored: Yes
+[04/27 18:34:10     82s] (I)       Number of skip routing nets = 0.  Ignored: Yes
+[04/27 18:34:10     82s] (I)       Number of nets with ignore route flag = 0.  Ignored: No
+[04/27 18:34:10     82s] (I)       Number of nets with one or no pins = 0.  Ignored: Yes
+[04/27 18:34:10     82s] (I)       Number of two pin nets which has pins at the same location = 0.  Ignored: Yes
+[04/27 18:34:10     82s] [NR-eGR] There are 1 clock nets ( 0 with NDR ).
+[04/27 18:34:10     82s] (I)       Before initializing earlyGlobalRoute syMemory usage = 883.0 MB
+[04/27 18:34:10     82s] (I)       Layer1  viaCost=200.00
+[04/27 18:34:10     82s] (I)       Layer2  viaCost=100.00
+[04/27 18:34:10     82s] (I)       ---------------------Grid Graph Info--------------------
+[04/27 18:34:10     82s] (I)       routing area        :  (0, 0) - (3511200, 3492000)
+[04/27 18:34:10     82s] (I)       core area           :  (50400, 51000) - (3460800, 3441000)
+[04/27 18:34:10     82s] (I)       Site Width          :  2400  (dbu)
+[04/27 18:34:10     82s] (I)       Row Height          : 30000  (dbu)
+[04/27 18:34:10     82s] (I)       GCell Width         : 30000  (dbu)
+[04/27 18:34:10     82s] (I)       GCell Height        : 30000  (dbu)
+[04/27 18:34:10     82s] (I)       grid                :   117   116     3
+[04/27 18:34:10     82s] (I)       vertical capacity   :     0 30000     0
+[04/27 18:34:10     82s] (I)       horizontal capacity :     0     0 30000
+[04/27 18:34:10     82s] (I)       Default wire width  :   900   900  1500
+[04/27 18:34:10     82s] (I)       Default wire space  :   900   900   900
+[04/27 18:34:10     82s] (I)       Default pitch size  :  1800  2400  3000
+[04/27 18:34:10     82s] (I)       First Track Coord   :     0  1200  1500
+[04/27 18:34:10     82s] (I)       Num tracks per GCell:  0.00 12.50 10.00
+[04/27 18:34:10     82s] (I)       Total num of tracks :     0  1463  1164
+[04/27 18:34:10     82s] (I)       Num of masks        :     1     1     1
+[04/27 18:34:10     82s] (I)       Num of trim masks   :     0     0     0
+[04/27 18:34:10     82s] (I)       --------------------------------------------------------
+[04/27 18:34:10     82s] 
+[04/27 18:34:10     82s] [NR-eGR] ============ Routing rule table ============
+[04/27 18:34:10     82s] [NR-eGR] Rule id 0. Nets 14646 
+[04/27 18:34:10     82s] [NR-eGR] id=0  ndrTrackId=0  ndrViaId=-1  extraSpace=0  numShields=0  maxHorDemand=1  maxVerDemand=1
+[04/27 18:34:10     82s] [NR-eGR] Pitch:  L1=1800  L2=2400  L3=3000
+[04/27 18:34:10     82s] [NR-eGR] ========================================
+[04/27 18:34:10     82s] [NR-eGR] 
+[04/27 18:34:10     82s] (I)       After initializing earlyGlobalRoute syMemory usage = 883.0 MB
+[04/27 18:34:10     82s] (I)       Loading and dumping file time : 0.05 seconds
+[04/27 18:34:10     82s] (I)       ============= Initialization =============
+[04/27 18:34:10     82s] (I)       total 2D Cap : 259138 = (136188 H, 122950 V)
+[04/27 18:34:10     82s] [NR-eGR] Layer group 1: route 14646 net(s) in layer range [2, 3]
+[04/27 18:34:10     82s] (I)       ============  Phase 1a Route ============
+[04/27 18:34:10     82s] (I)       Phase 1a runs 0.01 seconds
+[04/27 18:34:10     82s] (I)       blkAvoiding Routing :  time=0.00  numBlkSegs=6
+[04/27 18:34:10     82s] (I)       Usage: 72677 = (33411 H, 39266 V) = (24.53% H, 31.94% V) = (1.002e+06um H, 1.178e+06um V)
+[04/27 18:34:10     82s] (I)       
+[04/27 18:34:10     82s] (I)       ============  Phase 1b Route ============
+[04/27 18:34:10     82s] (I)       Phase 1b runs 0.01 seconds
+[04/27 18:34:10     82s] (I)       Usage: 72724 = (33445 H, 39279 V) = (24.56% H, 31.95% V) = (1.003e+06um H, 1.178e+06um V)
+[04/27 18:34:10     82s] (I)       
+[04/27 18:34:10     82s] (I)       earlyGlobalRoute overflow of layer group 1: 0.00% H + 2.77% V. EstWL: 2.181720e+06um
+[04/27 18:34:10     82s] (I)       ============  Phase 1c Route ============
+[04/27 18:34:10     82s] (I)       Level2 Grid: 24 x 24
+[04/27 18:34:10     82s] (I)       Phase 1c runs 0.00 seconds
+[04/27 18:34:10     82s] (I)       Usage: 72724 = (33445 H, 39279 V) = (24.56% H, 31.95% V) = (1.003e+06um H, 1.178e+06um V)
+[04/27 18:34:10     82s] (I)       
+[04/27 18:34:10     82s] (I)       ============  Phase 1d Route ============
+[04/27 18:34:10     82s] (I)       Phase 1d runs 0.00 seconds
+[04/27 18:34:10     82s] (I)       Usage: 72724 = (33445 H, 39279 V) = (24.56% H, 31.95% V) = (1.003e+06um H, 1.178e+06um V)
+[04/27 18:34:10     82s] (I)       
+[04/27 18:34:10     82s] (I)       ============  Phase 1e Route ============
+[04/27 18:34:10     82s] (I)       Phase 1e runs 0.01 seconds
+[04/27 18:34:10     82s] (I)       Usage: 72724 = (33445 H, 39279 V) = (24.56% H, 31.95% V) = (1.003e+06um H, 1.178e+06um V)
+[04/27 18:34:10     82s] (I)       
+[04/27 18:34:10     82s] [NR-eGR] earlyGlobalRoute overflow of layer group 1: 0.00% H + 2.74% V. EstWL: 2.181720e+06um
+[04/27 18:34:10     82s] [NR-eGR] 
+[04/27 18:34:10     82s] (I)       ============  Phase 1l Route ============
+[04/27 18:34:10     82s] (I)       Phase 1l runs 0.01 seconds
+[04/27 18:34:10     82s] (I)       Total Global Routing Runtime: 0.05 seconds
+[04/27 18:34:10     82s] (I)       total 2D Cap : 263273 = (136188 H, 127085 V)
+[04/27 18:34:10     82s] [NR-eGR] Overflow after earlyGlobalRoute (GR compatible) 0.00% H + 2.29% V
+[04/27 18:34:10     82s] [NR-eGR] Overflow after earlyGlobalRoute 0.00% H + 2.68% V
+[04/27 18:34:10     82s] (I)       ============= track Assignment ============
+[04/27 18:34:10     82s] (I)       extract Global 3D Wires
+[04/27 18:34:10     82s] (I)       Extract Global WL : time=0.01
+[04/27 18:34:10     82s] (I)       Initialize Greedy Track Assignment (maxPinLayer=Layer4, numCutBoxes=0)
+[04/27 18:34:10     82s] (I)       Initialization real time=0.00 seconds
+[04/27 18:34:10     82s] (I)       Kernel real time=0.24 seconds
+[04/27 18:34:10     82s] (I)       End Greedy Track Assignment
+[04/27 18:34:10     82s] [NR-eGR] Layer1(metal1)(F) length: 0.000000e+00um, number of vias: 46056
+[04/27 18:34:10     82s] [NR-eGR] Layer2(metal2)(V) length: 1.263668e+06um, number of vias: 71972
+[04/27 18:34:10     82s] [NR-eGR] Layer3(metal3)(H) length: 1.103968e+06um, number of vias: 0
+[04/27 18:34:10     82s] [NR-eGR] Total length: 2.367635e+06um, number of vias: 118028
+[04/27 18:34:10     82s] [NR-eGR] End Peak syMemory usage = 873.5 MB
+[04/27 18:34:10     82s] [NR-eGR] Early Global Router Kernel+IO runtime : 0.45 seconds
+[04/27 18:34:10     82s] ### Creating LA Mngr. totSessionCpu=0:01:23 mem=871.1M
+[04/27 18:34:10     82s] Updating RC grid for preRoute extraction ...
+[04/27 18:34:10     82s] Initializing multi-corner capacitance tables ... 
+[04/27 18:34:10     82s] Initializing multi-corner resistance tables ...
+[04/27 18:34:10     82s] ### Creating LA Mngr, finished. totSessionCpu=0:01:23 mem=877.1M
+[04/27 18:34:10     82s] Extraction called for design 'Top_Level' of instances=14276 and nets=15023 using extraction engine 'preRoute' .
+[04/27 18:34:10     82s] **WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+[04/27 18:34:10     82s] Type 'man IMPEXT-3530' for more detail.
+[04/27 18:34:10     82s] PreRoute RC Extraction called for design Top_Level.
+[04/27 18:34:10     82s] RC Extraction called in multi-corner(1) mode.
+[04/27 18:34:10     82s] RCMode: PreRoute
+[04/27 18:34:10     82s]       RC Corner Indexes            0   
+[04/27 18:34:10     82s] Capacitance Scaling Factor   : 1.00000 
+[04/27 18:34:10     82s] Resistance Scaling Factor    : 1.00000 
+[04/27 18:34:10     82s] Clock Cap. Scaling Factor    : 1.00000 
+[04/27 18:34:10     82s] Clock Res. Scaling Factor    : 1.00000 
+[04/27 18:34:10     82s] Shrink Factor                : 1.00000
+[04/27 18:34:10     82s] PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+[04/27 18:34:10     82s] Using capacitance table file ...
+[04/27 18:34:10     82s] Updating RC grid for preRoute extraction ...
+[04/27 18:34:10     82s] Initializing multi-corner capacitance tables ... 
+[04/27 18:34:10     82s] Initializing multi-corner resistance tables ...
+[04/27 18:34:10     82s] PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 877.109M)
+[04/27 18:34:10     82s] ** INFO : this run is activating medium effort placeOptDesign flow
+[04/27 18:34:10     82s] PhyDesignGrid: maxLocalDensity 3.00
+[04/27 18:34:10     82s] ### Creating PhyDesignMc. totSessionCpu=0:01:23 mem=877.1M
+[04/27 18:34:10     82s] #spOpts: mergeVia=F 
+[04/27 18:34:10     82s] Core basic site is core
+[04/27 18:34:10     82s] Layer info - lib-1st H=1, V=2.  Cell-FPin=1. Top-pin=2
+[04/27 18:34:10     82s] ### Creating PhyDesignMc, finished. totSessionCpu=0:01:23 mem=877.1M
+[04/27 18:34:10     82s] PhyDesignGrid: maxLocalDensity 3.00
+[04/27 18:34:10     82s] ### Creating PhyDesignMc. totSessionCpu=0:01:23 mem=871.1M
+[04/27 18:34:10     82s] #spOpts: mergeVia=F 
+[04/27 18:34:10     83s] ### Creating PhyDesignMc, finished. totSessionCpu=0:01:23 mem=871.1M
+[04/27 18:34:10     83s] *** Starting optimizing excluded clock nets MEM= 871.1M) ***
+[04/27 18:34:11     83s] *info: No excluded clock nets to be optimized.
+*** Finished optimizing excluded clock nets (CPU Time= 0:00:00.8  MEM= 880.9M) ***
+[04/27 18:34:11     83s] #################################################################################
+[04/27 18:34:11     83s] # Design Stage: PreRoute
+[04/27 18:34:11     83s] # Design Name: Top_Level
+[04/27 18:34:11     83s] # Design Mode: 90nm
+[04/27 18:34:11     83s] # Analysis Mode: MMMC Non-OCV 
+[04/27 18:34:11     83s] # Parasitics Mode: No SPEF/RCDB
+[04/27 18:34:11     83s] # Signoff Settings: SI Off 
+[04/27 18:34:11     83s] #################################################################################
+[04/27 18:34:11     84s] AAE_INFO: 1 threads acquired from CTE.
+[04/27 18:34:11     84s] Calculate delays in Single mode...
+[04/27 18:34:11     84s] Topological Sorting (CPU = 0:00:00.0, MEM = 881.1M, InitMEM = 878.9M)
+[04/27 18:34:24     96s] Total number of fetched objects 14649
+[04/27 18:34:24     96s] End Timing Check Calculation. (CPU Time=0:00:00.1, Real Time=0:00:00.0)
+[04/27 18:34:24     96s] End delay calculation. (MEM=924.648 CPU=0:00:12.6 REAL=0:00:13.0)
+[04/27 18:34:24     96s] *** CDM Built up (cpu=0:00:13.0  real=0:00:13.0  mem= 924.6M) ***
+[04/27 18:34:25     97s] The useful skew maximum allowed delay is: 0.3
+[04/27 18:34:25     97s] Info: 1 clock net  excluded from IPO operation.
+[04/27 18:34:25     97s] ### Creating LA Mngr. totSessionCpu=0:01:38 mem=924.6M
+[04/27 18:34:25     97s] ### Creating LA Mngr, finished. totSessionCpu=0:01:38 mem=924.6M
+[04/27 18:34:25     97s] PhyDesignGrid: maxLocalDensity 3.00
+[04/27 18:34:25     97s] ### Creating PhyDesignMc. totSessionCpu=0:01:38 mem=924.6M
+[04/27 18:34:25     97s] ### Creating PhyDesignMc, finished. totSessionCpu=0:01:38 mem=924.6M
+[04/27 18:34:25     97s] ### Creating LA Mngr. totSessionCpu=0:01:38 mem=924.6M
+[04/27 18:34:25     97s] ### Creating LA Mngr, finished. totSessionCpu=0:01:38 mem=924.6M
+[04/27 18:34:25     97s] *info: There are 3 candidate Buffer cells
+[04/27 18:34:25     97s] *info: There are 4 candidate Inverter cells
+[04/27 18:34:25     97s] ### Creating LA Mngr. totSessionCpu=0:01:38 mem=924.6M
+[04/27 18:34:25     97s] ### Creating LA Mngr, finished. totSessionCpu=0:01:38 mem=924.6M
+[04/27 18:34:25     98s] 
+[04/27 18:34:25     98s] Netlist preparation processing... 
+[04/27 18:34:25     98s] Removed 351 instances
+[04/27 18:34:25     98s] *info: Marking 0 isolation instances dont touch
+[04/27 18:34:25     98s] *info: Marking 0 level shifter instances dont touch
+[04/27 18:34:26     99s] Begin: GigaOpt high fanout net optimization
+[04/27 18:34:26     99s] Info: 1 clock net  excluded from IPO operation.
+[04/27 18:34:26     99s] PhyDesignGrid: maxLocalDensity 3.00
+[04/27 18:34:26     99s] ### Creating PhyDesignMc. totSessionCpu=0:01:39 mem=939.4M
+[04/27 18:34:26     99s] #spOpts: mergeVia=F 
+[04/27 18:34:26     99s] ### Creating PhyDesignMc, finished. totSessionCpu=0:01:39 mem=939.4M
+[04/27 18:34:26     99s] ### Creating LA Mngr. totSessionCpu=0:01:39 mem=939.4M
+[04/27 18:34:26     99s] ### Creating LA Mngr, finished. totSessionCpu=0:01:39 mem=939.4M
+[04/27 18:34:27     99s] +----------+---------+--------+----------+------------+--------+
+[04/27 18:34:27     99s] | Density  | Commits |  WNS   |   TNS    |    Real    |  Mem   |
+[04/27 18:34:27     99s] +----------+---------+--------+----------+------------+--------+
+[04/27 18:34:27     99s] |    57.38%|        -| -21.679|-10837.458|   0:00:00.0| 1073.0M|
+[04/27 18:34:27     99s] Info: violation cost 2.000000 (cap = 0.000000, tran = 0.000000, len = 0.000000, fanout load = 0.000000, fanout count = 2.000000, glitch 0.000000)
+[04/27 18:34:31    104s] Info: violation cost 0.000000 (cap = 0.000000, tran = 0.000000, len = 0.000000, fanout load = 0.000000, fanout count = 0.000000, glitch 0.000000)
+[04/27 18:34:31    104s] |    57.86%|      118| -21.679|-12114.104|   0:00:04.0| 1079.0M|
+[04/27 18:34:31    104s] +----------+---------+--------+----------+------------+--------+
+[04/27 18:34:31    104s] 
+[04/27 18:34:31    104s] *** Finish pre-CTS High Fanout Net Fixing (cpu=0:00:04.5 real=0:00:04.0 mem=1079.0M) ***
+[04/27 18:34:31    104s] 
+[04/27 18:34:31    104s] ###############################################################################
+[04/27 18:34:31    104s] #
+[04/27 18:34:31    104s] #  Large fanout net report:  
+[04/27 18:34:31    104s] #     - there is 1 high fanout ( > 75) net in the design. (excluding clock nets)
+[04/27 18:34:31    104s] #     - current density: 57.86
+[04/27 18:34:31    104s] #
+[04/27 18:34:31    104s] #  List of high fanout nets:
+[04/27 18:34:31    104s] #        Net(1):  AHB_DUT/III/n208: (fanouts = 97)
+[04/27 18:34:31    104s] #
+[04/27 18:34:31    104s] ###############################################################################
+[04/27 18:34:31    104s] 
+[04/27 18:34:31    104s] 
+[04/27 18:34:31    104s] =======================================================================
+[04/27 18:34:31    104s]                 Reasons for remaining drv violations
+[04/27 18:34:31    104s] =======================================================================
+[04/27 18:34:31    104s] *info: Total 1 net(s) have violations which never been worked on.
+[04/27 18:34:31    104s] 
+[04/27 18:34:31    104s] End: GigaOpt high fanout net optimization
+[04/27 18:34:31    104s] Begin: GigaOpt DRV Optimization
+[04/27 18:34:31    104s] GigaOpt DRV : Use maxLocalDensity 3.0 (from dbgIPOMaxLocalDensity=3.0, optModeMaxLocDen=3)
+[04/27 18:34:31    104s] Info: 1 clock net  excluded from IPO operation.
+[04/27 18:34:31    104s] PhyDesignGrid: maxLocalDensity 3.00
+[04/27 18:34:31    104s] ### Creating PhyDesignMc. totSessionCpu=0:01:44 mem=1053.9M
+[04/27 18:34:31    104s] #spOpts: mergeVia=F 
+[04/27 18:34:31    104s] ### Creating PhyDesignMc, finished. totSessionCpu=0:01:44 mem=1053.9M
+[04/27 18:34:31    104s] ### Creating LA Mngr. totSessionCpu=0:01:44 mem=1053.9M
+[04/27 18:34:31    104s] ### Creating LA Mngr, finished. totSessionCpu=0:01:44 mem=1053.9M
+[04/27 18:34:32    104s] +--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+[04/27 18:34:32    104s] |      max-tran     |      max-cap      |     max-fanout    |     max-length    |       |           |           |           |         |            |           |
+[04/27 18:34:32    104s] +--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+[04/27 18:34:32    104s] |  nets   |  terms  |  nets   |  terms  |  nets   |  terms  |  nets   |  terms  |  WNS  |  #Buffer  | #Inverter |  #Resize  | Density |    Real    |    Mem    |
+[04/27 18:34:32    104s] +--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+[04/27 18:34:32    104s] Info: violation cost 277.187683 (cap = 276.187683, tran = 0.000000, len = 0.000000, fanout load = 0.000000, fanout count = 1.000000, glitch 0.000000)
+[04/27 18:34:32    104s] |     0   |     0   |   284   |    284  |     0   |     0   |     0   |     0   | -21.68 |          0|          0|          0|  57.86  |            |           |
+[04/27 18:34:38    110s] Info: violation cost 0.000000 (cap = 0.000000, tran = 0.000000, len = 0.000000, fanout load = 0.000000, fanout count = 0.000000, glitch 0.000000)
+[04/27 18:34:38    110s] |     0   |     0   |     0   |      0  |     0   |     0   |     0   |     0   | -6.47 |        232|         12|         60|  58.42  |   0:00:06.0|    1088.2M|
+[04/27 18:34:38    110s] Info: violation cost 0.000000 (cap = 0.000000, tran = 0.000000, len = 0.000000, fanout load = 0.000000, fanout count = 0.000000, glitch 0.000000)
+[04/27 18:34:38    110s] |     0   |     0   |     0   |      0  |     0   |     0   |     0   |     0   | -6.47 |          0|          0|          0|  58.42  |   0:00:00.0|    1088.2M|
+[04/27 18:34:38    110s] +--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+[04/27 18:34:38    110s] 
+[04/27 18:34:38    110s] *** Finish DRV Fixing (cpu=0:00:06.4 real=0:00:07.0 mem=1088.2M) ***
+[04/27 18:34:38    110s] 
+[04/27 18:34:38    110s] GigaOpt DRV: restore maxLocalDensity to dbgIPOMaxLocalDensity=3.0, optModeMaxLocDen=$3
+[04/27 18:34:38    110s] End: GigaOpt DRV Optimization
+[04/27 18:34:38    110s] **optDesign ... cpu = 0:00:29, real = 0:00:29, mem = 936.2M, totSessionCpu=0:01:51 **
+[04/27 18:34:38    110s] Begin: GigaOpt Global Optimization
+[04/27 18:34:38    110s] *info: use new DP (enabled)
+[04/27 18:34:38    110s] Global Opt: maxLocalDensity 1.2 (from dbgIPOMaxLocalDensity=3.0, optModeMaxLocDen=3)
+[04/27 18:34:38    110s] Info: 1 clock net  excluded from IPO operation.
+[04/27 18:34:38    110s] PhyDesignGrid: maxLocalDensity 1.20
+[04/27 18:34:38    110s] ### Creating PhyDesignMc. totSessionCpu=0:01:51 mem=934.2M
+[04/27 18:34:38    110s] #spOpts: mergeVia=F 
+[04/27 18:34:38    110s] ### Creating PhyDesignMc, finished. totSessionCpu=0:01:51 mem=934.2M
+[04/27 18:34:38    111s] ### Creating LA Mngr. totSessionCpu=0:01:51 mem=942.2M
+[04/27 18:34:38    111s] ### Creating LA Mngr, finished. totSessionCpu=0:01:51 mem=942.2M
+[04/27 18:34:39    111s] *info: 1 clock net excluded
+[04/27 18:34:39    111s] *info: 2 special nets excluded.
+[04/27 18:34:39    111s] *info: 695 no-driver nets excluded.
+[04/27 18:34:41    113s] ** GigaOpt Global Opt WNS Slack -6.468  TNS Slack -6032.172 
+[04/27 18:34:41    113s] +--------+---------+----------+------------+--------+----------+---------+------------------------------------------+
+[04/27 18:34:41    113s] |  WNS   |   TNS   | Density  |    Real    |  Mem   |Worst View|Pathgroup|                End Point                 |
+[04/27 18:34:41    113s] +--------+---------+----------+------------+--------+----------+---------+------------------------------------------+
+[04/27 18:34:41    113s] |  -6.468|-6032.172|    58.42%|   0:00:00.0| 1092.7M|     osu05|  default| AHB_DUT/III/rrowpt_reg[31]/R             |
+[04/27 18:34:59    132s] |  -6.165|-5094.692|    59.21%|   0:00:18.0| 1206.3M|     osu05|  default| AHB_DUT/III/rrowpt_reg[31]/R             |
+[04/27 18:35:05    137s] |  -5.274|-4783.890|    59.35%|   0:00:06.0| 1206.3M|     osu05|  default| AHB_DUT/III/rrowpt_reg[31]/R             |
+[04/27 18:35:06    138s] |  -5.274|-4783.890|    59.35%|   0:00:01.0| 1206.3M|     osu05|  default| AHB_DUT/III/rrowpt_reg[31]/R             |
+[04/27 18:35:10    142s] |  -5.274|-4672.459|    59.35%|   0:00:04.0| 1206.3M|     osu05|  default| AHB_DUT/III/rrowpt_reg[31]/R             |
+[04/27 18:35:29    162s] |  -5.161|-4446.905|    59.64%|   0:00:19.0| 1213.4M|     osu05|  default| AHB_DUT/III/rrowpt_reg[31]/R             |
+[04/27 18:35:34    166s] |  -4.788|-4301.241|    59.68%|   0:00:05.0| 1213.4M|     osu05|  default| AHB_DUT/III/rrowpt_reg[31]/R             |
+[04/27 18:35:34    167s] |  -4.788|-4301.241|    59.68%|   0:00:00.0| 1213.4M|     osu05|  default| AHB_DUT/III/rrowpt_reg[31]/R             |
+[04/27 18:35:38    170s] |  -4.707|-4192.965|    59.69%|   0:00:04.0| 1213.4M|     osu05|  default| AHB_DUT/III/rrowpt_reg[31]/R             |
+[04/27 18:35:56    189s] |  -3.438|-4831.901|    59.82%|   0:00:18.0| 1166.5M|     osu05|  default| AHB_DUT/III/rrowpt_reg[31]/R             |
+[04/27 18:35:59    191s] |  -3.154|-4658.401|    59.85%|   0:00:03.0| 1166.5M|     osu05|  default| B1_DUT/o_full_reg/D                      |
+[04/27 18:36:00    192s] |  -3.154|-4658.401|    59.85%|   0:00:01.0| 1166.5M|     osu05|  default| B1_DUT/o_full_reg/D                      |
+[04/27 18:36:03    196s] |  -3.154|-4480.781|    59.86%|   0:00:03.0| 1166.5M|     osu05|  default| B1_DUT/o_full_reg/D                      |
+[04/27 18:36:21    213s] |  -3.014|-4389.877|    59.95%|   0:00:18.0| 1162.3M|     osu05|  default| B1_DUT/o_full_reg/D                      |
+[04/27 18:36:23    215s] |  -3.014|-4037.390|    59.97%|   0:00:02.0| 1162.3M|     osu05|  default| B1_DUT/o_full_reg/D                      |
+[04/27 18:36:23    216s] |  -3.014|-4037.390|    59.97%|   0:00:00.0| 1162.3M|     osu05|  default| B1_DUT/o_full_reg/D                      |
+[04/27 18:36:25    217s] |  -3.014|-4002.732|    59.98%|   0:00:02.0| 1162.3M|     osu05|  default| B1_DUT/o_full_reg/D                      |
+[04/27 18:36:42    234s] |  -3.014|-3975.647|    59.99%|   0:00:17.0| 1162.3M|     osu05|  default| B1_DUT/o_full_reg/D                      |
+[04/27 18:36:43    236s] |  -3.014|-3933.668|    60.00%|   0:00:01.0| 1162.3M|     osu05|  default| B1_DUT/o_full_reg/D                      |
+[04/27 18:36:44    237s] |  -3.014|-3933.668|    60.00%|   0:00:01.0| 1162.3M|     osu05|  default| B1_DUT/o_full_reg/D                      |
+[04/27 18:36:45    238s] |  -3.014|-3933.462|    60.00%|   0:00:01.0| 1162.3M|     osu05|  default| B1_DUT/o_full_reg/D                      |
+[04/27 18:36:45    238s] +--------+---------+----------+------------+--------+----------+---------+------------------------------------------+
+[04/27 18:36:45    238s] 
+[04/27 18:36:45    238s] *** Finish pre-CTS Global Setup Fixing (cpu=0:02:05 real=0:02:04 mem=1162.3M) ***
+[04/27 18:36:45    238s] 
+[04/27 18:36:45    238s] *** Finish pre-CTS Setup Fixing (cpu=0:02:05 real=0:02:04 mem=1162.3M) ***
+[04/27 18:36:45    238s] ** GigaOpt Global Opt End WNS Slack -3.014  TNS Slack -3933.462 
+[04/27 18:36:46    238s] Global Opt: restore maxLocalDensity to 3.0
+[04/27 18:36:46    238s] End: GigaOpt Global Optimization
+[04/27 18:36:46    238s] 
+[04/27 18:36:46    238s] Active setup views:
+[04/27 18:36:46    238s]  osu05
+[04/27 18:36:46    238s]   Dominating endpoints: 0
+[04/27 18:36:46    238s]   Dominating TNS: -0.000
+[04/27 18:36:46    238s] 
+[04/27 18:36:46    238s] *** Timing NOT met, worst failing slack is -3.014
+[04/27 18:36:46    238s] *** Check timing (0:00:00.0)
+[04/27 18:36:46    238s] Info: 1 clock net  excluded from IPO operation.
+[04/27 18:36:46    238s] ### Creating LA Mngr. totSessionCpu=0:03:59 mem=983.3M
+[04/27 18:36:46    238s] ### Creating LA Mngr, finished. totSessionCpu=0:03:59 mem=983.3M
+[04/27 18:36:46    238s] Begin: Area Reclaim Optimization
+[04/27 18:36:46    238s] PhyDesignGrid: maxLocalDensity 3.00
+[04/27 18:36:46    238s] ### Creating PhyDesignMc. totSessionCpu=0:03:59 mem=1140.2M
+[04/27 18:36:46    238s] #spOpts: mergeVia=F 
+[04/27 18:36:46    238s] ### Creating PhyDesignMc, finished. totSessionCpu=0:03:59 mem=1140.2M
+[04/27 18:36:46    238s] ### Creating LA Mngr. totSessionCpu=0:03:59 mem=1140.2M
+[04/27 18:36:46    238s] ### Creating LA Mngr, finished. totSessionCpu=0:03:59 mem=1140.2M
+[04/27 18:36:46    239s] Reclaim Optimization WNS Slack -3.014  TNS Slack -3933.462 Density 60.00
+[04/27 18:36:46    239s] +----------+---------+--------+---------+------------+--------+
+[04/27 18:36:46    239s] | Density  | Commits |  WNS   |   TNS   |    Real    |  Mem   |
+[04/27 18:36:46    239s] +----------+---------+--------+---------+------------+--------+
+[04/27 18:36:46    239s] |    60.00%|        -|  -3.014|-3933.462|   0:00:00.0| 1140.2M|
+[04/27 18:36:47    240s] |    60.00%|        1|  -3.014|-3933.465|   0:00:01.0| 1140.2M|
+[04/27 18:36:47    240s] |    60.00%|        0|  -3.014|-3933.465|   0:00:00.0| 1140.2M|
+[04/27 18:36:50    242s] |    59.96%|       22|  -3.014|-3974.124|   0:00:03.0| 1140.2M|
+[04/27 18:36:53    245s] |    59.94%|       46|  -3.014|-3961.742|   0:00:03.0| 1140.2M|
+[04/27 18:36:53    246s] |    59.94%|        0|  -3.014|-3961.742|   0:00:00.0| 1140.2M|
+[04/27 18:36:53    246s] +----------+---------+--------+---------+------------+--------+
+[04/27 18:36:53    246s] Reclaim Optimization End WNS Slack -3.014  TNS Slack -3961.742 Density 59.94
+[04/27 18:36:53    246s] 
+[04/27 18:36:53    246s] ** Summary: Restruct = 1 Buffer Deletion = 6 Declone = 17 Resize = 26 **
+[04/27 18:36:53    246s] --------------------------------------------------------------
+[04/27 18:36:53    246s] |                                   | Total     | Sequential |
+[04/27 18:36:53    246s] --------------------------------------------------------------
+[04/27 18:36:53    246s] | Num insts resized                 |      26  |       0    |
+[04/27 18:36:53    246s] | Num insts undone                  |      20  |       0    |
+[04/27 18:36:53    246s] | Num insts Downsized               |      26  |       0    |
+[04/27 18:36:53    246s] | Num insts Samesized               |       0  |       0    |
+[04/27 18:36:53    246s] | Num insts Upsized                 |       0  |       0    |
+[04/27 18:36:53    246s] | Num multiple commits+uncommits    |       0  |       -    |
+[04/27 18:36:53    246s] --------------------------------------------------------------
+[04/27 18:36:53    246s] ** Finished Core Area Reclaim Optimization (cpu = 0:00:07.4) (real = 0:00:07.0) **
+[04/27 18:36:53    246s] Executing incremental physical updates
+[04/27 18:36:53    246s] Executing incremental physical updates
+[04/27 18:36:53    246s] *** Finished Area Reclaim Optimization (cpu=0:00:07, real=0:00:07, mem=985.35M, totSessionCpu=0:04:06).
+[04/27 18:36:54    246s] *** Timing NOT met, worst failing slack is -3.014
+[04/27 18:36:54    246s] *** Check timing (0:00:00.0)
+[04/27 18:36:54    246s] Begin: GigaOpt Optimization in TNS mode
+[04/27 18:36:54    246s] Effort level <high> specified for reg2reg path_group
+[04/27 18:36:54    247s] Info: 1 clock net  excluded from IPO operation.
+[04/27 18:36:54    247s] PhyDesignGrid: maxLocalDensity 3.00
+[04/27 18:36:54    247s] ### Creating PhyDesignMc. totSessionCpu=0:04:07 mem=985.3M
+[04/27 18:36:55    247s] ### Creating PhyDesignMc, finished. totSessionCpu=0:04:07 mem=985.3M
+[04/27 18:36:55    247s] ### Creating LA Mngr. totSessionCpu=0:04:08 mem=993.4M
+[04/27 18:36:55    247s] ### Creating LA Mngr, finished. totSessionCpu=0:04:08 mem=993.4M
+[04/27 18:36:55    248s] *info: 1 clock net excluded
+[04/27 18:36:55    248s] *info: 2 special nets excluded.
+[04/27 18:36:55    248s] *info: 699 no-driver nets excluded.
+[04/27 18:36:55    248s] ** GigaOpt Optimizer WNS Slack -3.014 TNS Slack -3961.742 Density 59.94
+[04/27 18:36:55    248s] Optimizer TNS Opt
+[04/27 18:36:55    248s] Active Path Group: reg2reg  

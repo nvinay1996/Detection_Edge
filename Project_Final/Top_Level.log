@@ -1,0 +1,2542 @@
+Synthesizing design: Top_Level.sv
+dc_shell-t -x "source -echo do_mapping.tcl"
+                                        
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+                                        
+               Version K-2015.06-SP1 for linux64 - Jul 21, 2015 
+                                        
+                    Copyright (c) 1988 - 2015 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+# Step 1:  Read in the source file
+analyze -format sverilog -lib WORK {address_counter.sv edge_detection.sv grayscale.sv AHB.sv AHB_slave.sv AHB_wrapper.sv edge_detection_core.sv mcu.sv buffer_window.sv buffer_2.sv   Top_Level.sv}
+Running PRESTO HDLC
+Compiling source file ./source/address_counter.sv
+Compiling source file ./source/edge_detection.sv
+Compiling source file ./source/grayscale.sv
+Compiling source file ./source/AHB.sv
+Compiling source file ./source/AHB_slave.sv
+Compiling source file ./source/AHB_wrapper.sv
+Compiling source file ./source/edge_detection_core.sv
+Compiling source file ./source/mcu.sv
+Compiling source file ./source/buffer_window.sv
+Compiling source file ./source/buffer_2.sv
+Compiling source file ./source/Top_Level.sv
+Presto compilation completed successfully.
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Loading db file '/package/eda/synopsys/syn-K-2015.06-SP1/libraries/syn/dw_foundation.sldb'
+elaborate Top_Level -lib WORK
+Loading db file '/package/eda/synopsys/syn-K-2015.06-SP1/libraries/syn/gtech.db'
+Loading db file '/package/eda/synopsys/syn-K-2015.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'osu05_stdcells'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'Top_Level'.
+Information: Building the design 'AHB_wrapper'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'grayscale'. (HDL-193)
+
+Statistics for case statements in always block at line 77 in file
+	'./source/grayscale.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            80            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 152 in file
+	'./source/grayscale.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           160            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine grayscale line 39 in file
+		'./source/grayscale.sv'.
+======================================================================================
+|       Register Name        |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+======================================================================================
+|         o_gray_reg         | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| o_grayscale_data_ready_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+======================================================================================
+
+Inferred memory devices in process
+	in routine grayscale line 51 in file
+		'./source/grayscale.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     average_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       min_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|       max_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      total_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine grayscale line 67 in file
+		'./source/grayscale.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      curr_reg       | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'buffer_window'. (HDL-193)
+
+Statistics for case statements in always block at line 161 in file
+	'./source/buffer_window.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           164            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 453 in file
+	'./source/buffer_window.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           482            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine buffer_window line 81 in file
+		'./source/buffer_window.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     o_full_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     o_empty_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine buffer_window line 93 in file
+		'./source/buffer_window.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      o_m25_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m1_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m2_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m3_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m4_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m5_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m6_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m7_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m8_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m9_reg       | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m10_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m11_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m12_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m13_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m14_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m15_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m16_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m17_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m18_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m19_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m20_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m21_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m22_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m23_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      o_m24_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine buffer_window line 151 in file
+		'./source/buffer_window.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      curr_reg       | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'edge_detection_core'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'buffer_2'. (HDL-193)
+
+Statistics for case statements in always block at line 101 in file
+	'./source/buffer_2.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           104            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 262 in file
+	'./source/buffer_2.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           279            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine buffer_2 line 48 in file
+		'./source/buffer_2.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| o_write_enable_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     o_empty_reg     | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     o_full_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine buffer_2 line 62 in file
+		'./source/buffer_2.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| o_buffer2_data_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       m1_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       m2_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       m3_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       m4_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       m5_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       m6_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       m7_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       m8_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       m9_reg        | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine buffer_2 line 91 in file
+		'./source/buffer_2.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      curr_reg       | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mcu'. (HDL-193)
+
+Statistics for case statements in always block at line 77 in file
+	'./source/mcu.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            80            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 181 in file
+	'./source/mcu.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           191            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine mcu line 44 in file
+		'./source/mcu.sv'.
+=================================================================================
+|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=================================================================================
+|       o_we_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|       o_re_reg        | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| o_grayscale_start_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     o_b1_save_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    o_b1_clear_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| o_gradient_start_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     o_b2_save_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+=================================================================================
+
+Inferred memory devices in process
+	in routine mcu line 67 in file
+		'./source/mcu.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      curr_reg       | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      curr_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'AHB'. (HDL-193)
+
+Inferred memory devices in process
+	in routine AHB line 64 in file
+		'./source/AHB.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        Q_reg        | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine AHB line 73 in file
+		'./source/AHB.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   prev_waddr_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+| greyscale_data_reg  | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      haddr_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      re_ff_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      we_ff_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   prev_hwrite_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    hready_ff_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     hwdata_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|  read_complete_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| write_complete_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     hwrite_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      init_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      init2_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| raddr_ready_ff_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+| waddr_ready_ff_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   prev_raddr_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'AHB_slave'. (HDL-193)
+
+Inferred memory devices in process
+	in routine AHB_slave line 34 in file
+		'./source/AHB_slave.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        Q_reg        | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     hrdata_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     hready_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|   start_waddr_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   start_raddr_reg   | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   img_height_reg    | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    img_width_reg    | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
+|   boundary_4_reg    | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'address_counter'. (HDL-193)
+
+Statistics for case statements in always block at line 153 in file
+	'./source/address_counter.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           156            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 209 in file
+	'./source/address_counter.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           219            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 283 in file
+	'./source/address_counter.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           286            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 339 in file
+	'./source/address_counter.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           349            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine address_counter line 82 in file
+		'./source/address_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     o_done_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     o_raddr_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|     o_waddr_reg     | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|    o_r_ready_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|    o_w_ready_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine address_counter line 100 in file
+		'./source/address_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       wpt_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     rrowpt_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+|     rcolpt_reg      | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine address_counter line 114 in file
+		'./source/address_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      rct3_reg       | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      rct3_reg       | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|      rct1_reg       | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      rct2_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      rct2_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine address_counter line 128 in file
+		'./source/address_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      wct3_reg       | Flip-flop |  14   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      wct3_reg       | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+|      wct1_reg       | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
+|      wct2_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|      wct2_reg       | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine address_counter line 143 in file
+		'./source/address_counter.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| curr_read_state_reg | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine address_counter line 273 in file
+		'./source/address_counter.sv'.
+================================================================================
+|    Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+================================================================================
+| curr_write_state_reg | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+| curr_write_state_reg | Flip-flop |   2   |  Y  | N  | N  | Y  | N  | N  | N  |
+================================================================================
+Presto compilation completed successfully.
+Information: Building the design 'edge_detection'. (HDL-193)
+Warning:  ./source/edge_detection.sv:199: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./source/edge_detection.sv:200: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./source/edge_detection.sv:201: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./source/edge_detection.sv:202: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./source/edge_detection.sv:203: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./source/edge_detection.sv:204: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./source/edge_detection.sv:231: unsigned to signed assignment occurs. (VER-318)
+Warning:  ./source/edge_detection.sv:243: signed to unsigned part selection occurs. (VER-318)
+
+Statistics for case statements in always block at line 105 in file
+	'./source/edge_detection.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           108            |     no/auto      |
+===============================================
+
+Statistics for case statements in always block at line 180 in file
+	'./source/edge_detection.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           196            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine edge_detection line 49 in file
+		'./source/edge_detection.sv'.
+=====================================================================================
+|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+=====================================================================================
+|    o_processed_sum_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+| o_gradient_data_ready_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+=====================================================================================
+
+Inferred memory devices in process
+	in routine edge_detection line 62 in file
+		'./source/edge_detection.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine edge_detection line 71 in file
+		'./source/edge_detection.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    temp_sum_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       A1_reg        | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       B1_reg        | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       C1_reg        | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       D1_reg        | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       E1_reg        | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       A2_reg        | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       B2_reg        | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       C2_reg        | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       D2_reg        | Flip-flop |   9   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       E2_reg        | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       Gx_reg        | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+|       Gy_reg        | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+uniquify
+Information: Uniquified 9 instances of design 'edge_detection'. (OPT-1056)
+# Step 2: Set design constraints
+# Uncomment below to set timing, area, power, etc. constraints
+# set_max_delay <delay> -from "<input>" -to "<output>"
+# set_max_area <area>
+# set_max_total_power <power> mW
+create_clock "clk " -name "clk " -period 4
+# Step 3: Compile the design
+compile -map_effort medium
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | K-2015.06-DWBB_201506.1 |     *     |
+| Licensed DW Building Blocks        | K-2015.06-DWBB_201506.1 |     *     |
+============================================================================
+
+
+Information: There are 286 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'mcu'
+Information: The register 'curr_reg[5]' is a constant and will be removed. (OPT-1206)
+  Processing 'buffer_2'
+Information: The register 'curr_reg[5]' is a constant and will be removed. (OPT-1206)
+  Processing 'edge_detection_0'
+Information: The register 'state_reg[5]' is a constant and will be removed. (OPT-1206)
+Information: The register 'state_reg[4]' is a constant and will be removed. (OPT-1206)
+  Processing 'edge_detection_core'
+  Processing 'buffer_window'
+  Processing 'grayscale'
+  Processing 'address_counter'
+Information: Added key list 'DesignWare' to design 'address_counter'. (DDB-72)
+Information: The register 'curr_read_state_reg[4]' is a constant and will be removed. (OPT-1206)
+  Processing 'AHB_slave'
+  Processing 'AHB'
+  Processing 'AHB_wrapper'
+  Processing 'Top_Level'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'edge_detection_0_DW01_sub_0'
+  Processing 'edge_detection_0_DW01_sub_1'
+  Processing 'edge_detection_0_DW01_add_0'
+  Processing 'edge_detection_0_DW01_add_1'
+  Processing 'edge_detection_0_DW01_add_2'
+  Processing 'edge_detection_0_DW01_add_3'
+  Processing 'edge_detection_0_DW01_add_4'
+  Processing 'edge_detection_0_DW01_add_5'
+  Processing 'edge_detection_0_DW01_add_6'
+  Processing 'edge_detection_0_DW01_sub_2'
+  Processing 'edge_detection_0_DW01_sub_3'
+  Processing 'edge_detection_0_DW01_sub_4'
+  Processing 'edge_detection_0_DW01_sub_5'
+  Processing 'edge_detection_0_DW01_sub_6'
+  Processing 'edge_detection_0_DW01_sub_7'
+  Processing 'edge_detection_1_DW01_sub_0'
+  Processing 'edge_detection_1_DW01_sub_1'
+  Processing 'edge_detection_1_DW01_add_0'
+  Processing 'edge_detection_1_DW01_add_1'
+  Processing 'edge_detection_1_DW01_add_2'
+  Processing 'edge_detection_1_DW01_add_3'
+  Processing 'edge_detection_1_DW01_add_4'
+  Processing 'edge_detection_1_DW01_add_5'
+  Processing 'edge_detection_1_DW01_add_6'
+  Processing 'edge_detection_1_DW01_sub_2'
+  Processing 'edge_detection_1_DW01_sub_3'
+  Processing 'edge_detection_1_DW01_sub_4'
+  Processing 'edge_detection_1_DW01_sub_5'
+  Processing 'edge_detection_1_DW01_sub_6'
+  Processing 'edge_detection_1_DW01_sub_7'
+  Processing 'edge_detection_2_DW01_sub_0'
+  Processing 'edge_detection_2_DW01_sub_1'
+  Processing 'edge_detection_2_DW01_add_0'
+  Processing 'edge_detection_2_DW01_add_1'
+  Processing 'edge_detection_2_DW01_add_2'
+  Processing 'edge_detection_2_DW01_add_3'
+  Processing 'edge_detection_2_DW01_add_4'
+  Processing 'edge_detection_2_DW01_add_5'
+  Processing 'edge_detection_2_DW01_add_6'
+  Processing 'edge_detection_2_DW01_sub_2'
+  Processing 'edge_detection_2_DW01_sub_3'
+  Processing 'edge_detection_2_DW01_sub_4'
+  Processing 'edge_detection_2_DW01_sub_5'
+  Processing 'edge_detection_2_DW01_sub_6'
+  Processing 'edge_detection_2_DW01_sub_7'
+  Processing 'edge_detection_3_DW01_sub_0'
+  Processing 'edge_detection_3_DW01_sub_1'
+  Processing 'edge_detection_3_DW01_add_0'
+  Processing 'edge_detection_3_DW01_add_1'
+  Processing 'edge_detection_3_DW01_add_2'
+  Processing 'edge_detection_3_DW01_add_3'
+  Processing 'edge_detection_3_DW01_add_4'
+  Processing 'edge_detection_3_DW01_add_5'
+  Processing 'edge_detection_3_DW01_add_6'
+  Processing 'edge_detection_3_DW01_sub_2'
+  Processing 'edge_detection_3_DW01_sub_3'
+  Processing 'edge_detection_3_DW01_sub_4'
+  Processing 'edge_detection_3_DW01_sub_5'
+  Processing 'edge_detection_3_DW01_sub_6'
+  Processing 'edge_detection_3_DW01_sub_7'
+  Processing 'edge_detection_4_DW01_sub_0'
+  Processing 'edge_detection_4_DW01_sub_1'
+  Processing 'edge_detection_4_DW01_add_0'
+  Processing 'edge_detection_4_DW01_add_1'
+  Processing 'edge_detection_4_DW01_add_2'
+  Processing 'edge_detection_4_DW01_add_3'
+  Processing 'edge_detection_4_DW01_add_4'
+  Processing 'edge_detection_4_DW01_add_5'
+  Processing 'edge_detection_4_DW01_add_6'
+  Processing 'edge_detection_4_DW01_sub_2'
+  Processing 'edge_detection_4_DW01_sub_3'
+  Processing 'edge_detection_4_DW01_sub_4'
+  Processing 'edge_detection_4_DW01_sub_5'
+  Processing 'edge_detection_4_DW01_sub_6'
+  Processing 'edge_detection_4_DW01_sub_7'
+  Processing 'edge_detection_5_DW01_sub_0'
+  Processing 'edge_detection_5_DW01_sub_1'
+  Processing 'edge_detection_5_DW01_add_0'
+  Processing 'edge_detection_5_DW01_add_1'
+  Processing 'edge_detection_5_DW01_add_2'
+  Processing 'edge_detection_5_DW01_add_3'
+  Processing 'edge_detection_5_DW01_add_4'
+  Processing 'edge_detection_5_DW01_add_5'
+  Processing 'edge_detection_5_DW01_add_6'
+  Processing 'edge_detection_5_DW01_sub_2'
+  Processing 'edge_detection_5_DW01_sub_3'
+  Processing 'edge_detection_5_DW01_sub_4'
+  Processing 'edge_detection_5_DW01_sub_5'
+  Processing 'edge_detection_5_DW01_sub_6'
+  Processing 'edge_detection_5_DW01_sub_7'
+  Processing 'edge_detection_6_DW01_sub_0'
+  Processing 'edge_detection_6_DW01_sub_1'
+  Processing 'edge_detection_6_DW01_add_0'
+  Processing 'edge_detection_6_DW01_add_1'
+  Processing 'edge_detection_6_DW01_add_2'
+  Processing 'edge_detection_6_DW01_add_3'
+  Processing 'edge_detection_6_DW01_add_4'
+  Processing 'edge_detection_6_DW01_add_5'
+  Processing 'edge_detection_6_DW01_add_6'
+  Processing 'edge_detection_6_DW01_sub_2'
+  Processing 'edge_detection_6_DW01_sub_3'
+  Processing 'edge_detection_6_DW01_sub_4'
+  Processing 'edge_detection_6_DW01_sub_5'
+  Processing 'edge_detection_6_DW01_sub_6'
+  Processing 'edge_detection_6_DW01_sub_7'
+  Processing 'edge_detection_7_DW01_sub_0'
+  Processing 'edge_detection_7_DW01_sub_1'
+  Processing 'edge_detection_7_DW01_add_0'
+  Processing 'edge_detection_7_DW01_add_1'
+  Processing 'edge_detection_7_DW01_add_2'
+  Processing 'edge_detection_7_DW01_add_3'
+  Processing 'edge_detection_7_DW01_add_4'
+  Processing 'edge_detection_7_DW01_add_5'
+  Processing 'edge_detection_7_DW01_add_6'
+  Processing 'edge_detection_7_DW01_sub_2'
+  Processing 'edge_detection_7_DW01_sub_3'
+  Processing 'edge_detection_7_DW01_sub_4'
+  Processing 'edge_detection_7_DW01_sub_5'
+  Processing 'edge_detection_7_DW01_sub_6'
+  Processing 'edge_detection_7_DW01_sub_7'
+  Processing 'edge_detection_8_DW01_sub_0'
+  Processing 'edge_detection_8_DW01_sub_1'
+  Processing 'edge_detection_8_DW01_add_0'
+  Processing 'edge_detection_8_DW01_add_1'
+  Processing 'edge_detection_8_DW01_add_2'
+  Processing 'edge_detection_8_DW01_add_3'
+  Processing 'edge_detection_8_DW01_add_4'
+  Processing 'edge_detection_8_DW01_add_5'
+  Processing 'edge_detection_8_DW01_add_6'
+  Processing 'edge_detection_8_DW01_sub_2'
+  Processing 'edge_detection_8_DW01_sub_3'
+  Processing 'edge_detection_8_DW01_sub_4'
+  Processing 'edge_detection_8_DW01_sub_5'
+  Processing 'edge_detection_8_DW01_sub_6'
+  Processing 'edge_detection_8_DW01_sub_7'
+  Processing 'grayscale_DW01_add_0'
+  Mapping 'grayscale_DW_cmp_0'
+  Mapping 'grayscale_DW_cmp_1'
+  Mapping 'grayscale_DW_cmp_2'
+  Mapping 'grayscale_DW_cmp_3'
+  Processing 'address_counter_DW01_add_0'
+  Processing 'address_counter_DW01_add_1'
+  Processing 'address_counter_DW01_add_2'
+  Processing 'address_counter_DW01_add_3'
+  Processing 'address_counter_DW01_add_4'
+  Processing 'address_counter_DW01_inc_0'
+  Processing 'address_counter_DW01_add_5'
+  Processing 'address_counter_DW01_dec_0'
+  Processing 'address_counter_DW01_sub_0'
+  Processing 'address_counter_DW01_inc_1'
+  Processing 'address_counter_DW01_sub_1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'grayscale'. (DDB-72)
+  Mapping Optimization (Phase 1)
+Information: The register 'EDC_DUT/E2/C2_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E2/C1_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E3/C2_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E3/C1_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E4/C2_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E4/C1_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E5/C2_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E5/C1_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E6/C2_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E6/C1_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E7/C2_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E7/C1_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E8/C2_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E8/C1_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E1/C2_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E1/C1_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E9/C2_reg[0]' is a constant and will be removed. (OPT-1206)
+Information: The register 'EDC_DUT/E9/C1_reg[0]' is a constant and will be removed. (OPT-1206)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:18 7019829.0      0.21      29.6       3.0                          
+    0:00:18 7019829.0      0.21      29.6       3.0                          
+    0:00:18 7019829.0      0.21      29.6       3.0                          
+    0:00:18 7019829.0      0.21      29.6       3.0                          
+    0:00:18 7019829.0      0.21      29.6       3.0                          
+    0:00:19 6880725.0      0.40      39.2       3.0                          
+    0:00:20 6881157.0      0.43      36.8       3.0                          
+    0:00:20 6881085.0      0.30      35.6       3.0                          
+    0:00:20 6881733.0      0.28      34.0       3.0                          
+    0:00:20 6882453.0      0.25      33.6       3.0                          
+    0:00:20 6883092.0      0.25      32.6       3.0                          
+    0:00:20 6883443.0      0.25      31.6       3.0                          
+    0:00:20 6884082.0      0.24      30.7       3.0                          
+    0:00:21 6884514.0      0.22      29.8       3.0                          
+    0:00:21 6884658.0      0.22      29.4       3.0                          
+    0:00:21 6885153.0      0.21      28.6       3.0                          
+    0:00:21 6885657.0      0.20      28.4       3.0                          
+    0:00:21 6886737.0      0.19      25.9       3.0                          
+    0:00:21 6887241.0      0.19      25.8       3.0                          
+    0:00:21 6889932.0      0.18      24.9       2.9                          
+    0:00:21 6890760.0      0.17      24.9       2.9                          
+    0:00:21 6891012.0      0.17      24.8       2.9                          
+    0:00:21 6891264.0      0.17      24.8       2.9                          
+    0:00:21 6891768.0      0.17      24.8       2.9                          
+    0:00:21 6891768.0      0.17      24.8       2.9                          
+    0:00:21 6891768.0      0.17      24.8       2.9                          
+    0:00:22 6895656.0      0.17      23.8       0.0                          
+    0:00:22 6895656.0      0.17      23.8       0.0                          
+    0:00:22 6895656.0      0.17      23.8       0.0                          
+    0:00:22 6895656.0      0.17      23.8       0.0                          
+    0:00:22 6895656.0      0.17      23.8       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:22 6895656.0      0.17      23.8       0.0                          
+    0:00:22 6899742.0      0.15      17.2       0.0 AHB_DUT/III/o_waddr_reg[26]/D
+    0:00:22 6901542.0      0.11      14.2       0.0 AHB_DUT/III/o_waddr_reg[26]/D
+    0:00:22 6904692.0      0.10       8.9       0.0 EDC_DUT/E9/A1_reg[7]/D   
+    0:00:22 6908544.0      0.08       7.1       0.0 EDC_DUT/E6/temp_sum_reg[7]/D
+    0:00:22 6909228.0      0.07       6.3       0.0 EDC_DUT/E9/Gy_reg[10]/D  
+    0:00:22 6910488.0      0.07       4.9       0.0 EDC_DUT/E6/B1_reg[7]/D   
+    0:00:22 6914628.0      0.04       3.3       0.0 AHB_DUT/III/o_waddr_reg[26]/D
+    0:00:22 6916140.0      0.03       0.9       0.0 AHB_DUT/III/o_waddr_reg[26]/D
+    0:00:22 6922161.0      0.03       0.7       0.0 EDC_DUT/E4/E1_reg[8]/D   
+    0:00:22 6928182.0      0.03       0.6       0.0 EDC_DUT/E7/E1_reg[8]/D   
+    0:00:22 6934203.0      0.03       0.4       0.0 EDC_DUT/E1/E1_reg[8]/D   
+    0:00:22 6942150.0      0.02       0.2       0.0 EDC_DUT/E9/A1_reg[7]/D   
+    0:00:22 6946110.0      0.01       0.1       0.0 EDC_DUT/E4/D2_reg[7]/D   
+    0:00:22 6949458.0      0.00       0.0       0.0                          
+    0:00:23 6949458.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:23 6949458.0      0.00       0.0       0.0                          
+    0:00:23 6949458.0      0.00       0.0       0.0                          
+    0:00:24 6899202.0      0.08       1.1       0.0                          
+    0:00:24 6884442.0      0.15       4.3       0.0                          
+    0:00:24 6879978.0      0.15       4.5       0.0                          
+    0:00:24 6875946.0      0.15       4.5       0.0                          
+    0:00:25 6872994.0      0.15       4.5       0.0                          
+    0:00:25 6872994.0      0.15       4.5       0.0                          
+    0:00:25 6874830.0      0.02       0.4       0.0                          
+    0:00:25 6875262.0      0.02       0.4       0.0                          
+    0:00:25 6875190.0      0.01       0.1       0.0                          
+    0:00:25 6876126.0      0.00       0.0       0.0                          
+    0:00:25 6876126.0      0.00       0.0       0.0                          
+    0:00:25 6872094.0      0.09       2.8       0.0                          
+    0:00:25 6872094.0      0.09       2.8       0.0                          
+    0:00:25 6872094.0      0.09       2.8       0.0                          
+    0:00:25 6872094.0      0.09       2.8       0.0                          
+    0:00:25 6872094.0      0.09       2.8       0.0                          
+    0:00:25 6872094.0      0.09       2.8       0.0                          
+    0:00:25 6873390.0      0.01       0.1       0.0 EDC_DUT/E5/B2_reg[7]/D   
+    0:00:25 6855759.0      0.00       0.0       0.0                          
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'Top_Level' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'EDC_DUT/E2/clk': 2144 load(s), 1 driver(s)
+# Step 4: Output reports
+report_timing -path full -delay max -max_paths 1000 -nworst 1000 > reports/Top_Level.rep
+Error: could not open output redirect file "reports/Top_Level.rep" (CMD-015)
+report_area >> reports/Top_Level.rep
+Error: could not open output redirect file "reports/Top_Level.rep" (CMD-015)
+report_power -hier >> reports/Top_Level.rep
+Error: could not open output redirect file "reports/Top_Level.rep" (CMD-015)
+sizeof_collection [all_registers] >> reports/regs.rep
+Error: could not open output redirect file "reports/regs.rep" (CMD-015)
+# Step 5: Output final VHDL and Verilog files
+write_file -format verilog -hierarchy -output "mapped/Top_Level.v"
+Writing verilog file '/home/ecegridfs/a/mg163/ece337/Project_Final/mapped/Top_Level.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 14 nets to module AHB_wrapper using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 1 nets to module grayscale using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+echo "\nScript Done\n"
+
+Script Done
+
+echo "\nChecking Design\n"
+
+Checking Design
+
+check_design
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06-SP1
+Date:        Fri Apr 28 15:19:21 2017
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                    657
+    Unconnected ports (LINT-28)                                   639
+    Feedthrough (LINT-29)                                          18
+
+Cells                                                             509
+    Connected to power or ground (LINT-32)                        374
+    Nets connected to multiple pins on same cell (LINT-33)        135
+--------------------------------------------------------------------------------
+
+Warning: In design 'grayscale', port 'i_RGB[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'grayscale', port 'i_RGB[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'grayscale', port 'i_RGB[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'grayscale', port 'i_RGB[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'grayscale', port 'i_RGB[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'grayscale', port 'i_RGB[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'grayscale', port 'i_RGB[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'grayscale', port 'i_RGB[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'mcu', port 'i_start_next_write' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'AHB_slave', port 'haddr[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter', port 'i_img_height[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter', port 'i_img_height[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter', port 'i_img_height[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter', port 'i_img_height[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter', port 'i_img_height[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter', port 'i_img_height[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter', port 'i_img_height[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter', port 'i_img_height[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter', port 'i_img_height[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8', port 'P4[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8', port 'P4[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8', port 'P4[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8', port 'P4[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8', port 'P4[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8', port 'P4[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8', port 'P4[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8', port 'P4[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0', port 'P4[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0', port 'P4[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0', port 'P4[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0', port 'P4[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0', port 'P4[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0', port 'P4[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0', port 'P4[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0', port 'P4[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1', port 'P4[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1', port 'P4[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1', port 'P4[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1', port 'P4[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1', port 'P4[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1', port 'P4[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1', port 'P4[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1', port 'P4[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2', port 'P4[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2', port 'P4[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2', port 'P4[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2', port 'P4[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2', port 'P4[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2', port 'P4[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2', port 'P4[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2', port 'P4[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3', port 'P4[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3', port 'P4[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3', port 'P4[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3', port 'P4[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3', port 'P4[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3', port 'P4[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3', port 'P4[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3', port 'P4[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4', port 'P4[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4', port 'P4[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4', port 'P4[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4', port 'P4[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4', port 'P4[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4', port 'P4[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4', port 'P4[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4', port 'P4[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5', port 'P4[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5', port 'P4[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5', port 'P4[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5', port 'P4[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5', port 'P4[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5', port 'P4[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5', port 'P4[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5', port 'P4[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6', port 'P4[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6', port 'P4[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6', port 'P4[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6', port 'P4[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6', port 'P4[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6', port 'P4[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6', port 'P4[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6', port 'P4[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7', port 'P4[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7', port 'P4[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7', port 'P4[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7', port 'P4[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7', port 'P4[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7', port 'P4[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7', port 'P4[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7', port 'P4[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_6', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_7', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'B[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[10]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[7]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[6]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[5]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[4]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[3]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[2]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[1]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'B[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'address_counter_DW01_add_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_7', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_7', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_8', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_8', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_8', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_9', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_9', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_9', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_7', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_7', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_8', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_8', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_8', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_9', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_9', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_9', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_add_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_7', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_7', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_8', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_8', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_8', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_9', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_9', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_9', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_add_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_7', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_7', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_8', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_8', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_8', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_9', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_9', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_9', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_add_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_7', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_7', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_8', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_8', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_8', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_9', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_9', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_9', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_add_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_7', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_7', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_8', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_8', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_8', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_9', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_9', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_9', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_add_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_7', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_7', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_8', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_8', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_8', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_9', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_9', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_9', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_add_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_7', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_7', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_8', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_8', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_8', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_9', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_9', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_9', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_add_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_7', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_7', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_8', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_8', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_8', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_9', port 'A[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_9', port 'A[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_9', port 'B[9]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_add_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_8', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_8', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_9', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_9', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_12', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_12', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_12', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_12', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_13', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_13', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_13', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_sub_13', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_8', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_8', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_9', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_9', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_12', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_12', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_12', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_12', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_13', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_13', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_13', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_7_DW01_sub_13', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_8', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_8', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_9', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_9', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_12', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_12', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_12', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_12', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_13', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_13', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_13', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_6_DW01_sub_13', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_8', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_8', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_9', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_9', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_12', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_12', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_12', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_12', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_13', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_13', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_13', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_3_DW01_sub_13', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_8', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_8', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_9', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_9', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_12', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_12', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_12', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_12', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_13', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_13', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_13', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_0_DW01_sub_13', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_8', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_8', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_9', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_9', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_12', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_12', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_12', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_12', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_13', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_13', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_13', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_5_DW01_sub_13', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_8', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_8', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_9', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_9', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_12', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_12', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_12', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_12', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_13', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_13', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_13', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_4_DW01_sub_13', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_8', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_8', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_9', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_9', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_12', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_12', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_12', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_12', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_13', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_13', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_13', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_1_DW01_sub_13', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_8', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_8', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_8', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_8', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_9', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_9', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_9', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_9', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_10', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_10', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_10', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_10', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_11', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_11', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_11', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_11', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_12', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_12', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_12', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_12', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_13', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_13', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_13', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_2_DW01_sub_13', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'grayscale_DW01_add_1', port 'A[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'grayscale_DW01_add_1', port 'B[8]' is not connected to any nets. (LINT-28)
+Warning: In design 'grayscale_DW01_add_1', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'grayscale_DW01_add_1', port 'SUM[0]' is not connected to any nets. (LINT-28)
+Warning: In design 'grayscale_DW01_add_1', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'edge_detection_8_DW01_add_8', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_8_DW01_add_9', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_7_DW01_add_8', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_7_DW01_add_9', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_6_DW01_add_8', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_6_DW01_add_9', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_5_DW01_add_8', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_5_DW01_add_9', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_4_DW01_add_8', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_4_DW01_add_9', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_3_DW01_add_8', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_3_DW01_add_9', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_2_DW01_add_8', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_2_DW01_add_9', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_1_DW01_add_8', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_1_DW01_add_9', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_0_DW01_add_8', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'edge_detection_0_DW01_add_9', input port 'B[0]' is connected directly to output port 'SUM[0]'. (LINT-29)
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[31]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[30]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[29]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[28]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[27]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[26]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[25]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[24]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[23]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[22]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[21]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[20]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[19]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[18]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[17]' is connected to logic 1. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[16]' is connected to logic 1. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[15]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[14]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[13]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[12]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[11]' is connected to logic 1. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[10]' is connected to logic 1. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[9]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[8]' is connected to logic 1. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[7]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[6]' is connected to logic 1. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[5]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[4]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[3]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[2]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[1]' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', a pin on submodule 'III' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'i_init_waddr[0]' is connected to logic 0. 
+Warning: In design 'grayscale', a pin on submodule 'add_184' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'grayscale', a pin on submodule 'add_184' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'grayscale', a pin on submodule 'add_184' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[31]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[30]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[29]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[28]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[27]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[26]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[25]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[24]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[23]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[22]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[21]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[20]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[19]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[18]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[17]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[16]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[15]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[14]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[13]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[12]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[11]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[10]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_238' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[31]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[30]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[29]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[28]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[27]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[26]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[25]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[24]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[23]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[22]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[21]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[20]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[19]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[18]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[17]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[16]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[15]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[14]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[13]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[12]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[11]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[10]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_368' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[31]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[30]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[29]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[28]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[27]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[26]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[25]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[24]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[23]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[22]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[21]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[20]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[19]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[18]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[17]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[16]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[15]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[14]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[13]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[12]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[11]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[10]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[7]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[6]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[1]' is connected to logic 1. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[0]' is connected to logic 1. 
+Warning: In design 'address_counter', a pin on submodule 'add_387' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[31]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[30]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[29]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[28]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[27]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[26]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[25]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[24]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[23]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[22]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[21]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[20]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[19]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[18]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[17]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[16]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[15]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[14]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[13]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[12]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[11]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[10]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[9]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[7]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[6]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[5]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[4]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[3]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[2]' is connected to logic 0. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[1]' is connected to logic 1. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[0]' is connected to logic 1. 
+Warning: In design 'address_counter', a pin on submodule 'add_257' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'add_231' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'add_214' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'add_213' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_8', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'add_231' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'add_214' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'add_213' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_0', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'add_231' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'add_214' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'add_213' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_1', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'add_231' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'add_214' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'add_213' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_2', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'add_231' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'add_214' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'add_213' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_3', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'add_231' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'add_214' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'add_213' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_4', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'add_231' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'add_214' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'add_213' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_5', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'add_231' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'add_214' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'add_213' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_6', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'add_231' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'add_219' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'add_218' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'add_214' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'add_213' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_202' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_204' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_203' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_200' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_201' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'B[8]' is connected to logic 0. 
+Warning: In design 'edge_detection_7', a pin on submodule 'sub_199' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'AHB_wrapper', the same net is connected to more than one pin on submodule 'III'. (LINT-33)
+   Net '*Logic0*' is connected to pins 'i_init_waddr[31]', 'i_init_waddr[30]'', 'i_init_waddr[29]', 'i_init_waddr[28]', 'i_init_waddr[27]', 'i_init_waddr[26]', 'i_init_waddr[25]', 'i_init_waddr[24]', 'i_init_waddr[23]', 'i_init_waddr[22]', 'i_init_waddr[21]', 'i_init_waddr[20]', 'i_init_waddr[19]', 'i_init_waddr[18]', 'i_init_waddr[15]', 'i_init_waddr[14]', 'i_init_waddr[13]', 'i_init_waddr[12]', 'i_init_waddr[9]', 'i_init_waddr[7]', 'i_init_waddr[5]', 'i_init_waddr[4]', 'i_init_waddr[3]', 'i_init_waddr[2]', 'i_init_waddr[1]', 'i_init_waddr[0]'.
+Warning: In design 'AHB_wrapper', the same net is connected to more than one pin on submodule 'III'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'i_init_waddr[17]', 'i_init_waddr[16]'', 'i_init_waddr[11]', 'i_init_waddr[10]', 'i_init_waddr[8]', 'i_init_waddr[6]'.
+Warning: In design 'grayscale', the same net is connected to more than one pin on submodule 'add_184'. (LINT-33)
+   Net 'n1' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'address_counter', the same net is connected to more than one pin on submodule 'add_238'. (LINT-33)
+   Net 'n9' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]', 'B[18]', 'B[17]', 'B[16]', 'B[15]', 'B[14]', 'B[13]', 'B[12]', 'B[11]', 'B[10]', 'B[9]', 'CI'.
+Warning: In design 'address_counter', the same net is connected to more than one pin on submodule 'add_368'. (LINT-33)
+   Net 'n4' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]', 'B[18]', 'B[17]', 'B[16]', 'B[15]', 'B[14]', 'B[13]', 'B[12]', 'B[11]', 'B[10]', 'B[9]', 'CI'.
+Warning: In design 'address_counter', the same net is connected to more than one pin on submodule 'add_387'. (LINT-33)
+   Net 'n3' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]', 'B[18]', 'B[17]', 'B[16]', 'B[15]', 'B[14]', 'B[13]', 'B[12]', 'B[11]', 'B[10]', 'B[9]', 'B[8]', 'B[7]', 'B[6]', 'B[5]', 'B[4]', 'B[3]', 'B[2]', 'CI'.
+Warning: In design 'address_counter', the same net is connected to more than one pin on submodule 'add_387'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'B[1]', 'B[0]''.
+Warning: In design 'address_counter', the same net is connected to more than one pin on submodule 'add_257'. (LINT-33)
+   Net 'n8' is connected to pins 'B[31]', 'B[30]'', 'B[29]', 'B[28]', 'B[27]', 'B[26]', 'B[25]', 'B[24]', 'B[23]', 'B[22]', 'B[21]', 'B[20]', 'B[19]', 'B[18]', 'B[17]', 'B[16]', 'B[15]', 'B[14]', 'B[13]', 'B[12]', 'B[11]', 'B[10]', 'B[9]', 'B[8]', 'B[7]', 'B[6]', 'B[5]', 'B[4]', 'B[3]', 'B[2]', 'CI'.
+Warning: In design 'address_counter', the same net is connected to more than one pin on submodule 'add_257'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'B[1]', 'B[0]''.
+Warning: In design 'edge_detection_8', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'C2[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_8', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'E2[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_8', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'C1[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_8', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'E1[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_8', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'A2[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_8', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'D2[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_8', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'A1[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_8', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'D1[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_8', the same net is connected to more than one pin on submodule 'sub_204'. (LINT-33)
+   Net 'n10' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_8', the same net is connected to more than one pin on submodule 'sub_202'. (LINT-33)
+   Net 'n12' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_8', the same net is connected to more than one pin on submodule 'sub_203'. (LINT-33)
+   Net 'n11' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_8', the same net is connected to more than one pin on submodule 'sub_200'. (LINT-33)
+   Net 'n14' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_8', the same net is connected to more than one pin on submodule 'sub_201'. (LINT-33)
+   Net 'n13' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_8', the same net is connected to more than one pin on submodule 'sub_199'. (LINT-33)
+   Net 'n15' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_0', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'C2[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_0', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'E2[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_0', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'C1[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_0', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'E1[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_0', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'A2[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_0', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'D2[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_0', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'A1[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_0', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'D1[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_0', the same net is connected to more than one pin on submodule 'sub_199'. (LINT-33)
+   Net 'n773' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_0', the same net is connected to more than one pin on submodule 'sub_201'. (LINT-33)
+   Net 'n775' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_0', the same net is connected to more than one pin on submodule 'sub_203'. (LINT-33)
+   Net 'n777' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_0', the same net is connected to more than one pin on submodule 'sub_200'. (LINT-33)
+   Net 'n774' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_0', the same net is connected to more than one pin on submodule 'sub_202'. (LINT-33)
+   Net 'n776' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_0', the same net is connected to more than one pin on submodule 'sub_204'. (LINT-33)
+   Net 'n778' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_1', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'C2[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_1', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'E2[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_1', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'C1[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_1', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'E1[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_1', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'A2[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_1', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'D2[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_1', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'A1[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_1', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'D1[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_1', the same net is connected to more than one pin on submodule 'sub_199'. (LINT-33)
+   Net 'n771' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_1', the same net is connected to more than one pin on submodule 'sub_202'. (LINT-33)
+   Net 'n774' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_1', the same net is connected to more than one pin on submodule 'sub_201'. (LINT-33)
+   Net 'n773' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_1', the same net is connected to more than one pin on submodule 'sub_204'. (LINT-33)
+   Net 'n776' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_1', the same net is connected to more than one pin on submodule 'sub_203'. (LINT-33)
+   Net 'n775' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_1', the same net is connected to more than one pin on submodule 'sub_200'. (LINT-33)
+   Net 'n772' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_2', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'C2[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_2', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'E2[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_2', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'C1[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_2', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'E1[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_2', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'A2[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_2', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'D2[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_2', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'A1[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_2', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'D1[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_2', the same net is connected to more than one pin on submodule 'sub_204'. (LINT-33)
+   Net 'n776' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_2', the same net is connected to more than one pin on submodule 'sub_199'. (LINT-33)
+   Net 'n771' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_2', the same net is connected to more than one pin on submodule 'sub_202'. (LINT-33)
+   Net 'n774' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_2', the same net is connected to more than one pin on submodule 'sub_201'. (LINT-33)
+   Net 'n773' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_2', the same net is connected to more than one pin on submodule 'sub_203'. (LINT-33)
+   Net 'n775' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_2', the same net is connected to more than one pin on submodule 'sub_200'. (LINT-33)
+   Net 'n772' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_3', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'C2[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_3', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'E2[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_3', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'C1[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_3', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'E1[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_3', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'A2[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_3', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'D2[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_3', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'A1[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_3', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'D1[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_3', the same net is connected to more than one pin on submodule 'sub_201'. (LINT-33)
+   Net 'n775' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_3', the same net is connected to more than one pin on submodule 'sub_203'. (LINT-33)
+   Net 'n777' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_3', the same net is connected to more than one pin on submodule 'sub_200'. (LINT-33)
+   Net 'n774' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_3', the same net is connected to more than one pin on submodule 'sub_199'. (LINT-33)
+   Net 'n773' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_3', the same net is connected to more than one pin on submodule 'sub_202'. (LINT-33)
+   Net 'n776' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_3', the same net is connected to more than one pin on submodule 'sub_204'. (LINT-33)
+   Net 'n778' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_4', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'C2[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_4', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'E2[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_4', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'C1[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_4', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'E1[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_4', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'A2[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_4', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'D2[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_4', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'A1[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_4', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'D1[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_4', the same net is connected to more than one pin on submodule 'sub_202'. (LINT-33)
+   Net 'n776' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_4', the same net is connected to more than one pin on submodule 'sub_201'. (LINT-33)
+   Net 'n775' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_4', the same net is connected to more than one pin on submodule 'sub_204'. (LINT-33)
+   Net 'n778' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_4', the same net is connected to more than one pin on submodule 'sub_203'. (LINT-33)
+   Net 'n777' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_4', the same net is connected to more than one pin on submodule 'sub_200'. (LINT-33)
+   Net 'n774' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_4', the same net is connected to more than one pin on submodule 'sub_199'. (LINT-33)
+   Net 'n773' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_5', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'C2[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_5', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'E2[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_5', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'C1[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_5', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'E1[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_5', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'A2[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_5', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'D2[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_5', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'A1[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_5', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'D1[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_5', the same net is connected to more than one pin on submodule 'sub_204'. (LINT-33)
+   Net 'n774' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_5', the same net is connected to more than one pin on submodule 'sub_201'. (LINT-33)
+   Net 'n771' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_5', the same net is connected to more than one pin on submodule 'sub_202'. (LINT-33)
+   Net 'n772' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_5', the same net is connected to more than one pin on submodule 'sub_203'. (LINT-33)
+   Net 'n773' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_5', the same net is connected to more than one pin on submodule 'sub_200'. (LINT-33)
+   Net 'n770' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_5', the same net is connected to more than one pin on submodule 'sub_199'. (LINT-33)
+   Net 'n769' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_6', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'C2[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_6', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'E2[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_6', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'C1[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_6', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'E1[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_6', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'A2[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_6', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'D2[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_6', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'A1[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_6', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'D1[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_6', the same net is connected to more than one pin on submodule 'sub_203'. (LINT-33)
+   Net 'n777' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_6', the same net is connected to more than one pin on submodule 'sub_200'. (LINT-33)
+   Net 'n774' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_6', the same net is connected to more than one pin on submodule 'sub_202'. (LINT-33)
+   Net 'n776' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_6', the same net is connected to more than one pin on submodule 'sub_201'. (LINT-33)
+   Net 'n775' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_6', the same net is connected to more than one pin on submodule 'sub_204'. (LINT-33)
+   Net 'n778' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_6', the same net is connected to more than one pin on submodule 'sub_199'. (LINT-33)
+   Net 'n773' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_7', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'C2[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_7', the same net is connected to more than one pin on submodule 'add_219'. (LINT-33)
+   Net 'E2[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_7', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'C1[9]' is connected to pins 'A[10]', 'A[9]''.
+Warning: In design 'edge_detection_7', the same net is connected to more than one pin on submodule 'add_218'. (LINT-33)
+   Net 'E1[9]' is connected to pins 'B[10]', 'B[9]''.
+Warning: In design 'edge_detection_7', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'A2[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_7', the same net is connected to more than one pin on submodule 'add_214'. (LINT-33)
+   Net 'D2[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_7', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'A1[8]' is connected to pins 'A[9]', 'A[8]''.
+Warning: In design 'edge_detection_7', the same net is connected to more than one pin on submodule 'add_213'. (LINT-33)
+   Net 'D1[8]' is connected to pins 'B[9]', 'B[8]''.
+Warning: In design 'edge_detection_7', the same net is connected to more than one pin on submodule 'sub_202'. (LINT-33)
+   Net 'n776' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_7', the same net is connected to more than one pin on submodule 'sub_204'. (LINT-33)
+   Net 'n778' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_7', the same net is connected to more than one pin on submodule 'sub_203'. (LINT-33)
+   Net 'n777' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_7', the same net is connected to more than one pin on submodule 'sub_200'. (LINT-33)
+   Net 'n774' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_7', the same net is connected to more than one pin on submodule 'sub_201'. (LINT-33)
+   Net 'n775' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+Warning: In design 'edge_detection_7', the same net is connected to more than one pin on submodule 'sub_199'. (LINT-33)
+   Net 'n773' is connected to pins 'A[8]', 'B[8]'', 'CI'.
+quit
+
+Thank you...
+Done
+
+
